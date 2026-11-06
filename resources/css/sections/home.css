@@ -1,0 +1,634 @@
+/* Home sections: only what Tailwind utilities cannot express (pseudo-elements, states, keyframes). */
+@layer components {
+    /* ---------- Hero ---------- */
+    .hero {
+        background: radial-gradient(ellipse at 20% 55%, var(--color-ember) 0%, var(--color-onyx) 60%);
+    }
+
+    .hero-visual {
+        background: var(--color-velvet);
+    }
+
+    .hero-wordmark {
+        font-family: var(--font-display);
+        font-size: clamp(3.6rem, 9vw, 8.6rem);
+        font-weight: 400;
+        line-height: 0.95;
+        letter-spacing: 0.16em;
+        color: var(--color-bone);
+    }
+
+    /* ---------- Hero slideshow ---------- */
+    .hero-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1.4s var(--ease-soft);
+    }
+
+    .hero-slide.is-active {
+        opacity: 1;
+    }
+
+    .hero-slide .cork {
+        background: var(--color-velvet);
+    }
+
+    /* Slow zoom on the visible slide (Ken Burns). The studio photos sit on the same velvet black,
+       so "contain" shows the whole piece at any screen ratio with no visible edges. */
+    .hero-slide .cork-img {
+        object-fit: contain;
+        transform: scale(1.1);
+        transition: transform 7s linear;
+    }
+
+    .hero-slide.is-active .cork-img {
+        transform: scale(1);
+    }
+
+    .hero-controls {
+        position: absolute;
+        left: calc(clamp(24px, 3.2vw, 44px) + 24px);
+        bottom: calc(clamp(24px, 3.2vw, 44px) + 22px);
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 0.62rem;
+        letter-spacing: 0.3em;
+        color: var(--color-parchment);
+    }
+
+    .hero-progress {
+        position: relative;
+        width: 90px;
+        height: 1px;
+        overflow: hidden;
+        background: var(--color-line);
+    }
+
+    .hero-progress span {
+        position: absolute;
+        inset: 0;
+        background: var(--color-gold);
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    .hero-pause {
+        display: grid;
+        place-items: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--color-line);
+        border-radius: 50%;
+        background: transparent;
+        color: var(--color-parchment);
+        cursor: pointer;
+        transition: border-color 0.4s, color 0.4s;
+    }
+
+    .hero-pause:hover,
+    .hero-pause:focus-visible {
+        border-color: var(--color-gold);
+        color: var(--color-gold);
+    }
+
+    .hero-pause .icon-play,
+    .hero-pause[aria-pressed='true'] .icon-pause {
+        display: none;
+    }
+
+    .hero-pause[aria-pressed='true'] .icon-play {
+        display: block;
+    }
+
+    /* Photograph melts into the copy side (left on desktop, bottom on mobile). */
+    .hero-fade {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(0deg, var(--color-onyx) 0%, transparent 45%);
+        pointer-events: none;
+    }
+
+    @media (min-width: 56.25rem) {
+        .hero-fade {
+            background: linear-gradient(90deg, var(--color-onyx) 0%, transparent 32%);
+        }
+    }
+
+    /* Thin gold frame inset over the photograph. */
+    .hero-frame {
+        position: absolute;
+        inset: clamp(24px, 3.2vw, 44px);
+        z-index: 2;
+        border: 1px solid var(--color-line);
+        pointer-events: none;
+    }
+
+    .hero-caption {
+        position: absolute;
+        top: clamp(24px, 3.2vw, 44px);
+        right: calc(clamp(24px, 3.2vw, 44px) + 28px);
+        z-index: 3;
+        padding: 0 12px;
+        transform: translateY(-50%);
+        background: var(--color-onyx);
+        font-family: var(--font-serif);
+        font-size: 0.95rem;
+        font-style: italic;
+        line-height: 1.6;
+        color: var(--color-gold);
+    }
+
+    /* Soft warm spotlight behind the piece, as if lit in a gallery. */
+    .hero-visual::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: radial-gradient(ellipse 58% 52% at 52% 50%, var(--color-glow), transparent 72%);
+        mix-blend-mode: screen;
+        pointer-events: none;
+    }
+
+    /* "Scroll" cue: a gold line that draws and retracts. */
+    .scroll-cue {
+        width: 60px;
+        height: 1px;
+        background: linear-gradient(90deg, var(--color-gold), transparent);
+        animation: scroll-cue 2.4s var(--ease-soft) infinite;
+    }
+
+    @keyframes scroll-cue {
+        0% { transform: scaleX(0); transform-origin: left; }
+        50% { transform: scaleX(1); transform-origin: left; }
+        51% { transform-origin: right; }
+        100% { transform: scaleX(0); transform-origin: right; }
+    }
+
+    /* ---------- Statement (word-by-word scrub) ---------- */
+    .scrub-word {
+        opacity: 0.14;
+        transition: opacity 0.6s;
+    }
+
+    .scrub-word.is-lit,
+    html:not(.js) .scrub-word {
+        opacity: 1;
+    }
+
+    .signature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        font-size: 0.66rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--color-mute);
+    }
+
+    .signature::before,
+    .signature::after {
+        content: '';
+        width: 60px;
+        height: 1px;
+        background: var(--color-line);
+    }
+
+    /* ---------- Collection slider ---------- */
+    .slider-track {
+        display: flex;
+        gap: 34px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding-left: max(var(--gutter), (100% - var(--container-site)) / 2);
+        padding-right: var(--gutter);
+        scroll-padding-left: max(var(--gutter), (100% - var(--container-site)) / 2);
+        cursor: grab;
+        overscroll-behavior-x: contain;
+    }
+
+    .slider-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .slider-track.is-dragging {
+        cursor: grabbing;
+        scroll-snap-type: none;
+    }
+
+    .slider-track.is-dragging a {
+        pointer-events: none;
+    }
+
+    .slider-progress {
+        position: relative;
+        width: 160px;
+        height: 1px;
+        background: var(--color-line);
+    }
+
+    .slider-progress-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 20%;
+        background: var(--color-gold);
+        transition: width 0.4s;
+    }
+
+    /* ---------- ProductCard (gallery style) ---------- */
+    .product-card {
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    .product-card.slider-item {
+        flex: 0 0 clamp(260px, 24vw, 340px);
+        scroll-snap-align: start;
+    }
+
+    .product-card img {
+        -webkit-user-drag: none;
+    }
+
+    .product-card .cork-img {
+        transition: transform 1.6s var(--ease-mask);
+    }
+
+    .product-card:hover .cork-img,
+    .product-card:focus-visible .cork-img {
+        transform: scale(1.05);
+    }
+
+    /* Hairline mat around each piece, drawn a touch brighter on hover. */
+    .product-card-media::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        border: 1px solid var(--color-line-faint);
+        transition: border-color 0.7s var(--ease-soft);
+        pointer-events: none;
+    }
+
+    .product-card:hover .product-card-media::before,
+    .product-card:focus-visible .product-card-media::before {
+        border-color: var(--color-line);
+    }
+
+    /* Warm spotlight that blooms behind the piece on hover. */
+    .product-card-media::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: radial-gradient(ellipse 60% 55% at 50% 55%, var(--color-glow), transparent 70%);
+        mix-blend-mode: screen;
+        opacity: 0;
+        transition: opacity 0.9s var(--ease-soft);
+        pointer-events: none;
+    }
+
+    .product-card:hover .product-card-media::after,
+    .product-card:focus-visible .product-card-media::after {
+        opacity: 1;
+    }
+
+    /* 3 per row (2 on mobile); an incomplete last row is centred. */
+    .product-grid {
+        --grid-gap: clamp(16px, 2.6vw, 40px);
+        --grid-cols: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(44px, 6vw, 84px) var(--grid-gap);
+    }
+
+    .product-grid-item {
+        width: calc((100% - (var(--grid-cols) - 1) * var(--grid-gap)) / var(--grid-cols));
+    }
+
+    @media (min-width: 56.25rem) {
+        .product-grid {
+            --grid-cols: 3;
+        }
+    }
+
+    /* Hairline under the info that draws gold on hover. */
+    .product-card-info {
+        position: relative;
+        border-top: 1px solid var(--color-line);
+    }
+
+    .product-card-info::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--color-gold);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.9s var(--ease-mask);
+    }
+
+    .product-card:hover .product-card-info::before,
+    .product-card:focus-visible .product-card-info::before {
+        transform: scaleX(1);
+    }
+
+    .product-arrow {
+        display: none;
+        flex: none;
+        place-items: center;
+        width: 46px;
+        height: 46px;
+        border: 1px solid var(--color-line);
+        border-radius: 50%;
+        color: var(--color-bone);
+        transition: background-color 0.5s var(--ease-soft), border-color 0.5s var(--ease-soft), color 0.5s var(--ease-soft), transform 0.5s var(--ease-soft);
+    }
+
+    @media (min-width: 37.5rem) {
+        .product-arrow {
+            display: grid;
+        }
+    }
+
+    .product-card:hover .product-arrow,
+    .product-card:focus-visible .product-arrow {
+        background: var(--color-gold);
+        border-color: var(--color-gold);
+        color: var(--color-onyx);
+        transform: translateX(4px);
+    }
+
+    /* Outlined hairline chip rather than a solid block. */
+    .product-tag {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        z-index: 3;
+        padding: 8px 14px;
+        border: 1px solid var(--color-line-strong);
+        font-size: 0.56rem;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+        background: var(--color-veil);
+        backdrop-filter: blur(6px);
+    }
+
+    .product-tag-sage {
+        border-color: var(--color-sage-line);
+        color: var(--color-sage-ink);
+    }
+
+    /* ---------- Manifesto ---------- */
+    .manifesto-watermark {
+        font-family: var(--font-display);
+        font-size: clamp(5rem, 10vw, 9rem);
+        line-height: 1;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--color-bronze);
+        opacity: 0.6;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .manifesto-quote {
+        position: relative;
+        padding: 30px 0;
+        margin: 34px 0;
+        border-block: 1px solid var(--color-line-light);
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-size: clamp(1.5rem, 2.2vw, 2rem);
+        line-height: 1.35;
+        color: var(--color-ink);
+    }
+
+    .manifesto-quote::before {
+        content: '\201C';
+        position: absolute;
+        left: -6px;
+        top: -30px;
+        font-size: 5rem;
+        line-height: 1;
+        color: var(--color-bronze);
+        opacity: 0.35;
+    }
+
+    /* ---------- Ritual cards ---------- */
+    .ritual-card {
+        --card-pad: clamp(26px, 2.6vw, 38px);
+        --medallion: 66px;
+        position: relative;
+        background: var(--color-paper);
+        border: 1px solid var(--color-linen);
+        transition: transform 0.6s var(--ease-soft), box-shadow 0.6s var(--ease-soft);
+    }
+
+    /* Gold bar along the base that grows across the card on hover. */
+    .ritual-card::after {
+        content: '';
+        position: absolute;
+        left: var(--card-pad);
+        bottom: -1px;
+        width: 60px;
+        height: 2px;
+        background: var(--color-gold);
+        transition: width 0.6s var(--ease-soft);
+    }
+
+    .ritual-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px -30px var(--color-shadow);
+    }
+
+    .ritual-card:hover::after {
+        width: calc(100% - 2 * var(--card-pad));
+    }
+
+    .ritual-card .cork-img {
+        filter: saturate(0.85);
+        transition: transform 1.4s var(--ease-mask), filter 0.8s;
+    }
+
+    .ritual-card:hover .cork-img {
+        transform: scale(1.06);
+        filter: none;
+    }
+
+    /* Round numeral medallion straddling the photo's lower edge. */
+    .ritual-numeral {
+        position: absolute;
+        left: var(--card-pad);
+        bottom: calc(var(--medallion) / -2);
+        z-index: 2;
+        display: grid;
+        place-items: center;
+        width: var(--medallion);
+        height: var(--medallion);
+        border: 1px solid var(--color-gold);
+        border-radius: 50%;
+        background: var(--color-paper);
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1;
+        color: var(--color-bronze-ink);
+        transition: background-color 0.6s var(--ease-soft), color 0.6s var(--ease-soft);
+    }
+
+    .ritual-card:hover .ritual-numeral {
+        background: var(--color-gold);
+        color: var(--color-onyx);
+    }
+
+    /* Desktop: a fine gold line runs from each medallion across the gap to the next card. */
+    @media (min-width: 56.25rem) {
+        .ritual-media.has-connector::after {
+            content: '';
+            position: absolute;
+            left: calc(var(--card-pad) + var(--medallion) + 14px);
+            right: calc(-1 * clamp(24px, 3vw, 40px) - 1px);
+            bottom: 0;
+            z-index: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--color-gold), var(--color-line-strong));
+        }
+    }
+
+    /* ---------- Film: thin gold frame offset around the video ---------- */
+    .film-frame {
+        position: relative;
+    }
+
+    .film-frame::before {
+        content: '';
+        position: absolute;
+        inset: -14px;
+        border: 1px solid var(--color-line);
+        pointer-events: none;
+    }
+
+    @media (min-width: 56.25rem) {
+        .film-frame::before {
+            inset: -22px;
+        }
+    }
+
+    /* ---------- Editorial banner ---------- */
+    .editorial-media {
+        position: absolute;
+        inset: -12% 0;
+        will-change: transform;
+    }
+
+    /* ---------- Journal ---------- */
+    .journal-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .journal-media {
+        aspect-ratio: 3 / 2;
+        overflow: hidden;
+        border-radius: 4px;
+        background: var(--color-parchment);
+    }
+
+    .journal-media .cork-img {
+        transition: transform 1.4s var(--ease-soft);
+    }
+
+    .journal-card:hover .journal-media .cork-img,
+    .journal-card:focus-visible .journal-media .cork-img {
+        transform: scale(1.05);
+    }
+
+    .journal-meta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 28px;
+        font-size: 0.66rem;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--color-bronze-ink);
+    }
+
+    .journal-meta i {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: var(--color-line-light);
+    }
+
+    .journal-title {
+        margin-top: 16px;
+        font-size: clamp(1.45rem, 2vw, 1.75rem);
+        line-height: 1.2;
+        color: var(--color-ink);
+        transition: color 0.4s;
+    }
+
+    .journal-card:hover .journal-title {
+        color: var(--color-bronze-ink);
+    }
+
+    .journal-excerpt {
+        margin-top: 14px;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--color-ink-soft);
+    }
+
+    .journal-read {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: auto;
+        padding-top: 24px;
+        font-size: 0.66rem;
+        font-weight: 600;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--color-ink);
+    }
+
+    .journal-card:hover .btn-arrow,
+    .journal-card:focus-visible .btn-arrow {
+        width: 32px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .scroll-cue {
+            animation: none;
+        }
+
+        .hero-slide,
+        .hero-slide .cork-img,
+        .product-card .cork-img,
+        .journal-media .cork-img,
+        .ritual-card {
+            transition: none;
+        }
+
+        .ritual-card:hover {
+            transform: none;
+        }
+    }
+}

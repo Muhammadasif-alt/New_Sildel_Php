@@ -1,0 +1,294 @@
+@layer components {
+    /* ---------- Kicker ---------- */
+    .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 0.66rem;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.42em;
+        text-transform: uppercase;
+        color: var(--kicker-color, var(--color-gold));
+    }
+
+    .kicker-line {
+        display: block;
+        flex: none;
+        width: 46px;
+        height: 1px;
+        background: currentColor;
+    }
+
+    /* ---------- Roman numeral ---------- */
+    .roman {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        color: var(--color-gold);
+    }
+
+    /* ---------- CorkImage: real photo over a cork-texture fallback ---------- */
+    .cork {
+        position: relative;
+        overflow: hidden;
+        background-color: var(--color-cork-fill);
+        background-image:
+            radial-gradient(ellipse at 30% 20%, rgb(255 226 180 / 0.28), transparent 55%),
+            radial-gradient(ellipse at 80% 90%, rgb(0 0 0 / 0.45), transparent 60%),
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .72 0 0 0 0 .52 0 0 0 0 .32 0 0 0 1.6 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
+        background-size: cover, cover, 260px;
+        background-position: center;
+    }
+
+    .cork-dark {
+        background-color: var(--color-cork-fill-dark);
+    }
+
+    .cork-arch {
+        border-radius: 999px 999px 0 0;
+    }
+
+    .cork-circle {
+        border-radius: 50%;
+    }
+
+    .cork-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cork-label {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-size: 1.05rem;
+        letter-spacing: 0.06em;
+        white-space: nowrap;
+        color: var(--color-cork-label);
+        pointer-events: none;
+    }
+
+    /* ---------- RotatingBadge ---------- */
+    .badge {
+        position: relative;
+        width: 132px;
+        height: 132px;
+    }
+
+    .badge svg {
+        width: 100%;
+        height: 100%;
+        animation: badge-spin 22s linear infinite;
+    }
+
+    .badge text {
+        font-family: var(--font-sans);
+        font-size: 7.4px;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        fill: var(--color-gold);
+    }
+
+    .badge-center {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        color: var(--color-bone);
+    }
+
+    /* Brand emblem (lynx) tinted with any token colour via mask */
+    .emblem {
+        display: block;
+        background: currentColor;
+        -webkit-mask: var(--emblem) center / contain no-repeat;
+        mask: var(--emblem) center / contain no-repeat;
+    }
+
+    /* Official logo: width derives from --logo-h so it never collapses in grids or flex rows. */
+    .logo-mark {
+        display: block;
+        height: var(--logo-h, 40px);
+        width: calc(var(--logo-h, 40px) * 1400 / 463);
+        transition: height 0.6s, width 0.6s;
+    }
+
+    /* ---------- Wordmark ---------- */
+    .brand {
+        display: inline-block;
+        font-family: var(--font-display);
+        font-size: 2rem;
+        line-height: 1;
+        letter-spacing: 0.5em;
+        padding-left: 0.5em;
+        text-align: center;
+    }
+
+    .brand small {
+        display: block;
+        margin-top: 8px;
+        font-family: var(--font-sans);
+        font-size: 0.5rem;
+        letter-spacing: 0.62em;
+        color: var(--color-gold);
+    }
+
+    /* ---------- VideoEmbed (lite YouTube) ---------- */
+    .video-veil {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(20deg, var(--color-veil) 0%, transparent 45%);
+        transition: opacity 0.8s var(--ease-soft);
+    }
+
+    .video-embed:hover .video-veil {
+        opacity: 0.6;
+    }
+
+    /* Play control sits in the lower-left corner so the poster's logo stays clear. */
+    .video-play {
+        position: absolute;
+        left: clamp(20px, 3vw, 44px);
+        bottom: clamp(20px, 3vw, 44px);
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: var(--color-bone);
+        cursor: pointer;
+    }
+
+    .video-play-icon {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: clamp(58px, 6vw, 76px);
+        height: clamp(58px, 6vw, 76px);
+        border-radius: 50%;
+        background: var(--color-gold);
+        color: var(--color-onyx);
+        transition: background-color 0.5s var(--ease-soft), transform 0.5s var(--ease-soft);
+    }
+
+    .video-play-icon svg {
+        margin-left: 3px;
+    }
+
+    .video-play-label {
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        text-shadow: 0 1px 12px var(--color-onyx);
+    }
+
+    .video-play:hover .video-play-icon,
+    .video-play:focus-visible .video-play-icon {
+        background: var(--color-bone);
+        transform: scale(1.06);
+    }
+
+    /* Soft pulsing ring around the play button. */
+    .video-play-ring {
+        position: absolute;
+        inset: -14px;
+        border: 1px solid var(--color-line-strong);
+        border-radius: 50%;
+        animation: video-pulse 2.6s var(--ease-soft) infinite;
+    }
+
+    .video-embed.is-playing .video-play,
+    .video-embed.is-playing .video-veil {
+        display: none;
+    }
+
+    @keyframes video-pulse {
+        0% { transform: scale(0.9); opacity: 1; }
+        100% { transform: scale(1.35); opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .video-play-ring {
+            animation: none;
+        }
+    }
+
+    /* ---------- Marquee: a quiet uppercase ticker between two hairlines ---------- */
+    .marquee {
+        overflow: hidden;
+        padding: 20px 0;
+        background: var(--color-onyx);
+        border-block: 1px solid var(--color-line-faint);
+        color: var(--color-mute-light);
+    }
+
+    .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee var(--marquee-duration, 38s) linear infinite;
+    }
+
+    .marquee:hover .marquee-track {
+        animation-play-state: paused;
+    }
+
+    .marquee-list {
+        display: flex;
+        flex: none;
+    }
+
+    .marquee-list li {
+        display: flex;
+        align-items: center;
+        gap: 56px;
+        padding-right: 56px;
+        font-family: var(--font-sans);
+        font-size: 0.64rem;
+        font-weight: 500;
+        letter-spacing: 0.36em;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    /* Tiny gold diamond between the words. */
+    .marquee-list li::after {
+        content: '';
+        width: 4px;
+        height: 4px;
+        rotate: 45deg;
+        background: var(--color-gold);
+        opacity: 0.7;
+    }
+
+    @keyframes marquee {
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .marquee-track {
+            animation: none;
+        }
+    }
+
+    @keyframes badge-spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

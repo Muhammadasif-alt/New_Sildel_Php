@@ -1,0 +1,257 @@
+/*
+   ui/field (floating label input/textarea), EnquiryForm panel, NewsletterForm, Toaster.
+   Field colours are variables so a parent can re-theme them (see .enquiry-panel).
+*/
+@layer components {
+    /* ---------- Floating label field ---------- */
+    .field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .field-control {
+        width: 100%;
+        padding: 14px 0 10px;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid var(--field-line, var(--color-field));
+        border-radius: 0;
+        outline: none;
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--field-text, var(--color-bone));
+    }
+
+    textarea.field-control {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    .field-label {
+        position: absolute;
+        left: 0;
+        top: 14px;
+        font-size: 0.66rem;
+        line-height: 1.6;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--field-label, var(--color-mute-light));
+        pointer-events: none;
+        transition: top 0.4s var(--ease-soft), font-size 0.4s var(--ease-soft), color 0.4s var(--ease-soft);
+    }
+
+    .field-control:focus + .field-label,
+    .field-control:not(:placeholder-shown) + .field-label {
+        top: -14px;
+        font-size: 0.56rem;
+        color: var(--field-accent, var(--color-gold));
+    }
+
+    /* Gold underline grows from the left on focus. */
+    .field-line {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        background: var(--field-accent, var(--color-gold));
+        transition: width 0.7s var(--ease-mask);
+        pointer-events: none;
+    }
+
+    .field:focus-within .field-line {
+        width: 100%;
+    }
+
+    .field-control:focus-visible {
+        outline: none;
+    }
+
+    .field.has-error .field-control {
+        border-bottom-color: var(--field-accent, var(--color-gold));
+    }
+
+    .field-error {
+        margin-top: 8px;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        color: var(--field-accent, var(--color-gold));
+    }
+
+    /* Honeypot: off-screen, not display:none (some bots skip hidden fields). */
+    .hp-field {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    /* ---------- Enquiry form panel ---------- */
+    /* Light paper card with ink fields (used on the sage atelier section). */
+    .enquiry-panel {
+        --field-text: var(--color-ink);
+        --field-line: var(--color-line-light);
+        --field-label: var(--color-ink-soft);
+        --field-accent: var(--color-bronze-ink);
+        position: relative;
+        background: var(--color-paper);
+        box-shadow: 0 40px 80px -40px var(--color-shadow);
+    }
+
+    .enquiry-panel::before {
+        content: '';
+        position: absolute;
+        inset: 12px;
+        border: 1px solid var(--color-linen);
+        pointer-events: none;
+    }
+
+    .enquiry-panel .field-control:-webkit-autofill {
+        -webkit-text-fill-color: var(--color-ink);
+        box-shadow: inset 0 0 0 100px var(--color-paper);
+    }
+
+    /* ---------- Newsletter ---------- */
+    .newsletter-input {
+        flex: 1;
+        min-width: 0;
+        padding: 18px 0;
+        background: none;
+        border: 0;
+        outline: none;
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        color: var(--color-bone);
+    }
+
+    .newsletter-input::placeholder {
+        color: var(--color-mute);
+    }
+
+    .newsletter-button {
+        padding-left: 24px;
+        background: none;
+        border: 0;
+        font-family: var(--font-sans);
+        font-size: 0.66rem;
+        font-weight: 500;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+        cursor: pointer;
+        transition: color 0.4s;
+    }
+
+    .newsletter-button:hover,
+    .newsletter-button:focus-visible {
+        color: var(--color-bone);
+    }
+
+    /* ---------- Floating WhatsApp button ---------- */
+    .whatsapp-btn {
+        position: fixed;
+        right: var(--gutter);
+        bottom: var(--gutter);
+        z-index: 9990;
+        display: grid;
+        place-items: center;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: var(--color-whatsapp);
+        color: var(--color-snow);
+        box-shadow: 0 14px 30px -12px rgb(0 0 0 / 0.6), 0 0 0 0 rgb(37 211 102 / 0.45);
+        transition: transform 0.4s var(--ease-soft), background-color 0.4s var(--ease-soft);
+        animation: whatsapp-pulse 3.2s var(--ease-soft) infinite;
+    }
+
+    .whatsapp-btn:hover,
+    .whatsapp-btn:focus-visible {
+        background: var(--color-whatsapp-deep);
+        transform: translateY(-3px) scale(1.04);
+    }
+
+    @media (min-width: 37.5rem) {
+        .whatsapp-btn {
+            width: 62px;
+            height: 62px;
+        }
+    }
+
+    @keyframes whatsapp-pulse {
+        0%, 70%, 100% { box-shadow: 0 14px 30px -12px rgb(0 0 0 / 0.6), 0 0 0 0 rgb(37 211 102 / 0.45); }
+        35% { box-shadow: 0 14px 30px -12px rgb(0 0 0 / 0.6), 0 0 0 12px rgb(37 211 102 / 0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .whatsapp-btn {
+            animation: none;
+            transition: none;
+        }
+    }
+
+    /* ---------- Toaster ---------- */
+    /* Sits above the WhatsApp button so the two never overlap. */
+    .toaster {
+        position: fixed;
+        right: var(--gutter);
+        bottom: calc(var(--gutter) + 76px);
+        z-index: 10002;
+        display: grid;
+        gap: 12px;
+        width: min(400px, 100% - var(--gutter) * 2);
+        pointer-events: none;
+    }
+
+    .toast {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: start;
+        gap: 14px;
+        padding: 20px 20px 20px 22px;
+        background: var(--color-walnut);
+        border: 1px solid var(--color-line);
+        color: var(--color-bone);
+        font-size: 0.9rem;
+        line-height: 1.55;
+        box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.6);
+        pointer-events: auto;
+        transform: translateY(16px);
+        opacity: 0;
+        transition: transform 0.6s var(--ease-soft), opacity 0.6s var(--ease-soft);
+    }
+
+    .toast.is-visible {
+        transform: none;
+        opacity: 1;
+    }
+
+    .toast-mark {
+        width: 8px;
+        height: 8px;
+        margin-top: 8px;
+        border-radius: 50%;
+        background: var(--color-gold);
+    }
+
+    .toast-error .toast-mark {
+        background: var(--color-bronze);
+    }
+
+    .toast-close {
+        padding: 0 2px;
+        background: none;
+        border: 0;
+        color: var(--color-mute-light);
+        font-size: 1.1rem;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .toast-close:hover {
+        color: var(--color-gold);
+    }
+}

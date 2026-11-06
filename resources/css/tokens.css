@@ -1,0 +1,107 @@
+/* =============================================================
+   SILDEL | DESIGN TOKENS
+   The only place colours, fonts, easings and breakpoints are defined.
+   Each token becomes a CSS variable (var(--color-gold)) and a Tailwind
+   utility (bg-gold, text-mute-light, border-line, font-display, ease-mask...).
+   Components must never hardcode hex values.
+   ============================================================= */
+
+@theme {
+    /* Reset Tailwind's default palette so only the Maison palette exists. */
+    --color-*: initial;
+
+    /* Darks: one deep, near-neutral family so every dark section reads as a single gallery space */
+    --color-onyx: #0b0a09;          /* deepest base */
+    --color-truffle: #14120f;       /* dark surface */
+    --color-walnut: #1d1a17;        /* raised dark surface */
+    --color-ember: #1b1612;         /* faint warm glow behind the hero */
+    --color-velvet: #000000;        /* gallery black: matches the studio product photography */
+    --color-glow: rgb(201 180 140 / 0.14);  /* warm spotlight behind the pieces */
+
+    /* Lights */
+    --color-snow: #ffffff;          /* white studio stages (treasures) */
+    --color-bone: #ede7dc;          /* light base */
+    --color-parchment: #e2dacc;     /* light surface */
+
+    /* Accents: champagne rather than yellow gold */
+    --color-gold: #c9b48c;          /* primary accent */
+    --color-bronze: #967850;        /* deep accent / hover */
+    --color-bronze-ink: #765631;    /* bronze for small text on light surfaces (WCAG AA) */
+    --color-cork: #b4885e;          /* material tone */
+
+    /* WhatsApp brand green (floating chat button only) */
+    --color-whatsapp: #25d366;
+    --color-whatsapp-deep: #1ebe5d;
+
+    /* Sustainability accent (used sparingly: numbers band) */
+    --color-sage: #4a5643;
+    --color-sage-ink: #dcd5c6;                     /* labels on sage */
+    --color-sage-line: rgb(244 238 228 / 0.18);
+
+    /* Light cards */
+    --color-paper: #faf7f2;                        /* card surface on bone */
+    --color-linen: #e8e0d3;                        /* card border on bone */
+    --color-shadow: rgb(42 34 27 / 0.35);
+
+    /* Neutrals */
+    --color-mute: #857a6c;
+    --color-mute-light: #a89e8f;
+    --color-ink: #171411;           /* text on light surfaces */
+    --color-ink-soft: #5d5247;      /* body copy on light surfaces */
+
+    /* Lines and overlays */
+    --color-line: rgb(201 180 140 / 0.2);
+    --color-line-faint: rgb(201 180 140 / 0.09);
+    --color-line-strong: rgb(201 180 140 / 0.42);
+    --color-line-light: rgb(150 120 80 / 0.28);  /* hairlines on light surfaces */
+    --color-field: rgb(237 231 220 / 0.2);       /* form field underline */
+    --color-veil: rgb(11 10 9 / 0.55);           /* image overlays */
+    --color-glass: rgb(11 10 9 / 0.78);          /* frosted header */
+
+    /* Cork texture fallback (CorkImage) */
+    --color-cork-fill: #7e5a38;
+    --color-cork-fill-dark: #3a2a1c;
+    --color-cork-label: rgb(237 231 220 / 0.55);
+
+    /* Typography */
+    --font-display: 'Italiana', serif;                                  /* wordmark, large numbers */
+    --font-serif: 'Cormorant Garamond', 'Garamond', Georgia, serif;     /* headings */
+    --font-sans: 'Manrope', 'Helvetica Neue', Arial, sans-serif;        /* body, UI */
+
+    --text-h2: clamp(2.5rem, 5.2vw, 4.8rem);
+    --text-h2--line-height: 1.08;
+    --text-h2--letter-spacing: 0;
+    --text-display: clamp(4rem, 14vw, 13rem);
+    --text-page: clamp(2.9rem, 6.6vw, 6.2rem);
+    --text-page--line-height: 1.02;
+    --text-statement: clamp(2.1rem, 4.2vw, 3.9rem);
+    --text-statement--line-height: 1.28;
+
+    /* Motion */
+    --ease-mask: cubic-bezier(0.77, 0, 0.18, 1);    /* masks, buttons */
+    --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1); /* fades */
+
+    /* Layout: breakpoints follow the approved design (600 / 900 / 1100 / 1440) */
+    --breakpoint-sm: 37.5rem;
+    --breakpoint-md: 56.25rem;
+    --breakpoint-lg: 68.75rem;
+    --breakpoint-xl: 90rem;
+    --container-site: 85rem; /* 1360px */
+}
+
+:root {
+    --gutter: 16px;
+    --header-h: 80px;
+}
+
+@media (min-width: 37.5rem) {
+    :root {
+        --gutter: 28px;
+    }
+}
+
+@media (min-width: 68.75rem) {
+    :root {
+        --header-h: 96px;
+    }
+}

@@ -1,0 +1,174 @@
+/* Site chrome: Preloader, CustomCursor, GrainOverlay */
+@layer components {
+    /* ---------- Preloader ---------- */
+    .loader {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: grid;
+        place-items: center;
+        background: var(--color-onyx);
+        transition: transform 1.3s var(--ease-mask) 0.2s;
+    }
+
+    .loader.is-done {
+        transform: translateY(-100%);
+    }
+
+    /* Skipped for the rest of the session, for reduced motion, and without JS. */
+    .no-preloader .loader,
+    html:not(.js) .loader {
+        display: none;
+    }
+
+    .js.is-loading body {
+        overflow: hidden;
+    }
+
+    .loader-inner {
+        display: grid;
+        justify-items: center;
+        gap: 28px;
+    }
+
+    .loader-emblem {
+        width: 54px;
+        height: 54px;
+        color: var(--color-bone);
+        opacity: 0;
+        animation: loader-fade 1.2s var(--ease-soft) 0.5s forwards;
+    }
+
+    .loader-word {
+        display: flex;
+        overflow: hidden;
+        padding-left: 0.38em;
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 10vw, 7rem);
+        line-height: 1.1;
+        letter-spacing: 0.38em;
+        color: var(--color-bone);
+    }
+
+    .loader-word span {
+        display: inline-block;
+        transform: translateY(110%);
+        animation: loader-up 1s var(--ease-mask) forwards;
+        animation-delay: calc(var(--i) * 0.07s);
+    }
+
+    .loader-bar {
+        position: absolute;
+        bottom: 18%;
+        left: 50%;
+        width: 160px;
+        height: 1px;
+        overflow: hidden;
+        background: var(--color-line);
+        transform: translateX(-50%);
+    }
+
+    .loader-bar::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--color-gold);
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: loader-bar 1.6s var(--ease-mask) forwards;
+    }
+
+    @keyframes loader-up {
+        to {
+            transform: none;
+        }
+    }
+
+    @keyframes loader-bar {
+        to {
+            transform: scaleX(1);
+        }
+    }
+
+    @keyframes loader-fade {
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* ---------- Custom cursor (only when enabled by JS on fine pointers) ---------- */
+    .cursor,
+    .cursor-label {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        display: none;
+        will-change: transform;
+    }
+
+    .has-cursor .cursor,
+    .has-cursor .cursor-label {
+        display: block;
+    }
+
+    .cursor {
+        z-index: 9999;
+        width: 8px;
+        height: 8px;
+        margin: -4px 0 0 -4px;
+        border-radius: 50%;
+        background: var(--color-gold);
+        mix-blend-mode: difference;
+        transition: width 0.4s var(--ease-soft), height 0.4s var(--ease-soft), margin 0.4s var(--ease-soft), background-color 0.4s;
+    }
+
+    .cursor.is-big {
+        width: 86px;
+        height: 86px;
+        margin: -43px 0 0 -43px;
+        background: var(--color-bone);
+    }
+
+    .cursor-label {
+        z-index: 10000;
+        translate: -50% -50%;
+        font-size: 0.58rem;
+        font-weight: 500;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--color-onyx);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .cursor-label.is-visible {
+        opacity: 1;
+    }
+
+    /* ---------- Film grain ---------- */
+    .grain {
+        position: fixed;
+        inset: -50%;
+        z-index: 9998;
+        pointer-events: none;
+        opacity: 0.04;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+        animation: grain 1.2s steps(6) infinite;
+    }
+
+    @keyframes grain {
+        0% { transform: translate(0, 0); }
+        20% { transform: translate(-3%, 2%); }
+        40% { transform: translate(2%, -3%); }
+        60% { transform: translate(-2%, -1%); }
+        80% { transform: translate(3%, 3%); }
+        100% { transform: translate(0, 0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .grain {
+            animation: none;
+        }
+    }
+}
