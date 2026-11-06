@@ -1,0 +1,93 @@
+/* Self-hosted Google Fonts (copied to /public/fonts by `npm run fonts`). */
+@font-face { font-family: 'Italiana'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/italiana-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/cormorant-garamond-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/cormorant-garamond-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 500; font-display: swap; src: url('/fonts/cormorant-garamond-latin-500-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/cormorant-garamond-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 300; font-display: swap; src: url('/fonts/manrope-latin-300-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/manrope-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/manrope-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/manrope-latin-600-normal.woff2') format('woff2'); }
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--header-h);
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        font-weight: 400;
+        line-height: 1.75;
+        background: var(--color-onyx);
+        color: var(--color-bone);
+        overflow-x: clip;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        /* Cormorant defaults to old-style figures (911 reads as 9II); use lining figures everywhere. */
+        font-variant-numeric: lining-nums;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: var(--font-serif);
+        font-weight: 500;
+        line-height: 1.08;
+        letter-spacing: 0;
+    }
+
+    em {
+        font-style: italic;
+        font-weight: 500;
+        color: var(--color-gold);
+    }
+
+    ::selection {
+        background: var(--color-gold);
+        color: var(--color-onyx);
+    }
+
+    :focus-visible {
+        outline: 1px solid var(--color-gold);
+        outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+}
+
+@layer components {
+    /* SectionContainer: max 1360px with responsive gutters */
+    .site-container {
+        width: min(var(--container-site), 100% - var(--gutter) * 2);
+        margin-inline: auto;
+    }
+
+    /* Small uppercase UI label used across footer, cards, numbers */
+    .caps {
+        font-size: 0.62rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+    }
+
+    .skip-link {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 10001;
+        padding: 12px 20px;
+        background: var(--color-gold);
+        color: var(--color-onyx);
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        transform: translateY(-200%);
+    }
+
+    .skip-link:focus {
+        transform: none;
+    }
+}

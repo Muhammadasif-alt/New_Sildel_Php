@@ -1,0 +1,241 @@
+/* Header, MobileMenu (sheet), Footer */
+@layer components {
+    /* ---------- Header ---------- */
+    /* Frosted dark bar: melts into the hero at the top, floats over everything once the page scrolls. */
+    .site-header {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 100;
+        padding: 22px 0;
+        background: var(--color-glass);
+        border-bottom: 1px solid var(--color-line-faint);
+        color: var(--color-bone);
+        backdrop-filter: blur(18px) saturate(140%);
+        transition: padding 0.6s, border-color 0.6s, box-shadow 0.6s;
+    }
+
+    .site-header.is-solid {
+        padding: 14px 0;
+        border-bottom-color: var(--color-line);
+        box-shadow: 0 24px 60px -36px rgb(0 0 0 / 0.9);
+    }
+
+    /* Logo shrinks with the header once it turns solid. */
+    .site-logo {
+        --logo-h: 40px;
+    }
+
+    .site-header.is-solid .site-logo {
+        --logo-h: 36px;
+    }
+
+    @media (min-width: 68.75rem) {
+        .site-logo {
+            --logo-h: 52px;
+        }
+
+        .site-header.is-solid .site-logo {
+            --logo-h: 44px;
+        }
+    }
+
+    .nav-link {
+        position: relative;
+        padding: 6px 0;
+        font-size: 0.66rem;
+        font-weight: 500;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--color-parchment);
+        opacity: 0.82;
+        transition: color 0.4s, opacity 0.4s;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible,
+    .nav-link[aria-current] {
+        color: var(--color-gold);
+        opacity: 1;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: var(--color-gold);
+        transition: left 0.5s var(--ease-mask), width 0.5s var(--ease-mask);
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after,
+    .nav-link[aria-current]::after {
+        left: 0;
+        width: 100%;
+    }
+
+    .lang {
+        font-size: 0.66rem;
+        letter-spacing: 0.24em;
+        color: var(--lang-color, var(--color-mute-light));
+    }
+
+    .lang [aria-current] {
+        color: var(--lang-active, var(--color-gold));
+        font-weight: 500;
+    }
+
+    .lang a:hover {
+        color: var(--lang-hover, var(--color-bone));
+    }
+
+    /* Inside the dark mobile sheet */
+    .sheet .lang {
+        --lang-color: var(--color-mute-light);
+        --lang-active: var(--color-gold);
+        --lang-hover: var(--color-bone);
+    }
+
+    /* Burger morphs into a cross when the sheet is open. */
+    .burger {
+        position: relative;
+        width: 34px;
+        height: 34px;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        color: var(--color-bone);
+    }
+
+    .burger span {
+        position: absolute;
+        right: 0;
+        height: 1px;
+        background: currentColor;
+        transition: transform 0.5s var(--ease-mask), width 0.5s var(--ease-mask), top 0.5s var(--ease-mask);
+    }
+
+    .burger span:first-child {
+        top: 10px;
+        width: 100%;
+    }
+
+    .burger span:last-child {
+        top: 24px;
+        width: 60%;
+    }
+
+    .burger[aria-expanded='true'] span:first-child {
+        top: 17px;
+        transform: rotate(45deg);
+    }
+
+    .burger[aria-expanded='true'] span:last-child {
+        top: 17px;
+        width: 100%;
+        transform: rotate(-45deg);
+    }
+
+    /* ---------- Sheet (full-screen mobile menu) ---------- */
+    .sheet {
+        position: fixed;
+        inset: 0;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 32px;
+        background: var(--color-truffle);
+        clip-path: inset(0 0 100% 0);
+        visibility: hidden;
+        transition: clip-path 1s var(--ease-mask), visibility 0s linear 1s;
+    }
+
+    .sheet.is-open {
+        clip-path: inset(0 0 0 0);
+        visibility: visible;
+        transition: clip-path 1s var(--ease-mask), visibility 0s;
+    }
+
+    .sheet-link {
+        display: inline-block;
+        font-family: var(--font-serif);
+        font-size: clamp(2.4rem, 9.5vw, 2.9rem);
+        font-weight: 500;
+        line-height: 1.5;
+        transition: color 0.4s;
+    }
+
+    .sheet-link:hover,
+    .sheet-link:focus-visible,
+    .sheet-link[aria-current] {
+        color: var(--color-gold);
+        font-style: italic;
+    }
+
+    .sheet-item {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.8s var(--ease-soft), transform 0.8s var(--ease-soft);
+    }
+
+    .sheet.is-open .sheet-item {
+        opacity: 1;
+        transform: none;
+        transition-delay: calc(0.35s + var(--i) * 0.07s);
+    }
+
+    /* ---------- Footer ---------- */
+    .footer-heading {
+        margin-bottom: 26px;
+        font-family: var(--font-sans);
+        font-size: 0.6rem;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.36em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+    }
+
+    .social-link {
+        display: grid;
+        place-items: center;
+        width: 46px;
+        height: 46px;
+        border: 1px solid var(--color-line);
+        border-radius: 50%;
+        font-size: 0.6rem;
+        letter-spacing: 0.14em;
+        color: var(--color-parchment);
+        transition: background-color 0.5s var(--ease-soft), border-color 0.5s var(--ease-soft), color 0.5s var(--ease-soft);
+    }
+
+    .social-link:hover,
+    .social-link:focus-visible {
+        background: var(--color-gold);
+        border-color: var(--color-gold);
+        color: var(--color-onyx);
+    }
+
+    .giant-wordmark {
+        margin-bottom: -0.12em;
+        font-family: var(--font-display);
+        font-size: clamp(5rem, 23vw, 22rem);
+        line-height: 0.8;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--color-line);
+        user-select: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .sheet,
+        .sheet.is-open,
+        .sheet-item {
+            transition: none;
+        }
+    }
+}

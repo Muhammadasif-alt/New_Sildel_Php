@@ -1,0 +1,71 @@
+{
+    "about": "Product photography for /treasures. Each product gets card.webp (listing), NN.webp (gallery) and tNN.webp (thumbnails) on a white stage. 'live' picks files by number from source-assets/live-site/products/<folder> (photos downloaded from the product pages on sildel.pt); 'files' are paths under source-assets/. 'details' are close-ups, cropped to fill the frame.",
+    "sourceRoot": "source-assets",
+    "outputRoot": "public/images/sildel/treasures",
+    "products": {
+        "abyss": { "live": "abyss", "gallery": [1, 2, 3, 6, 8] },
+        "alexis": { "live": "alexis", "gallery": [1, 2, 4], "details": [3, 6] },
+        "belize": { "live": "belize", "gallery": [1, 3, 2, 5], "details": [6] },
+        "bond": { "live": "bond", "gallery": [1, 3, 6], "details": [4, 5] },
+        "bonfire": { "live": "bonfire", "gallery": [1, 2, 3, 4] },
+        "carre-dor": { "live": "carre-dor", "gallery": [1, 2, 8, 5], "details": [4] },
+        "crescent": { "files": [
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/CRESCENT ' S/CRESCENT 1330x300mm/Fundo Branco/Oval_fundo branco_acesa.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/CRESCENT ' S/CRESCENT 1330x300mm/Fundo Branco/Horizontal Esticado_FB_Acessa.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/CRESCENT ' S/CRESCENT 1330x300mm/Fundo Branco/Vertical_fundo branco_acessa.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/CRESCENT ' S/CRESCENT 1330x300mm/Fundo Branco/Oval_fundo branco_Apagada.jpg"
+        ] },
+        "eclipse-copper": { "live": "eclipse-copper", "gallery": [1, 2, 3] },
+        "eclipse-silver": { "live": "eclipse-silver", "gallery": [1, 2, 3] },
+        "equilibrium": { "live": "equilibrium", "gallery": [2, 4, 5] },
+        "fireflies": { "files": [
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/FIREFLIES/Fundo_BRANCO/14_01_01_FB.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/FIREFLIES/Fundo_BRANCO/14_01_02_FB.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/FIREFLIES/Fundo_BRANCO/14_01_04_FB.jpg"
+        ] },
+        "gibraltar": { "live": "gibraltar", "gallery": [1, 2, 4, 6] },
+        "granada": { "live": "granada", "gallery": [1, 2, 3, 4] },
+        "halley": { "live": "halley", "gallery": [1, 2, 3, 4] },
+        "horizon": { "live": "horizon", "gallery": [1, 3, 5, 6, 4] },
+        "hot-spring": { "live": "hot-spring-v2", "gallery": [1, 2, 3] },
+        "island": { "live": "island", "gallery": [1, 3, 4, 5] },
+        "leaf-golden": { "live": "leaf-golden-side", "gallery": [1, 5] },
+        "leaf-brown": { "files": [
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/LEAF COLLECTION/Fundo_BRANCO/Peca 02/_MGL1367.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/LEAF COLLECTION/Fundo_BRANCO/Peca 02/_MGL1373.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/LEAF COLLECTION/Fundo_BRANCO/Peca 02/_MGL1377.jpg"
+        ] },
+        "marlin": { "live": "marlin", "gallery": [1, 2, 3, 5], "details": [4] },
+        "olympia": { "live": "olympia", "gallery": [1, 2, 3] },
+        "oscar": { "live": "oscar", "gallery": [1, 2, 3, 4] },
+        "pearl": { "live": "pearl", "gallery": [1, 3, 2, 6], "details": [5, 4] },
+        "shale": { "files": [
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_flower/Fundo_BRANCO/Candeeiro 01/Fundo Branco/08_01_01_FB_acessa.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_flower/Fundo_BRANCO/Candeeiro 01/Fundo Branco/08_01_03_FB_acessa.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_flower/Fundo_BRANCO/Candeeiro 01/Fundo Branco/08_01_02_FB_acessa.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_flower/Fundo_BRANCO/Candeeiro 01/Fundo Branco/08_01_01_FB_apagada.jpg"
+        ] },
+        "shale-belly-red": { "files": [
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_red/Fundo_BRANCO/Peca 01/_MGL1179.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_red/Fundo_BRANCO/Peca 01/_MGL1183.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_red/Fundo_BRANCO/Peca 01/05_01_03_FB_Acessa.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_red/Fundo_BRANCO/Peca 01/05_01_05_FB_Acessa.jpg"
+        ] },
+        "shale-belly-silver": { "files": [
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_silver/Fundo_BRANCO/Peca 01/_MGL1301.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_silver/Fundo_BRANCO/Peca 01/_MGL1307.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_silver/Fundo_BRANCO/Peca 01/07_01_03_FB_acessa.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_silver/Fundo_BRANCO/Peca 01/07_01_05_FB_acessa.jpg"
+        ] },
+        "shale-coast": { "files": [
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_grey/Fundo_BRANCO/Peca 01/_MGL1242.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_grey/Fundo_BRANCO/Peca 01/_MGL1247.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_grey/Fundo_BRANCO/Peca 01/06_01_03_FB_acessa.jpg",
+            "wetransfer_fotos-produto_2026-05-25_1128/FOTOS PRODUTO/SHALE COLLECTION_grey/Fundo_BRANCO/Peca 01/_MGL1264.jpg"
+        ] },
+        "shell": { "live": "shell", "gallery": [1, 3, 4, 6] },
+        "side-by-side": { "live": "side-by-side", "gallery": [1, 3], "details": [2] },
+        "vitaqua": { "live": "vitaqua", "gallery": [1, 2, 4] },
+        "vitavele": { "live": "vitavele", "gallery": [1, 2, 3] }
+    }
+}
