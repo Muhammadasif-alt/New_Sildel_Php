@@ -28,7 +28,7 @@
             @foreach ($products as $product)
                 <li class="treasure-grid-item" data-category="{{ $product->category }}" @if ($active && $product->category !== $active) hidden @endif>
                     <x-common.reveal :delay="($loop->index % 3) * 0.08" :y="24">
-                        <x-sections.treasures.treasure-card :product="$product" tone="dark" />
+                        <x-sections.home.product-card :product="$product" :index="$loop->index" />
                     </x-common.reveal>
                 </li>
             @endforeach

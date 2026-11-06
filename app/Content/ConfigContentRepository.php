@@ -89,9 +89,11 @@ class ConfigContentRepository implements ContentRepository
         }
 
         $categories = $this->categories($locale);
-        $care = config('treasures.care');
+        $care = $this->translated(config('treasures.care'), config("treasures.translations.$locale.care", []));
+        $copy = config("treasures.translations.$locale.products", []);
 
-        return $this->products[$locale] = array_map(function (array $item) use ($locale, $categories, $care) {
+        return $this->products[$locale] = array_map(function (array $item) use ($locale, $categories, $care, $copy) {
+            $item = [...$item, ...($copy[$item['slug']] ?? [])];
             $folder = 'images/sildel/treasures/'.$item['slug'];
             $dark = 'images/sildel/products/'.$item['slug'].'.webp';
 
@@ -100,7 +102,8 @@ class ConfigContentRepository implements ContentRepository
                 'url' => LocalizedUrl::route('treasures.show', ['slug' => $item['slug']], $locale),
                 'category_label' => $categories[$item['category']] ?? '',
                 'image' => $folder.'/card.webp',
-                'dark_image' => ! empty($item['featured']) && PublicImage::exists($dark) ? $dark : null,
+                // Black studio card (images/sildel/products/{slug}.webp) whenever one exists; otherwise the white card.
+                'dark_image' => PublicImage::exists($dark) ? $dark : null,
                 'gallery' => $this->gallery($folder),
                 'care' => array_values(array_filter(array_map(fn (string $key) => $care[$key] ?? null, $item['care'] ?? []))),
             ]);
@@ -144,7 +147,7 @@ class ConfigContentRepository implements ContentRepository
     public function articles(string $locale): array
     {
         return array_map(fn (array $item) => Article::fromArray([
-            ...$item,
+            ...$this->articleCopy($item, $locale),
             'url' => LocalizedUrl::route('journal.show', ['slug' => $item['slug']], $locale),
         ]), config('journal.articles'));
     }
@@ -154,7 +157,7 @@ class ConfigContentRepository implements ContentRepository
         foreach (config('journal.articles') as $item) {
             if ($item['slug'] === $slug) {
                 return Article::fromArray([
-                    ...$item,
+                    ...$this->articleCopy($item, $locale),
                     'url' => LocalizedUrl::route('journal.show', ['slug' => $slug], $locale),
                     'body' => $this->markdown("journal/$slug.md", $locale),
                 ]);
@@ -174,6 +177,36 @@ class ConfigContentRepository implements ContentRepository
         }
 
         return [...$pages[$slug], 'html' => $html];
+    }
+
+    /**
+     * An article with its translated title, excerpt, topic and alt text for the locale
+     * (config/journal.php 'translations'); untranslated fields stay in English.
+     *
+     * @param  array<string, mixed>  $item
+     * @return array<string, mixed>
+     */
+    protected function articleCopy(array $item, string $locale): array
+    {
+        return [...$item, ...config("journal.translations.$locale.{$item['slug']}", [])];
+    }
+
+    /**
+     * Overlays translated entries (by key) on a keyed list, field by field.
+     *
+     * @param  array<string, array<string, mixed>>  $items
+     * @param  array<string, array<string, mixed>>  $copy
+     * @return array<string, array<string, mixed>>
+     */
+    protected function translated(array $items, array $copy): array
+    {
+        foreach ($copy as $key => $fields) {
+            if (isset($items[$key])) {
+                $items[$key] = [...$items[$key], ...$fields];
+            }
+        }
+
+        return $items;
     }
 
     /** @return array<string, mixed> */

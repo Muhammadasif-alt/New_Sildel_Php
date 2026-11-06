@@ -151,6 +151,7 @@ return [
             'slug' => 'hot-spring',
             'name' => 'Hot Spring',
             'category' => 'lighting',
+            'tag' => 'Different formats',
             'material' => 'Authentic cork and metal',
             'featured' => true,
             'description' => [
@@ -278,7 +279,7 @@ return [
             'slug' => 'crescent',
             'name' => 'Crescent',
             'category' => 'lighting',
-            'tag' => 'Signature',
+            'tag' => 'Different sizes',
             'material' => 'Authentic cork',
             'featured' => true,
             'description' => [
@@ -381,6 +382,7 @@ return [
             'name' => 'Shale',
             'category' => 'lighting',
             'family' => 'shale',
+            'exclusive' => true,
             'material' => 'Authentic cork',
             'description' => [
                 'Each layer of this piece tells a story of nature\'s quiet beauty, with a warm and inviting glow.',
@@ -444,6 +446,7 @@ return [
             'slug' => 'oscar',
             'name' => 'Óscar',
             'category' => 'sculptures',
+            'exclusive' => true,
             'material' => 'Authentic cork and white marble',
             'lead' => 'A tribute to the cork oak',
             'description' => [
@@ -594,6 +597,382 @@ return [
             'measures' => ['W 90 x D 5 x H 6 cm'],
             'weight' => '0.3 kg',
             'care' => ['cork', 'glass'],
+        ],
+    ],
+
+    /*
+    | Per-locale copy merged over the entries above (shallow: a field given here replaces the
+    | English one entirely). Wording follows the Portuguese product pages on sildel.pt.
+    */
+    'translations' => [
+        'pt' => [
+
+            'care' => [
+                'cork' => ['title' => 'Cortiça autêntica', 'lines' => [
+                    'A cortiça autêntica é resistente ao pó.',
+                    'Não deve preencher o interior da peça com líquidos.',
+                    'Em caso de derramamento de líquidos, deve-se usar um pano seco para absorver.',
+                    'Não é recomendável utilizar produtos com substâncias químicas.',
+                ]],
+                'cork_sheets' => ['title' => 'Cortiça autêntica', 'lines' => [
+                    'Recomenda-se prudência no manuseio das folhas de cortiça autêntica.',
+                    'Em caso de derramamento de líquidos, deve-se usar um pano seco para absorver.',
+                ]],
+                'cork_rings' => ['title' => 'Cortiça autêntica', 'lines' => [
+                    'Tenha prudência ao pendurar a peça devido à fragilidade dos anéis.',
+                    'Não é recomendável o uso de produtos com substâncias químicas.',
+                ]],
+                'carrara' => ['title' => 'Mármore de Carrara', 'lines' => [
+                    'Não deve deixar recipientes com líquidos sobre a superfície de mármore. Se se derramarem e não forem limpos de imediato, o mármore acaba por ficar manchado.',
+                    'Para a limpeza, utilize um pano humedecido com água.',
+                    'Use um pano de camurça após a limpeza para secar e polir o mármore simultaneamente.',
+                ]],
+                'marble' => ['title' => 'Mármore branco', 'lines' => [
+                    'Não deve deixar recipientes com líquidos sobre a superfície de mármore. Se se derramarem e não forem limpos de imediato, o mármore acaba por ficar manchado.',
+                    'Para a limpeza, utilize um pano humedecido com água.',
+                    'Use um pano de camurça após a limpeza para secar e polir o mármore simultaneamente.',
+                ]],
+                'glass' => ['title' => 'Vidro', 'lines' => [
+                    'Use produtos de limpeza adequados e um pano de microfibra.',
+                    'A utilização de produtos abrasivos pode danificar o vidro.',
+                    'Após secar com um pano macio, utilize um pedaço de jornal amassado para dar mais brilho ao vidro.',
+                ]],
+                'mirror' => ['title' => 'Espelho', 'lines' => [
+                    'O vidro é fácil de limpar e de manter.',
+                    'Evite mudanças bruscas de temperatura para prevenir fissuras.',
+                    'Em caso de derramamento de líquidos, limpe com um pano macio.',
+                    'Não é recomendável utilizar produtos de limpeza abrasivos nem químicos agressivos.',
+                ]],
+                'steel' => ['title' => 'Aço', 'lines' => [
+                    'O aço é durável e resistente à corrosão.',
+                    'Evite a exposição prolongada à humidade para prevenir o enferrujamento.',
+                    'Em caso de sujidade ou manchas, utilize um pano húmido para limpeza.',
+                    'Não é recomendável usar produtos de limpeza abrasivos ou lã de aço, pois podem riscar a superfície.',
+                ]],
+                'metal' => ['title' => 'Metal', 'lines' => [
+                    'Use água morna para limpar acabamentos metálicos.',
+                    'Limpe suavemente as superfícies metálicas com um pano macio e húmido.',
+                    'Seque completamente com um pano limpo e macio.',
+                    'Nunca use produtos de limpeza químicos abrasivos.',
+                    'Evite toalhas de papel ou esfregonas.',
+                ]],
+                'wood' => ['title' => 'Madeira maciça', 'lines' => [
+                    'A madeira maciça é durável e acrescenta um toque natural a qualquer espaço.',
+                    'Evite a exposição à luz solar direta e a temperaturas extremas para prevenir deformações.',
+                    'Não é recomendável utilizar produtos químicos agressivos ou produtos de limpeza abrasivos, pois podem danificar o acabamento.',
+                ]],
+            ],
+
+            'products' => [
+
+                'abyss' => [
+                    'material' => 'Cortiça autêntica e mármore de Carrara',
+                    'description' => [
+                        'A atração do Abyss transcende a mera arte, sendo um testemunho da dança ancestral entre a engenhosidade humana e o mundo natural.',
+                        'A sua génese reside no nobre sobreiro, onde cada colheita grava uma narrativa de simbiose e cuidado na própria casca.',
+                        'O Abyss, uma fusão sublime de forma e função, chama a ser mais do que apenas um mero adorno. Os seus contornos sinuosos evocam uma sensação de fluidez, convidando a imaginação a tecer histórias de propósito e possibilidade.',
+                    ],
+                    'measures' => ['L 38 x P 61 x A 31 cm', 'L 15” x P 24” x A 12,2” in'],
+                ],
+
+                'alexis' => [
+                    'material' => 'Cortiça autêntica e vidro',
+                    'description' => [
+                        'Alexis é uma joia do que acontece quando a cortiça e o vidro se fundem, incorporando uma técnica ancestral de amarração de palha de cortiça, visível através do vidro. Isso confere à peça um toque de intemporalidade.',
+                        'Possui uma base superior de cortiça (acima do nível do vidro) onde pode colocar tanto bebidas quentes quanto frias e alimentos. Esta mesa de café valoriza a sua singularidade, beleza e praticidade.',
+                    ],
+                    'measures' => ['L 123 x P 67 x A 41 cm', 'L 48,4” x P 26,3” x A 16,1” in'],
+                ],
+
+                'granada' => [
+                    'material' => 'Cortiça autêntica e madeira maciça',
+                    'description' => [
+                        'Nesta mesa de cortiça, a natureza funde-se com o quotidiano, transformando cada encontro, trabalho ou refeição numa expressão de arte boémia.',
+                        'Uma celebração da beleza bruta da natureza e da arte artesanal. A superfície da mesa, um mosaico intricado de dois tipos de cortiça autêntica, exibe uma rica tapeçaria de texturas e tons.',
+                        'Granada é mais do que uma mesa; é uma tela onde a elegância orgânica da cortiça se entrelaça com o ritmo do dia-a-dia.',
+                    ],
+                    'measures' => ['L 185 x P 100 x A 90 cm', 'L 72,8” x P 39,3” x A 35,4” in'],
+                ],
+
+                'hot-spring' => [
+                    'tag' => 'Diferentes formatos',
+                    'material' => 'Cortiça autêntica e metal',
+                    'description' => [
+                        'Hot Spring, com a sua forma única, é um testemunho de individualidade, transformando o mundano numa obra de arte luminosa. No seu brilho, torna-se não apenas uma fonte de luz, mas um farol de sofisticação e expressão artística, iluminando os espaços com graça e distinção incomparáveis.',
+                        'Hot Spring é a epítome da arte refinada. A base do candeeiro, um sólido prisma de cortiça autêntica, ancora o seu corpo metálico esbelto e imponente. No seu ápice, uma estrutura de cortiça irregular e audaciosa abriga a luz, emitindo um brilho que evoca a beleza serena das fontes termais, daí o nome Hot Spring.',
+                    ],
+                    'measures' => ['L 27 x P 28 x A 54 cm', 'L 10,6” x P 11” x A 21,2” in'],
+                    'includes' => 'Lâmpada E27 não incluída',
+                    'variants' => 'Disponível em diferentes formatos',
+                ],
+
+                'bond' => [
+                    'material' => 'Cortiça autêntica e aço',
+                    'description' => [
+                        'Bond exibe singularidade na sua forma geométrica. Esta peça é dividida em duas partes independentes com espessuras distintas, conferindo-lhe uma notável versatilidade.',
+                        'A peça pode ser exibida em várias configurações, oferecendo múltiplas oportunidades para personalizá-la de acordo com as preferências individuais.',
+                    ],
+                    'measures' => ['L 53 x P 64 x A 40 cm'],
+                ],
+
+                'fireflies' => [
+                    'material' => 'Cortiça autêntica com suporte em inox',
+                    'description' => [
+                        'Um feixe de luz, tecendo sonhos e sombras, dando vida a cantos esquecidos com uma aura de mistério.',
+                        'Esta peça foi concebida para proporcionar um ponto de luz suave onde quer que seja colocada, e a sua forma é inspirada na tradição alentejana de usar redes entrelaçadas para impedir as andorinhas de nidificar nas paredes.',
+                        'Como o próprio nome sugere, a luz que passa por cada peça de cortiça cuidadosamente disposta assemelha-se a um conjunto de pirilampos suspensos. Cada peça de cortiça é única, conferindo uma elegância distinta.',
+                    ],
+                    'measures' => ['L 12 x P 100 x A 10 cm', 'L 4,7” x P 39,4” x A 3,9” in'],
+                    'includes' => 'LEDs não incluídos',
+                ],
+
+                'eclipse-silver' => [
+                    'material' => 'Cortiça autêntica e metal branco',
+                    'description' => [
+                        'Eclipse transcende os limites ordinários de um simples candeeiro, emergindo como uma verdadeira obra-prima de refinamento. Fabricado com duas peças de cortiça autêntica, supera a sua função utilitária, ascendendo ao reino da sofisticação.',
+                        'A combinação harmoniosa de luz e cortiça confere ao Eclipse uma beleza singular, onde funcionalidade e arte se encontram numa dança requintada de elegância e iluminação.',
+                        'A parte superior da peça gira em redor da lâmpada, permitindo um feixe de luz mais disperso. Se preferir um feixe mais focado, basta posicionar as duas partes da mesma forma.',
+                    ],
+                    'measures' => ['L 9 x P 22 x A 9 cm', 'L 3,5” x P 8,7” x A 3,5” in'],
+                ],
+
+                'eclipse-copper' => [
+                    'material' => 'Cortiça autêntica e metal acobreado',
+                    'description' => [
+                        'Eclipse transcende os limites ordinários de um simples candeeiro, emergindo como uma verdadeira obra-prima de refinamento. Fabricado com duas peças de cortiça autêntica, supera a sua função utilitária, ascendendo ao reino da sofisticação.',
+                        'A combinação harmoniosa de luz e cortiça confere ao Eclipse uma beleza singular, onde funcionalidade e arte se encontram numa dança requintada de elegância e iluminação.',
+                        'A parte superior da peça gira em redor da lâmpada, permitindo um feixe de luz mais disperso. Se preferir um feixe mais focado, basta posicionar as duas partes da mesma forma.',
+                    ],
+                    'measures' => ['L 9 x P 22 x A 9 cm', 'L 3,5” x P 8,7” x A 3,5” in'],
+                ],
+
+                'island' => [
+                    'material' => 'Cortiça autêntica e mármore branco',
+                    'description' => [
+                        'Um testemunho da beleza do equilíbrio. Um pequeno prisma de mármore branco ancora uma estrutura fluida de cortiça autêntica, cuja forma alongada é adornada com uma miríade de curvas e ondulações.',
+                        'Estas reentrâncias esculpidas criam concavidades delicadas, cada uma convidando à colocação de objetos estimados. Island transforma qualquer espaço numa paisagem de maravilha estética, oferecendo tanto funcionalidade quanto um toque de grandeza poética.',
+                    ],
+                    'measures' => ['L 30 x P 84 x A 25 cm', 'L 11,8” x P 33,1” x A 9,8” in'],
+                ],
+
+                'gibraltar' => [
+                    'material' => 'Cortiça autêntica e vidro',
+                    'description' => [
+                        'Gibraltar é o resultado da fusão entre cortiça e vidro, uma peça que combina sofisticação e praticidade.',
+                        'Possui uma base superior de cortiça (acima do nível do vidro) onde pode colocar tanto bebidas quentes como frias e alimentos. Esta mesa de café valoriza a sua singularidade, beleza e funcionalidade.',
+                    ],
+                    'measures' => ['L 92 x P 62 x A 41 cm', 'L 36,2” x P 24,4” x A 16,1” in'],
+                ],
+
+                'shell' => [
+                    'material' => 'Cortiça autêntica e mármore branco',
+                    'description' => [
+                        'Uma dança entre a natureza e a arte. A forma côncava da cortiça autêntica encontra a pureza do mármore branco num bailado de formas e texturas.',
+                        'Shell serve múltiplos propósitos, dependendo dos desejos e da imaginação de cada um; a sua forma permite que funcione como uma fruteira, armazenamento de itens diversos, e muito mais. Cada peça, independente, está pronta para se reinventar em novas composições e funções.',
+                        'Shell é um poema visual, uma expressão de versatilidade em constante transformação.',
+                    ],
+                    'measures' => ['L 68 x P 68 x A 26 cm'],
+                ],
+
+                'crescent' => [
+                    'tag' => 'Diferentes tamanhos',
+                    'material' => 'Cortiça autêntica',
+                    'description' => [
+                        'Esta magnífica peça dá a sensação de que dezenas de arcos de cortiça flutuam no ar em torno de uma fonte de luz, graças à leveza da cortiça. Quando iluminada, revela um cativante jogo de sombras e luz, criando um ambiente encantador e sofisticado.',
+                        'Feita de cortiça autêntica, meticulosamente cortada em tiras com espaçamento deliberado, serve tanto como candeeiro quanto como instalação artística. A grandiosidade desta obra não passa despercebida.',
+                        'Graças à sua flexibilidade, o Crescent pode assumir várias configurações, desde horizontal a vertical, ou até mesmo oval.',
+                    ],
+                    'measures' => ['1330 x 300 mm', 'Ø 43 x A 123 cm', 'Ø 16,9” x A 48,4” in'],
+                    'includes' => 'Componente elétrico e lâmpada E27 não incluídos',
+                    'variants' => 'Também disponível em 1000 x 250 mm, 1080 x 300 mm e 1200 x 350 mm',
+                ],
+
+                'side-by-side' => [
+                    'material' => 'Cortiça autêntica e espelho',
+                    'description' => [
+                        'Refletindo a arte manual e a ancestralidade, o vidro encontra a cortiça autêntica, criando combinações infinitas.',
+                        'Esta peça de cortiça autêntica possui uma tridimensionalidade entre o espelho e a cortiça, e o seu corte representa uma verdadeira inovação, considerando a profundidade e complexidade associadas ao manuseio desta matéria-prima única.',
+                        'Side by Side ajusta-se facilmente a qualquer posição em qualquer ambiente, consistindo em duas peças independentes que permitem várias configurações.',
+                    ],
+                    'measures' => ['L 122 x P 7 x A 47 cm'],
+                ],
+
+                'shale-coast' => [
+                    'tag' => 'Novo',
+                    'material' => 'Cortiça autêntica',
+                    'description' => [
+                        'Um candeeiro único, feito de camadas espessas de cortiça autêntica. Cada camada varia em comprimento, diminuindo graciosamente à medida que sobe, culminando num ângulo ousado que adiciona caráter e estilo.',
+                        'Shale Coast pode ser usado tanto na horizontal como na vertical, tornando-se uma adição versátil e elegante a qualquer espaço. Cada posição oferece diferentes tipos de iluminação.',
+                    ],
+                    'measures' => ['L 31 x P 9 x A 14 cm', 'L 12,2” x P 3,5” x A 5,6” in'],
+                ],
+
+                'carre-dor' => [
+                    'tag' => 'Edição Dourada',
+                    'material' => 'Cortiça autêntica e espelho duplo',
+                    'description' => [
+                        'Harmonia inigualável entre elegância e funcionalidade. Conheça o Carré d\'Or, um convite à contemplação boémia.',
+                        'O componente de cortiça possui dois lados claramente distintos, enquanto o espelho pode ser posicionado tanto na vertical quanto na horizontal. Dessa forma, a versatilidade funde-se com a elegância inerente da peça.',
+                        'Ao dividir-se em dois componentes distintos, a saber, cortiça e espelho, esta peça oferece várias opções de exibição.',
+                    ],
+                    'measures' => ['L 38 x P 61 x A 31 cm', 'L 15” x P 24” x A 12,2” in'],
+                ],
+
+                'belize' => [
+                    'material' => 'Cortiça autêntica e mármore branco',
+                    'description' => [
+                        'Belize é uma ode à grandeza natural, onde cada linha e curva convida à contemplação. Uma peça que transcende a função, tornando-se um monumento de expressão artística, moldado pela natureza e pela imaginação.',
+                        'Tanto um vaso requintado quanto uma peça de destaque, Belize oferece um espaço majestoso para itens preciosos. Esta criação artística eleva qualquer ambiente com a sua beleza intemporal, incorporando tanto funcionalidade quanto charme poético.',
+                    ],
+                    'measures' => ['L 74 x P 44 x A 29 cm', 'L 29,1” x P 17,3” x A 11,4” in'],
+                ],
+
+                'equilibrium' => [
+                    'material' => 'Cortiça autêntica e esferas douradas em inox',
+                    'description' => [
+                        'Os detalhes dourados conferem a esta peça uma elegância verdadeiramente excecional e proporcionam equilíbrio para posicioná-la de diversas maneiras.',
+                        'A meticulosa atenção dedicada ao seu artesanato faz desta peça um exemplo de sofisticação, conferindo-lhe uma beleza singular.',
+                        'Adornada com esferas douradas de aço inoxidável, a Equilibrium convida-o a ser o artista, moldando a sua composição e propósito para refletir o seu estilo e imaginação únicos.',
+                    ],
+                    'measures' => ['L 38 x P 61 x A 31 cm', 'L 15” x P 24” x A 12,2” in'],
+                ],
+
+                'shale' => [
+                    'material' => 'Cortiça autêntica',
+                    'description' => [
+                        'Cada camada desta peça revela a história da beleza serena da natureza, com um brilho quente e acolhedor.',
+                        'Um deslumbrante candeeiro feito de cortiça autêntica. As suas camadas finas, meticulosamente prensadas e dispostas em comprimentos variados, tecem uma dança celestial de texturas. À medida que subimos, o espaço entre as camadas expande-se, formando uma estrutura crescente e arredondada.',
+                        'Versátil na sua elegância, Shale pode ser exibido na posição vertical ou horizontal. Dependendo do lado para o qual o candeeiro está virado, produz luz indireta ou direta.',
+                    ],
+                    'measures' => ['L 16 x P 6 x A 28 cm', 'L 6,3” x P 2,4” x A 11” in'],
+                ],
+
+                'leaf-golden' => [
+                    'tag' => 'Edição Dourada',
+                    'material' => 'Cortiça autêntica e mármore branco',
+                    'description' => [
+                        'Com uma base cúbica de mármore que simboliza estabilidade e elegância, o Leaf eleva-se com tiras de cortiça que caem livremente do topo, evocando a leveza e o movimento das folhas ao vento.',
+                        'Leaf cria um jogo de sombras e luz que dança pelo espaço, trazendo uma sensação de calma e beleza natural. É uma obra de arte luminosa, onde a solidez do mármore encontra a fluidez orgânica da cortiça, transformando qualquer ambiente num santuário de serenidade e inspiração.',
+                    ],
+                    'measures' => ['L 20 x P 18 x A 42 cm', 'L 7,8” x P 7” x A 16,5” in'],
+                ],
+
+                'leaf-brown' => [
+                    'material' => 'Cortiça autêntica e mármore branco',
+                    'description' => [
+                        'Com uma base cúbica de mármore que simboliza estabilidade e elegância, o Leaf eleva-se com tiras de cortiça que caem livremente do topo, evocando a leveza e o movimento das folhas ao vento.',
+                        'Leaf cria um jogo de sombras e luz que dança pelo espaço, trazendo uma sensação de calma e beleza natural. É uma obra de arte luminosa, onde a solidez do mármore encontra a fluidez orgânica da cortiça, transformando qualquer ambiente num santuário de serenidade e inspiração.',
+                    ],
+                    'measures' => ['L 20 x P 18 x A 42 cm', 'L 7,8” x P 7” x A 16,5” in'],
+                ],
+
+                'halley' => [
+                    'material' => 'Cortiça autêntica e espelho',
+                    'description' => [
+                        'A perfeita harmonia entre vidro e cortiça: Halley é uma expressão artística, com a natureza e a elegância combinadas.',
+                        'Apresenta uma forma redonda de espelho delicadamente aninhada dentro de uma estrutura de cortiça autêntica, com cada lado revelando uma textura única, permitindo-lhe criar composições exclusivas e infundir qualquer espaço com um toque pessoal.',
+                        'Com a sua “cauda” de cortiça, Halley adapta-se facilmente a qualquer posição e ambiente, apresentando duas peças independentes que permitem diversas arrumações e configurações.',
+                    ],
+                    'measures' => ['L 38 x P 61 x A 31 cm', 'L 15” x P 24” x A 12,2” in'],
+                ],
+
+                'oscar' => [
+                    'material' => 'Cortiça autêntica e mármore branco',
+                    'lead' => 'Uma homenagem ao sobreiro',
+                    'description' => [
+                        'Esta peça é uma homenagem a um material nobre que, para muitos, é ainda relativamente desconhecido. A cortiça é muito mais do que uma simples rolha. As suas inúmeras qualidades e potencialidades remontam à Antiguidade, tornando-a verdadeiramente intemporal.',
+                        'Óscar é a nossa sincera, nobre e merecida homenagem à cortiça e ao sobreiro.',
+                    ],
+                    'measures' => ['L 42 x P 42 x A 47 cm', 'L 16,5” x P 16,5” x A 18,5” in'],
+                ],
+
+                'marlin' => [
+                    'material' => 'Cortiça autêntica e mármore branco',
+                    'description' => [
+                        'Uma base redonda de mármore branco sustenta uma estrutura côncava assimétrica de cortiça autêntica, que nas suas amplas curvas envolve uma esfera impecável de mármore branco.',
+                        'Esta peça imponente, mas graciosa, cativa o olhar e serve como um recipiente refinado para a esfera. Uma personificação da sofisticação, Marlin transforma qualquer espaço num santuário de beleza serena.',
+                    ],
+                    'measures' => ['L 77 x P 42 x A 22 cm', 'L 30,3” x P 16,5” x A 8,3” in'],
+                ],
+
+                'olympia' => [
+                    'material' => 'Cortiça autêntica e aço',
+                    'description' => [
+                        'Uma obra de arte funcional. Conheça Olympia, um símbolo de refinamento e um testemunho da natureza na sua forma mais nobre.',
+                        'Elaborada com uma estrutura metálica elegante e adornada com duas superfícies de cortiça autêntica, esta mesa une charme natural e praticidade de forma harmoniosa.',
+                        'Projetada para servir como mesa de cabeceira ou mesa lateral de sofá, não só maximiza a funcionalidade, como também acrescenta um elemento de sofisticação arquitetónica a qualquer ambiente.',
+                    ],
+                    'measures' => ['L 42 x P 42 x A 94 cm', 'L 16,5” x P 16,5” x A 37” in'],
+                ],
+
+                'horizon' => [
+                    'material' => 'Cortiça autêntica e mármore branco',
+                    'description' => [
+                        'Horizon deve o seu nome à interação poética entre a estabilidade do mármore e a fluidez orgânica da cortiça, simbolizando a linha onde a terra encontra o céu. É uma peça que transcende a funcionalidade, oferecendo um convite à contemplação e à descoberta contínua da beleza.',
+                        'Uma composição intemporal de elegância e criatividade sublime. Um cubo de mármore forma a base sólida, equilibrando uma estrutura de cortiça autêntica que apresenta uma concavidade convidativa.',
+                        'O suporte de mármore branco pode ser posicionado de várias formas, oferecendo diferentes perspetivas à peça, conforme a sua preferência.',
+                    ],
+                    'measures' => ['L 43 x P 78 x A 15 cm', 'L 16,9” x P 30,7” x A 5,9” in'],
+                ],
+
+                'shale-belly-red' => [
+                    'material' => 'Cortiça autêntica',
+                    'description' => [
+                        'Uma afirmação de estilo. Conheça o Shale Belly, um mosaico de sombras e luzes proporcionado pelo melhor material da natureza.',
+                        'Este candeeiro, uma ode à cortiça autêntica, exibe finas tiras meticulosamente sobrepostas, cada uma dançando ao ritmo de diferentes comprimentos. A sua irregularidade deliberada no canto oferece uma subtil rebeldia e um toque de audácia.',
+                        'O Shale Belly pode ser disposto tanto na horizontal como na vertical, proporcionando diferentes tipos de iluminação. Ilumine o seu mundo com o seu charme único.',
+                    ],
+                    'measures' => ['L 16 x P 6 x A 28 cm', 'L 6,3” x P 2,4” x A 11” in'],
+                ],
+
+                'shale-belly-silver' => [
+                    'material' => 'Cortiça autêntica',
+                    'description' => [
+                        'Uma afirmação de estilo. Conheça o Shale Belly, um mosaico de sombras e luzes proporcionado pelo melhor material da natureza.',
+                        'Este candeeiro, uma ode à cortiça autêntica, exibe finas tiras meticulosamente sobrepostas, cada uma dançando ao ritmo de diferentes comprimentos. A sua irregularidade deliberada no canto oferece uma subtil rebeldia e um toque de audácia.',
+                        'O Shale Belly pode ser disposto tanto na horizontal como na vertical, proporcionando diferentes tipos de iluminação. Ilumine o seu mundo com o seu charme único.',
+                    ],
+                    'measures' => ['L 16 x P 6 x A 28 cm', 'L 6,3” x P 2,4” x A 11” in'],
+                ],
+
+                'pearl' => [
+                    'material' => 'Cortiça autêntica e mármore branco',
+                    'description' => [
+                        'Uma união requintada de elementos naturais. Uma elegante base oval de mármore branco suporta uma estrutura côncava alta e imponente de cortiça autêntica, distinguida por uma grande abertura redonda. Aninhada dentro desta forma impressionante está uma esfera lisa de mármore branco.',
+                        'Pearl é uma ode à assimetria, alcançando um equilíbrio orgânico que cativa. Esta peça extraordinária é um impressionante ponto focal, transformando qualquer ambiente num refúgio de beleza refinada.',
+                    ],
+                    'measures' => ['L 65 x P 46 x A 35 cm', 'L 25,5” x P 18,1” x A 13,6” in'],
+                ],
+
+                'vitaqua' => [
+                    'material' => 'Cortiça autêntica e vidro',
+                    'lead' => 'Uma homenagem à rolha de cortiça',
+                    'description' => [
+                        'Inspirado na ancestralidade do melhor fecho para vinho do mundo. Uma celebração da vida e da natureza em perfeita harmonia.',
+                        'A cortiça autêntica encontra o vidro, criando um fluxo contínuo da natureza e transformando cada flor numa obra-prima viva.',
+                    ],
+                    'measures' => ['L 90 x P 5 x A 15 cm'],
+                ],
+
+                'bonfire' => [
+                    'material' => 'Cortiça autêntica e vidro',
+                    'description' => [
+                        'Uma fusão de peças de cortiça que se unem para criar uma base única e orgânica, sustentando recipientes de vidro que abrigam velas, evocando a essência acolhedora de uma fogueira iluminada.',
+                    ],
+                    'measures' => ['L 45 x P 45 x A 12 cm'],
+                    'includes' => 'Velas não incluídas',
+                ],
+
+                'vitavele' => [
+                    'material' => 'Cortiça autêntica e vidro',
+                    'lead' => 'Uma homenagem à rolha de cortiça',
+                    'description' => [
+                        'Inspirado na ancestralidade do melhor fecho para vinho do mundo.',
+                        'A cortiça autêntica e o vidro convergem, iluminando os espaços com uma dança de luz e calor, transformando cada vela num símbolo de serenidade e beleza.',
+                    ],
+                    'measures' => ['L 90 x P 5 x A 6 cm'],
+                ],
+            ],
         ],
     ],
 ];

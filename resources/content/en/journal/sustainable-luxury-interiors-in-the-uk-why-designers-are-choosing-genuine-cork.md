@@ -34,7 +34,7 @@ For collaborations and bespoke commissions, visit our [You Think Cork](/you-thin
 
 Not every product labelled "cork" is genuine bark. When sourcing for a UK project, ask where the cork was harvested, who made the piece, and whether it is one of a kind. Every Sildel treasure is handcrafted from Portuguese cork in our atelier in Esmoriz, and sold through a personal enquiry so we can advise on size, finish and delivery to the UK.
 
-Explore the [Sildel Treasures](/treasures), learn more about the [material](/authentic-cork), or [contact the atelier](/contact) for a delivery quote.
+Explore the [Sildel Treasures](/treasures), learn more about the [material](/authentic-cork), or [contact the atelier](/contact) to arrange delivery.
 
 ## Frequently asked questions
 
@@ -42,7 +42,7 @@ Explore the [Sildel Treasures](/treasures), learn more about the [material](/aut
 Yes. Cork is naturally resistant to moisture and does not rot or swell easily, which makes it well suited to British homes.
 
 **Do you deliver to the United Kingdom?**
-Yes. Our pieces are shipped worldwide from Portugal. Write to us for a quote to your address.
+Yes. Our pieces are shipped worldwide from Portugal by DHL. Postage depends on the destination, and we confirm it with you before you pay.
 
 **Can you create pieces for a specific interior scheme?**
 Yes. We work with designers and architects on bespoke pieces made to measure for residential and hospitality projects.

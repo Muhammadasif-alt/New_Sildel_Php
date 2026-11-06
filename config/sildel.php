@@ -146,6 +146,7 @@ return [
                 'cursor_discover' => 'Discover',
                 'dismiss' => 'Dismiss',
                 'whatsapp' => 'Chat with us on WhatsApp',
+                'unique' => 'Unique & Exclusive',
             ],
 
             'footer' => [
@@ -321,6 +322,207 @@ return [
         // Portuguese: add translated keys here (same structure as "en").
         // Anything missing falls back to English automatically.
         'pt' => [
+
+            'seo' => [
+                'title' => 'Sildel | We Think Cork',
+                'description' => 'Arte intemporal sustentável. Peças exclusivas feitas à mão em cortiça portuguesa 100% autêntica.',
+            ],
+
+            'navigation' => [
+                'primary_left' => [
+                    ['label' => 'Nossa História', 'url' => 'route:our-story'],
+                    ['label' => 'A Cortiça', 'url' => 'route:authentic-cork'],
+                ],
+                'primary_right' => [
+                    ['label' => 'You Think Cork', 'url' => 'route:you-think-cork'],
+                    ['label' => 'Tesouros', 'url' => 'route:treasures.index'],
+                ],
+                'mobile' => [
+                    ['label' => 'Nossa História', 'url' => 'route:our-story'],
+                    ['label' => 'A Cortiça', 'url' => 'route:authentic-cork'],
+                    ['label' => 'You Think Cork', 'url' => 'route:you-think-cork'],
+                    ['label' => 'Tesouros', 'url' => 'route:treasures.index'],
+                    ['label' => 'Contactos', 'url' => 'route:contact'],
+                ],
+                'footer' => [
+                    [
+                        'title' => 'Maison',
+                        'links' => [
+                            ['label' => 'Nossa História', 'url' => 'route:our-story'],
+                            ['label' => 'Cortiça Autêntica', 'url' => 'route:authentic-cork'],
+                            ['label' => 'Tesouros', 'url' => 'route:treasures.index'],
+                            ['label' => 'Blog', 'url' => 'route:journal.index'],
+                            ['label' => 'Imprensa', 'url' => 'route:press'],
+                        ],
+                    ],
+                    [
+                        'title' => 'Apoio ao Cliente',
+                        'links' => [
+                            ['label' => 'Contactos', 'url' => 'route:contact'],
+                            ['label' => 'Perguntas Frequentes', 'url' => 'route:faqs'],
+                            ['label' => 'Envios e Devoluções', 'url' => 'route:legal.shipping'],
+                            ['label' => 'Livro de Reclamações', 'url' => 'https://www.livroreclamacoes.pt/INICIO/'],
+                        ],
+                    ],
+                    [
+                        'title' => 'Legal',
+                        'links' => [
+                            ['label' => 'Termos e Condições', 'url' => 'route:legal.terms'],
+                            ['label' => 'Política de Privacidade', 'url' => 'route:legal.privacy'],
+                        ],
+                    ],
+                ],
+            ],
+
+            'footer' => [
+                'newsletter' => [
+                    'heading' => "Seja o primeiro a descobrir\nos nossos *novos tesouros.*",
+                    'placeholder' => 'O seu endereço de email',
+                    'button' => 'Subscrever',
+                ],
+                'about' => 'Arte intemporal sustentável, feita à mão em cortiça portuguesa autêntica em Esmoriz e enviada para todo o mundo.',
+                'copyright' => '© :year Sildel. Todos os direitos reservados.',
+                'made_in' => 'Feito à mão em Esmoriz, Portugal',
+            ],
+
+            'contact_labels' => [
+                'phone' => 'Telefone',
+                'email' => 'Email',
+                'address' => 'Atelier',
+            ],
+
+            'home' => [
+
+                'hero' => [
+                    'kicker' => 'Maison de Arte em Cortiça',
+                    'tagline' => 'Arte Intemporal Sustentável',
+                    'intro' => 'Peças exclusivas feitas à mão em cortiça portuguesa 100% autêntica. Nascidas na floresta, feitas para durar uma vida.',
+                    'aside' => 'Arte intemporal sustentável, moldada por artesãos que honram cada veio da casca viva.',
+                    'cta' => ['label' => 'Explorar Tesouros', 'url' => 'route:treasures.index'],
+                    'link' => ['label' => 'Nossa História', 'url' => 'route:our-story'],
+                    'collection_label' => 'Coleção Fine Arts',
+                    'foot_right' => 'Cortiça Autêntica',
+                    'badge' => 'Feito à mão em Portugal • Cortiça Autêntica •',
+                    'scroll' => 'Deslizar',
+                    'pause' => 'Pausar apresentação',
+                    'play' => 'Reproduzir apresentação',
+                    // Only alt/caption are translated; image paths merge from "en" by index.
+                    'slides' => [
+                        ['alt' => 'Candeeiro de mesa em cortiça Leaf Dourado com brilho dourado interior', 'caption' => 'Leaf Dourado, Edição Ouro'],
+                        ['alt' => 'Taça escultural em cortiça Abyss sobre um disco de mármore de Carrara', 'caption' => 'Abyss, Mármore de Carrara'],
+                        ['alt' => 'Candeeiro suspenso em cortiça Crescent, aceso', 'caption' => 'Crescent, 1330 x 300 mm'],
+                        ['alt' => 'Fireflies, uma escultura alta de peças de cortiça empilhadas', 'caption' => 'Fireflies'],
+                        ['alt' => "Candeeiro Carré d'Or em cortiça e ouro", 'caption' => "Carré d'Or, Edição Ouro"],
+                        ['alt' => 'Concha escultural em cortiça Equilibrium', 'caption' => 'Equilibrium'],
+                        ['alt' => 'Candeeiro de mesa em cortiça Hot Spring', 'caption' => 'Hot Spring'],
+                        ['alt' => 'Halley, um tronco de cortiça com um espelho redondo', 'caption' => 'Halley, 600 x 300 mm'],
+                        ['alt' => 'Candeeiro em cortiça Shale Coast com lâmpada âmbar', 'caption' => 'Shale Coast, Novo'],
+                        ['alt' => 'Candeeiro em cortiça Shale Belly Vermelho, aceso, com cabo vermelho', 'caption' => 'Shale Belly Vermelho'],
+                    ],
+                ],
+
+                'marquee' => ['Fine Arts', 'Feito à mão em Portugal', 'Cortiça Autêntica', 'Envios para todo o mundo', 'Design Intemporal', 'Material Vivo'],
+
+                'statement' => [
+                    'kicker' => 'We Think Genuine Cork',
+                    'text' => 'Não vendemos produtos. Nós criamos tesouros. Cada peça começa como uma floresta viva, colhida sem prejudicar uma única árvore, para que a natureza e o design se possam renovar uma e outra vez.',
+                    'signature' => 'A Promessa Sildel',
+                ],
+
+                'collection' => [
+                    'kicker' => 'A Coleção',
+                    'title' => ['Fine Arts,', '*tesouros escolhidos*'],
+                    'cta' => ['label' => 'Ver Todos os Tesouros', 'url' => 'route:treasures.index'],
+                ],
+
+                'manifesto' => [
+                    'kicker' => 'O Nosso Manifesto',
+                    'title' => ['Não matamos árvores,', 'damos-lhes *vida.*'],
+                    'paragraphs_before' => [
+                        'Não cortamos sobreiros; ao colher a cortiça, libertamos a árvore para se regenerar, florescendo com uma nova camada de vida.',
+                    ],
+                    'quote' => 'Cada peça é um testemunho da renovação da natureza.',
+                    'paragraphs_after' => [
+                        'Este notável ciclo natural cria um material leve, duradouro e profundamente ligado à terra de onde vem. Na Sildel, transformamos este material vivo em objetos pensados para durar.',
+                    ],
+                    'cta' => ['label' => 'Descobrir a Cortiça Autêntica', 'url' => 'route:authentic-cork'],
+                    'image_alt' => 'Vasos de cortiça Sildel expostos numa consola de nogueira',
+                    'detail_image_alt' => 'Taça de cortiça Marlin com uma pérola sobre base de mármore',
+                ],
+
+                'numbers' => [
+                    'kicker' => 'Porquê a Sildel',
+                    'title' => ['Arte que retribui', 'à *floresta*'],
+                ],
+                // Only label/text are translated; values merge from "en" by index.
+                'stats' => [
+                    ['label' => 'Cortiça Autêntica', 'text' => 'Cada peça é feita em cortiça portuguesa natural: leve, quente ao toque e infinitamente duradoura.'],
+                    ['label' => 'Anos Entre Colheitas', 'text' => 'A casca é retirada à mão da árvore viva, que a volta a criar lentamente para a colheita seguinte.'],
+                    ['label' => 'Árvores Abatidas', 'text' => 'A colheita nunca prejudica o sobreiro, por isso cada tesouro retribui à floresta de onde veio.'],
+                    ['label' => 'Feito em Portugal, Enviado para Todo o Mundo', 'text' => 'Feito à mão em Esmoriz e enviado para todo o mundo, cada peça é embalada pelas mesmas mãos que a criaram.'],
+                ],
+
+                'film' => [
+                    'kicker' => 'Sildel Treasures',
+                    'title' => ['Nascido na floresta,', 'feito para *durar uma vida*'],
+                    'video_title' => 'Filme de apresentação Sildel Treasures',
+                    'play' => 'Reproduzir filme',
+                ],
+
+                'ritual' => [
+                    'kicker' => 'Da Floresta para Casa',
+                    'title' => ['O ritual de', '*um tesouro*'],
+                    'steps' => [
+                        ['title' => 'A Colheita', 'text' => 'A casca é retirada cuidadosamente à mão do sobreiro, deixando a árvore intacta e livre para criar uma nova camada.', 'image_alt' => 'Grande plano da casca de sobreiro em bruto'],
+                        ['title' => 'O Ofício', 'text' => 'Os artesãos moldam cada peça à mão, honrando o veio natural para que nunca existam dois tesouros iguais.', 'image_alt' => 'Base de mesa em cortiça moldada à mão, com o veio natural à vista'],
+                        ['title' => 'O Tesouro', 'text' => 'Uma obra de arte intemporal chega à sua porta, trazendo calor e um carácter sereno ao seu espaço.', 'image_alt' => 'Peças de cortiça Sildel num interior acolhedor'],
+                    ],
+                ],
+
+                'interiors' => [
+                    'kicker' => 'You Think Cork',
+                    'title' => ['Pensado para interiores', 'com *alma.*'],
+                    'text' => 'Descubra a beleza natural e a elegância única da cortiça autêntica na decoração de interiores. Leve, quente ao toque e infinitamente duradoura, a cortiça traz uma serena presença da natureza a cada divisão.',
+                    'features' => [
+                        'Peças exclusivas com designs únicos',
+                        'Material 100% sustentável e renovável',
+                        'Feito à mão em Esmoriz, Portugal',
+                        'Enviado para todo o mundo, embalado à mão com cuidado',
+                    ],
+                    'cta' => ['label' => 'Descobrir Mais', 'url' => 'route:you-think-cork'],
+                    'image_alt' => 'Vaso de porcelana sobre uma base de cortiça esculpida, numa mesa de mosaico de cortiça',
+                    'detail_image_alt' => 'Grande plano da textura natural da cortiça',
+                ],
+
+                'editorial' => [
+                    'kicker' => 'You Think Cork',
+                    'title' => ['Interiores com', 'uma *alma* viva'],
+                    'cta' => ['label' => 'Descobrir Mais', 'url' => 'route:you-think-cork'],
+                    'image_alt' => 'Vasos de cortiça Sildel num interior de luz suave',
+                ],
+
+                'journal' => [
+                    'kicker' => 'Blog',
+                    'title' => ['Histórias de cortiça', '& *inspiração*'],
+                    'intro' => 'Ideias, tendências e o ofício por trás de viver com cortiça autêntica.',
+                    'cta' => ['label' => 'Todos os Artigos', 'url' => 'route:journal.index'],
+                ],
+
+                'atelier' => [
+                    'kicker' => 'O Atelier',
+                    'title' => ['Vamos criar', 'algo *intemporal*'],
+                    'intro' => 'Uma questão sobre uma peça, uma encomenda personalizada ou um pedido. O nosso atelier terá todo o gosto em ajudá-lo pessoalmente.',
+                    'form' => [
+                        'name' => 'Nome',
+                        'email' => 'Email',
+                        'subject' => 'Assunto',
+                        'message' => 'A Sua Mensagem',
+                        'submit' => 'Enviar Pedido',
+                        'sending' => 'A enviar',
+                    ],
+                ],
+            ],
+
             'ui' => [
                 'menu_open' => 'Abrir menu',
                 'home' => 'Início',
@@ -336,6 +538,7 @@ return [
                 'cursor_discover' => 'Descobrir',
                 'dismiss' => 'Fechar',
                 'whatsapp' => 'Fale connosco no WhatsApp',
+                'unique' => 'Único e Exclusivo',
             ],
         ],
     ],

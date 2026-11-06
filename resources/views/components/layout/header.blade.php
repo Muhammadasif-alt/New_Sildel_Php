@@ -1,6 +1,6 @@
 {{--
-    layout/header: fixed frosted dark bar (resources/js/modules/header.js adds .is-solid after
-    scrolling, which compacts it). The official logo sits on the left, clearly legible;
+    layout/header: fixed white bar with the black logo, as on the client's site
+    (resources/js/modules/header.js adds .is-solid after scrolling, which compacts it). The official logo sits on the left, clearly legible;
     navigation is centred and the language switch sits on the right. Below 1100px the
     navigation moves into layout/mobile-menu behind the burger.
 --}}
@@ -8,7 +8,7 @@
 
 <header class="site-header" data-header>
     <nav class="site-container grid grid-cols-[auto_1fr_auto] items-center gap-8" aria-label="{{ $site->name }}">
-        <a href="{{ $site->homeUrl() }}" class="text-bone transition-opacity duration-500 hover:opacity-75">
+        <a href="{{ $site->homeUrl() }}" class="text-onyx">
             <x-common.logo :label="$site->name.', '.$site->tagline" class="site-logo" />
         </a>
 

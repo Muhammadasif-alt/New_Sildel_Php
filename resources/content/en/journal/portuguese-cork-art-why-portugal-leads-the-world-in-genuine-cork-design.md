@@ -38,7 +38,7 @@ Our pieces can be explored online in the [Sildel Treasures](/treasures) collecti
 Yes. The tree is never felled, the bark regrows, and the forests are protected by law. Cork is also natural, renewable and recyclable.
 
 **Do you ship from Portugal to other countries?**
-Yes. Sildel pieces are handcrafted in Portugal and shipped worldwide. [Contact the atelier](/contact) for a delivery quote to your country.
+Yes. Sildel pieces are handcrafted in Portugal and shipped worldwide by DHL. Postage depends on the destination, and we confirm it with you before you pay. [Contact the atelier](/contact) to arrange delivery to your country.
 
 **Can I commission a bespoke piece?**
 Yes. Designers, architects and private clients regularly ask us for pieces made to measure. Tell us about your project and we will reply personally.

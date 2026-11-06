@@ -43,6 +43,8 @@ return [
                     'The Iberian lynx, with its piercing gaze and graceful movements, roams the cork oak forests, a silent guardian of a unique ecosystem. It is in this environment, rich in biodiversity and history, that Sildel finds its essence.',
                     'At Sildel, we believe that true art lies in honouring nature. The Iberian lynx, a symbol of resilience and rarity, reflects our commitment to the preservation and appreciation of natural resources.',
                 ],
+                'image' => 'images/sildel/pages/iberian-lynx.webp',
+                'image_alt' => 'An Iberian lynx standing on a mossy rock',
             ],
             'film' => [
                 'kicker' => 'Sildel Film',
@@ -60,7 +62,7 @@ return [
                     'Therefore, I will not give up this dream: to position cork next to a *diamond.*',
                 ],
                 'name' => 'Isabel Silva',
-                'role' => 'CEO and Founder',
+                'role' => 'CEO',
                 'image' => 'images/sildel/pages/isabel-silva.webp',
                 'image_alt' => 'Portrait of Isabel Silva, CEO of Sildel',
             ],
@@ -69,7 +71,8 @@ return [
                 'title' => ['A celebration of the land', 'and its *fauna*'],
                 'paragraphs' => [
                     'Cork, a noble and sustainable material, is extracted with respect and care, maintaining harmony with nature. Each Sildel product is a celebration of the land and its fauna. The skilled hands of our artisans transform cork into pieces that carry the strength and beauty of the forest.',
-                    'Just as the lynx glides elegantly among the trees, our creations stand out for their sophistication and commitment to sustainability. We invite you to discover Sildel, where each piece tells a story of respect for the environment and passion for art.',
+                    'Just as the lynx glides elegantly among the trees, our creations stand out for their sophistication and commitment to sustainability.',
+                    'We invite you to discover Sildel, where each piece tells a story of respect for the environment and passion for art. May the spirit of the Iberian lynx, agile and untamed, inspire every moment of your journey with our treasures, bringing the untouched beauty of nature directly into your daily life.',
                 ],
                 // Whole piece, uncropped (the square manifesto detail cuts off both ends of the bowl).
                 'image' => 'images/sildel/pages/craft-marlin.webp',
@@ -239,7 +242,7 @@ return [
             'enquire' => 'Enquire about this piece',
             'enquiry_subject' => 'Enquiry: :name',
             'one_of_a_kind' => 'No two pieces are alike. Before dispatch we send you photographs of the actual piece, so you know exactly which grain and which markings are yours.',
-            'shipping' => 'Handcrafted in Esmoriz, Portugal. Delivered worldwide.',
+            'shipping' => 'Handcrafted in Esmoriz, Portugal. Delivered worldwide by DHL; postage depends on the destination.',
             'details' => 'Details',
             'specifications' => 'Specifications',
             'material' => 'Raw material',
@@ -340,6 +343,7 @@ return [
                 'hours' => ['Monday to Friday: 10:00 to 18:00', 'Saturday and Sunday: closed'],
                 'visit' => 'Visits to the atelier by appointment.',
                 'map_label' => 'Open in Google Maps',
+                'map_title' => 'Map showing the Sildel atelier at Rua das Ruivas 108, Esmoriz',
             ],
             'form' => [
                 'kicker' => 'Write to us',
@@ -388,7 +392,8 @@ return [
                 [
                     'title' => 'Shipping',
                     'items' => [
-                        ['q' => 'Do you ship internationally?', 'a' => 'Yes. We ship from Esmoriz, Portugal to clients around the world. Each piece is packed by hand for the journey, by the same hands that made it.'],
+                        ['q' => 'Do you ship internationally?', 'a' => 'Yes. We ship from Esmoriz, Portugal to clients around the world, by DHL. Each piece is packed by hand for the journey, by the same hands that made it.'],
+                        ['q' => 'How much does shipping cost?', 'a' => 'Postage depends on the destination country and on the pieces you choose. We confirm the exact cost with you before you pay, together with the expected delivery time for your country.', 'link' => ['label' => 'Shipping and Returns', 'url' => 'route:legal.shipping']],
                         ['q' => 'What if something arrives damaged?', 'a' => 'Tell us immediately and we will make it right. Cork is far more resilient than people expect, but shipping is shipping, and our responsibility does not end when the piece leaves the atelier.'],
                         ['q' => 'Can I return a piece?', 'a' => 'Yes, within 14 days of receiving it. The full conditions are on our Shipping and Returns page.', 'link' => ['label' => 'Shipping and Returns', 'url' => 'route:legal.shipping']],
                     ],
@@ -437,28 +442,406 @@ return [
     ],
 
     'pt' => [
+
+        'our_story' => [
+            'seo' => [
+                'title' => 'A Nossa História | Sildel',
+                'description' => 'Mais de 40 anos dedicados à cortiça autêntica. A Sildel nasceu no coração da Península Ibérica para posicionar a cortiça ao lado de um diamante.',
+            ],
+            'hero' => [
+                'kicker' => 'A Nossa História',
+                'title' => ['A cortiça é uma questão', 'de *amor*'],
+                'intro' => 'Mais de quarenta anos exclusivamente e unicamente em contacto com a cortiça, esta pequena maravilha da natureza, ainda desconhecida por tantos.',
+            ],
+            'intro' => [
+                'kicker' => 'Sem fórmula secreta',
+                'image_alt' => 'Jarra de porcelana branca sobre uma base esculpida em cortiça, uma peça Sildel e Porcel',
+                'title' => ['Não há segredo,', 'apenas *dedicação*'],
+                'paragraphs' => [
+                    'Despertámos a curiosidade daqueles que conhecem ou entram em contacto com os nossos produtos. Frequentemente, querem saber o nosso segredo ou fórmula mágica. Na verdade, não há segredo!',
+                    'É um conhecimento de mais de 40 anos, exclusivamente e unicamente em contacto com a cortiça, esta pequena maravilha da natureza, ainda desconhecida por tantos.',
+                    'A certa altura, este envolvimento tão próximo é tão extraordinário que já não sabemos se a cortiça faz parte de nós, ou se somos nós que pertencemos a ela. A resposta é simples: a cortiça é uma questão de amor.',
+                ],
+            ],
+            'lynx' => [
+                'kicker' => 'O nosso símbolo',
+                'title' => ['O *lince-ibérico*'],
+                'paragraphs' => [
+                    'No coração da Península Ibérica, onde os sobreiros se erguem majestosos, nasce a Sildel: uma empresa dedicada à criação de produtos que honram a cortiça autêntica. Aqui, a natureza e a arte entrelaçam-se, tal como as profundas raízes do sobreiro e a agilidade do lince-ibérico, o nosso símbolo e inspiração.',
+                    'O lince-ibérico, com o seu olhar penetrante e movimentos graciosos, vagueia pelas florestas de sobreiros, um guardião silencioso de um ecossistema único. É neste ambiente, rico em biodiversidade e história, que a Sildel encontra a sua essência.',
+                    'Na Sildel, acreditamos que a verdadeira arte reside em honrar a natureza. O lince-ibérico, símbolo de resiliência e raridade, reflete o nosso compromisso com a preservação e valorização dos recursos naturais.',
+                ],
+                'image_alt' => 'Um lince-ibérico de pé sobre uma rocha coberta de musgo',
+            ],
+            'film' => [
+                'kicker' => 'Filme Sildel',
+                'title' => ['Onde o lince', '*vagueia em liberdade*'],
+                'video_title' => 'Sildel: o lince-ibérico e o montado de sobro',
+                'play' => 'Ver o filme',
+            ],
+            'founder' => [
+                'kicker' => 'Um sonho',
+                'quote' => [
+                    'Cada vez mais, a cortiça tem sido destaque nas notícias e, como é sabido, é extremamente relevante no reforço do papel de Portugal no estrangeiro. Basta considerar que Portugal é o maior produtor e transformador de cortiça do mundo. Esta realidade, para mim, deu origem a um sonho. Eu tenho um sonho: posicionar a cortiça ao lado de um diamante.',
+                    'Um diamante é apreciado pela sua beleza e raridade. A cortiça é de uma beleza transcendente e as suas qualidades naturais elevam-na ao mais alto nível de raridade. A cortiça apresenta as cores do luxo: o dourado, o bege e o castanho-escuro. Vamos transformá-la em peças intemporais, repletas de sofisticação e requinte.',
+                    'Por isso, não desistirei deste sonho: posicionar a cortiça ao lado de um *diamante.*',
+                ],
+                'image_alt' => 'Retrato de Isabel Silva, CEO da Sildel',
+            ],
+            'craft' => [
+                'kicker' => 'O ofício',
+                'title' => ['Uma celebração da terra', 'e da sua *fauna*'],
+                'paragraphs' => [
+                    'A cortiça, um material nobre e sustentável, é extraída com respeito e cuidado, mantendo a harmonia com a natureza. Cada produto Sildel é uma celebração da terra e da sua fauna. As mãos habilidosas dos nossos artesãos transformam a cortiça em peças que carregam a força e a beleza da floresta.',
+                    'Assim como o lince desliza elegantemente entre as árvores, as nossas criações destacam-se pela sua sofisticação e compromisso com a sustentabilidade.',
+                    'Convidamo-lo a descobrir a Sildel, onde cada peça conta uma história de respeito pelo ambiente e paixão pela arte. Que o espírito do lince-ibérico, ágil e indomável, inspire cada momento da sua jornada com os nossos tesouros, trazendo a beleza intocada da natureza diretamente para o seu dia a dia.',
+                ],
+                'image_alt' => 'Pormenor de Marlin: cortiça autêntica a envolver uma esfera de mármore branco',
+            ],
+        ],
+
+        'authentic_cork' => [
+            'seo' => [
+                'title' => 'Cortiça Autêntica | Sildel',
+                'description' => 'A cortiça autêntica é retirada à mão de sobreiros vivos, sem danificar a árvore. Descubra a floresta por detrás de cada tesouro Sildel.',
+            ],
+            'hero' => [
+                'kicker' => 'Cortiça Autêntica',
+                'title' => ['A verdade pertence à natureza,', 'a *engenheira da criação*'],
+                'intro' => 'A cortiça autêntica é um presente da natureza, valorizada pela sua sustentabilidade e beleza única.',
+                'image_alt' => 'Um pedaço de casca de cortiça autêntica em bruto',
+            ],
+            'intro' => [
+                'paragraphs' => [
+                    'Retirada das camadas externas dos sobreiros sem causar qualquer dano. Cada peça carrega as marcas naturais da árvore, tornando cada peça verdadeiramente única.',
+                    'Na Sildel, celebramos este material incrível, transformando-o em criações que refletem a essência da natureza e o nosso compromisso com a sustentabilidade.',
+                ],
+                'facts' => [
+                    ['label' => 'anos para a casca voltar a crescer'],
+                    ['label' => 'descortiçamentos na vida de uma árvore'],
+                    ['label' => 'árvores abatidas'],
+                ],
+            ],
+            'film' => [
+                'kicker' => 'A Cortiça Autêntica',
+                'title' => ['Veja onde tudo', '*começa*'],
+                'text' => 'Observe a casca retirada à mão de sobreiros vivos nas florestas de Portugal. É o mesmo material raro que moldamos em cada tesouro Sildel.',
+                'video_title' => 'O descortiçamento nas florestas de Portugal',
+                'play' => 'Ver o filme',
+            ],
+            'biodiversity' => [
+                'kicker' => 'Um santuário de biodiversidade',
+                'title' => ['Um dos 35 santuários', '*de biodiversidade* do mundo'],
+                'text' => 'O montado de sobro é comparável à Amazónia, à savana africana, aos Andes e a Bornéu. Os montados de sobro albergam mais de:',
+                'stats' => [
+                    ['label' => 'Espécies de aves', 'text' => 'Das águias douradas às cegonhas pretas, os montados de sobro oferecem habitats críticos para diversas espécies de aves.'],
+                    ['label' => 'Espécies de répteis e anfíbios', 'text' => 'Locais de reprodução essenciais para espécies ameaçadas como a rela-meridional.'],
+                    ['label' => 'Espécies de mamíferos', 'text' => 'Lar de fauna icónica, incluindo o lince-ibérico, lobos ibéricos, veados e javalis, alguns dos quais estão em elevado risco de extinção.'],
+                ],
+            ],
+            'climate' => [
+                'kicker' => 'Um pulmão para o planeta',
+                'lead' => 'O montado de sobro é um verdadeiro pulmão para o Ambiente, fixando até',
+                'figure' => '14 milhões',
+                'unit' => 'de toneladas de CO₂ por ano',
+                'items' => [
+                    ['title' => 'Guardião do Clima', 'text' => 'Combate o aquecimento global e a desertificação.'],
+                    ['title' => 'Protetor do Solo', 'text' => 'Controla a erosão.'],
+                    ['title' => 'Guardião da Água', 'text' => 'Regula o ciclo hidrológico.'],
+                ],
+            ],
+            'closing' => [
+                'kicker' => 'As nossas homenagens',
+                'title' => ['Descubra as nossas homenagens', 'a este *nobre material*'],
+                'text' => 'Cada peça de cortiça começa como uma floresta viva. Ao recolher a casca de cortiça sem prejudicar a árvore, permitimos a regeneração, criando tesouros intemporais que sustentam tanto a natureza como o design.',
+                'cta' => ['label' => 'Ver todos os Tesouros'],
+            ],
+        ],
+
+        'you_think_cork' => [
+            'seo' => [
+                'title' => 'You Think Cork | Sildel',
+                'description' => 'Seja parceiro da Sildel para inovar com cortiça autêntica: desenvolvimento de produtos, soluções sustentáveis e projetos por medida para marcas, designers e arquitetos.',
+            ],
+            'hero' => [
+                'kicker' => 'You Think Cork',
+                'title' => ['Pensa em', '*cortiça?*'],
+                'intro' => 'Como membro orgulhoso do Material Bank, a Sildel está empenhada em promover um ambiente colaborativo onde marcas e empresas possam unir-se para inovar e criar.',
+                'image_alt' => 'Moodboard do Material Bank com amostras de cortiça Sildel, têxteis e pedra',
+            ],
+            'intro' => [
+                'title' => ['Uma rede de empresas', '*visionárias*'],
+                'paragraphs' => [
+                    '"You Think Cork" não se trata apenas de colaborar connosco. É sobre construir uma rede de empresas visionárias dedicadas a ultrapassar os limites do que é possível com a cortiça autêntica.',
+                    'Acreditamos no poder da colaboração para impulsionar a inovação e criar peças extraordinárias. A nossa dedicação à cortiça autêntica mostrou-nos o potencial ilimitado deste material sustentável, e queremos levar a nossa paixão um passo além: convidamo-lo a juntar-se a nós na exploração de novos horizontes.',
+                ],
+                'images' => [
+                    ['alt' => 'Amostras de cortiça Sildel apresentadas num evento do Material Bank'],
+                    ['alt' => 'Amostras de cortiça autêntica em tons naturais e escuros'],
+                ],
+            ],
+            'services' => [
+                'kicker' => 'Inovemos juntos',
+                'title' => ['Juntos podemos desenvolver', 'soluções *inovadoras*'],
+                'items' => [
+                    ['title' => 'Desenvolvimento de produtos', 'text' => 'Colabore com a nossa equipa para criar produtos inovadores que aproveitem os benefícios únicos da cortiça.'],
+                    ['title' => 'Soluções sustentáveis', 'text' => 'Trabalhe connosco para desenvolver alternativas ecológicas aos materiais tradicionais.'],
+                    ['title' => 'Projetos personalizados', 'text' => 'Dê vida às suas ideias únicas com soluções de cortiça personalizadas, criadas para satisfazer as suas necessidades específicas.'],
+                ],
+            ],
+            'collaborations' => [
+                'kicker' => 'Colaborações',
+                'title' => ['Feito em *conjunto*'],
+                'intro' => 'Esculpimos o troféu de um festival nacional e trabalhámos lado a lado com casas portuguesas de porcelana e de iluminação. Uma peça, um projeto, uma ideia de cada vez.',
+                'items' => [
+                    [
+                        'label' => 'Porcelana e cortiça',
+                        'text' => 'A porcelana, precisa e luminosa, encontra a cortiça autêntica, paciente e resiliente. Cada peça é concebida e produzida em Portugal: não são peças para uma estação, mas para uma vida.',
+                        'image_alt' => 'Peças Porcel e Sildel na feira Ambiente, em Frankfurt',
+                    ],
+                    [
+                        'label' => 'O troféu do festival',
+                        'text' => 'O troféu do Festival Mental, esculpido em cortiça autêntica pela Sildel para a nona e a décima edições, em 2025 e 2026.',
+                        'image_alt' => 'O troféu do Festival Mental, esculpido em cortiça autêntica',
+                    ],
+                    [
+                        'label' => 'Iluminação Corklux',
+                        'text' => 'Corklux, a gama de iluminação retroiluminada em cortiça autêntica criada pela Sildel e pela Lightenjin. Tangram, inspirado no quebra-cabeças geométrico chinês, combina os seus elementos em padrões únicos e dinâmicos.',
+                        'image_alt' => 'Candeeiro Corklux Tangram em cortiça autêntica',
+                    ],
+                ],
+            ],
+            'partners' => [
+                'kicker' => 'Torne-se um parceiro',
+                'title' => ['Vamos trabalhar', '*juntos?*'],
+                'paragraphs' => [
+                    'A Sildel é uma empresa que preza pela qualidade e atendimento aos seus clientes e fornece todas as suas disposições aos seus revendedores. Acima de tudo, Transparência e Confiança são os nossos principais valores na relação comercial.',
+                    'Teremos o maior prazer em conhecê-lo e apresentar a nossa gama de produtos. Se quiser ser a nova cara do nosso negócio, escreva-nos.',
+                ],
+            ],
+            'form' => [
+                'kicker' => 'Pensa em cortiça?',
+                'title' => ['Entre em contacto e junte-se a nós', 'na construção do *futuro*'],
+                'subject' => 'You Think Cork: parceria',
+            ],
+        ],
+
+        'treasures' => [
+            'seo' => [
+                'title' => 'Tesouros | Sildel',
+                'description' => 'Peças escultóricas, iluminação, mobiliário e espelhos feitos à mão em cortiça portuguesa autêntica. Cada peça é única.',
+            ],
+            'hero' => [
+                'kicker' => 'Tesouros',
+                'title' => ['Não vendemos produtos.', 'Criamos *tesouros.*'],
+                'intro' => 'A cortiça guarda as fissuras, o veio e as cicatrizes da árvore de onde veio, por isso não existem duas peças iguais.',
+            ],
+            'filter_label' => 'Filtrar por categoria',
+            'all' => 'Todas as peças',
+            'count' => ':count peças',
+            'bespoke' => [
+                'kicker' => 'Por medida',
+                'title' => ['Algo feito', 'para o seu *espaço*'],
+                'text' => 'Escreva-nos com o que tiver: uma divisão, um esboço, uma medida ou simplesmente uma ideia. Respondemos pessoalmente e dizemos-lhe com honestidade o que a cortiça pode fazer com ela.',
+                'cta' => ['label' => 'Encomendar uma peça'],
+            ],
+        ],
+
         'product' => [
+            'exclusive' => 'Único & Exclusivo',
             'enquire' => 'Pedir informações sobre esta peça',
+            'enquiry_subject' => 'Pedido de informação: :name',
+            'one_of_a_kind' => 'Não existem duas peças iguais. Antes do envio, enviamos-lhe fotografias da peça real, para que saiba exatamente qual o veio e quais as marcas que são suas.',
+            'shipping' => 'Feito à mão em Esmoriz, Portugal. Enviado para todo o mundo pela DHL; os portes dependem do destino.',
+            'details' => 'Detalhes',
             'specifications' => 'Especificações',
             'material' => 'Matéria-prima',
             'measures' => 'Medidas aproximadas',
             'weight' => 'Peso',
+            'includes' => 'Tenha em atenção',
+            'variants' => 'Outras dimensões',
             'care' => 'Instruções e cuidados',
+            'origin' => 'Quando a árvore é cortada para além da camada de cortiça, fica marcada para sempre. Esse corte cria mais tarde uma espécie de bolha de ar, e é daí que nasce a forma única desta peça.',
             'related' => 'Também poderá gostar',
             'back' => 'Todos os Tesouros',
+            'gallery' => 'Fotografias de :name',
+            'view_photo' => 'Mostrar fotografia :number',
         ],
-        'treasures' => [
-            'all' => 'Todas as peças',
-            'filter_label' => 'Filtrar por categoria',
-            'count' => ':count peças',
-        ],
+
         'journal' => [
+            'seo' => [
+                'title' => 'Blog | Sildel',
+                'description' => 'Explore o mundo da cortiça: tendências de design sustentável, a arte do artesanato e as histórias por detrás da Sildel.',
+            ],
+            'hero' => [
+                'kicker' => 'Blog',
+                'title' => ['Histórias de cortiça', '& *inspiração*'],
+                'intro' => 'Explore o nosso mundo de cortiça, desde tendências de design sustentável à arte do artesanato. Descubra insights inspiradores, histórias e inovação que definem o espírito Sildel.',
+            ],
             'read' => 'Ler artigo',
             'back' => 'Todos os artigos',
+            'more' => 'Mais do Blog',
+            'minutes' => ':count min de leitura',
             'page_title' => 'Página :page',
-            'pagination_label' => 'Páginas do diário',
+            'pagination_label' => 'Páginas do blog',
             'previous' => 'Anterior',
             'next' => 'Seguinte',
+        ],
+
+        'press' => [
+            'seo' => [
+                'title' => 'Imprensa | Sildel',
+                'description' => 'A Sildel na Vogue, na Mobiliário em Notícia e na Camden House.',
+            ],
+            'hero' => [
+                'kicker' => 'Imprensa',
+                'title' => ['A Sildel na', '*imprensa*'],
+                'intro' => 'Os nossos tesouros, nas páginas das revistas que acompanham o design e os interiores.',
+            ],
+            'items' => [
+                ['date' => "Abril '23"],
+                ['date' => "Janeiro '23"],
+                ['date' => "Outubro '22"],
+                ['date' => "Outubro '22"],
+                ['date' => "Setembro '22"],
+                ['date' => "Agosto '22"],
+                ['date' => "Junho '22"],
+                ['date' => "Abril '22"],
+                ['date' => "Fevereiro '22"],
+            ],
+            'viewer' => [
+                'read' => 'Ler o artigo',
+                'view' => 'Ver o recorte',
+                'pages' => ':count páginas',
+                'loading' => 'A abrir a revista',
+                'previous' => 'Página anterior',
+                'next' => 'Página seguinte',
+                'close' => 'Fechar',
+                'fullscreen' => 'Ecrã inteiro',
+                'download' => 'Descarregar PDF',
+                'hint' => 'Arraste um canto ou use as setas para virar a página',
+                'error' => 'Não foi possível abrir a revista. Experimente a ligação de descarga.',
+            ],
+            'contact' => [
+                'title' => ['Contactos de *imprensa*'],
+                'text' => 'Para entrevistas, imagens ou amostras, escreva-nos e responderemos pessoalmente.',
+                'cta' => ['label' => 'Contactar o atelier'],
+            ],
+        ],
+
+        'contact' => [
+            'seo' => [
+                'title' => 'Contactos | Sildel',
+                'description' => 'Fale com o atelier Sildel em Esmoriz, Portugal: encomendas, peças, parcerias. Respondemos no prazo de um dia útil.',
+            ],
+            'hero' => [
+                'kicker' => 'Contactos',
+                'title' => ['Vamos falar de', '*cortiça*'],
+                'intro' => 'Cada tesouro que criamos começa com uma conversa. Diga-nos o que tem em mente e o nosso atelier em Esmoriz tratará do resto.',
+            ],
+            'info' => [
+                'kicker' => 'Informações de Contacto',
+                'text' => 'Contacte-nos como preferir: por telefone, email ou pelo formulário. O nosso atelier em Esmoriz responde a todas as mensagens, normalmente no prazo de um dia útil.',
+                'phone_note' => 'Fale diretamente com o atelier',
+                'phone_cost' => 'Custo de uma chamada para a rede móvel nacional, de acordo com a sua tarifa.',
+                'hours_label' => 'Horário de Funcionamento',
+                'hours' => ['Segunda a sexta-feira: 10:00 – 18:00', 'Sábado e domingo: fechado'],
+                'visit' => 'Visitas ao atelier mediante marcação.',
+                'map_label' => 'Abrir no Google Maps',
+                'map_title' => 'Mapa com a localização do atelier Sildel na Rua das Ruivas 108, Esmoriz',
+            ],
+            'form' => [
+                'kicker' => 'Escreva-nos',
+                'title' => ['Diga-nos o que', 'tem em *mente*'],
+            ],
+            'faq' => [
+                'kicker' => 'O que nos perguntam',
+                'title' => ['Antes de nos', '*escrever*'],
+                'cta' => ['label' => 'Todas as perguntas'],
+            ],
+        ],
+
+        'faqs' => [
+            'seo' => [
+                'title' => 'Perguntas Frequentes | Sildel',
+                'description' => 'Respostas sobre a cortiça autêntica, as nossas peças, encomendas, cuidados e envios para todo o mundo.',
+            ],
+            'hero' => [
+                'kicker' => 'Perguntas Frequentes',
+                'title' => ['O que nos', '*perguntam*'],
+                'intro' => 'Respostas às perguntas mais comuns sobre a Sildel, a cortiça autêntica, o nosso trabalho artesanal e os nossos serviços.',
+            ],
+            'groups' => [
+                [
+                    'title' => 'A cortiça e as nossas peças',
+                    'items' => [
+                        ['q' => 'A árvore sobrevive?', 'a' => 'Sim. É precisamente essa a questão. O sobreiro é a única árvore do mundo que pode ser despida da sua casca e continuar a viver: simplesmente volta a produzi-la, mais espessa, ao longo de nove anos. Em Portugal, está protegido por lei. A árvore que deu a cortiça para a sua peça continua de pé, continua a crescer, continua a trabalhar na próxima.'],
+                        ['q' => 'Vou receber exatamente a peça da fotografia?', 'a' => 'Não, e não iria querer. A cortiça guarda as fissuras, o veio e as cicatrizes da árvore de onde veio, por isso não existem duas peças iguais. A sua peça terá a mesma alma daquela que viu, e um corpo que nunca existiu antes. Isso não é uma falha do processo. É o processo.'],
+                        ['q' => 'A cortiça é resistente o suficiente para mobiliário?', 'a' => 'A cortiça mantém o vinho selado há séculos, isolou naves espaciais e revestiu as paredes de edifícios que sobreviveram aos seus arquitetos. É retardadora de chama, impermeável e resistente ao pó, e não empena. As nossas peças são feitas para serem usadas: pouse um copo, apoie-se na mesa, viva com ela.'],
+                        ['q' => 'Como é viver com cortiça?', 'a' => 'É quente. Sempre. A cortiça nunca é fria ao toque como a pedra ou o aço, e quase não pesa na mão. Absorve o som em vez de o devolver. Quem compra as nossas peças diz-nos sempre o mesmo: não consegue deixar de lhes tocar.'],
+                        ['q' => 'Como devo cuidar da peça?', 'a' => 'Quase nada. A cortiça é resistente ao pó; um pano seco resolve um derrame. Evite produtos de limpeza químicos: a casca não precisa deles e nunca precisou. Trate-a como a floresta a tratou, e ela manterá a sua beleza durante décadas. A página de cada peça indica os cuidados a ter com os seus outros materiais.'],
+                    ],
+                ],
+                [
+                    'title' => 'Encomendas e peças por medida',
+                    'items' => [
+                        ['q' => 'Como encomendar uma peça?', 'a' => 'Escreva-nos com o que tiver: uma divisão, um esboço, uma medida ou simplesmente uma ideia. Respondemos pessoalmente, perguntamos o que precisamos de saber e dizemos-lhe com honestidade o que a cortiça pode e não pode fazer com ela.'],
+                        ['q' => 'Podem criar algo para o meu espaço?', 'a' => 'Muitas vezes, sim. Esculpimos o troféu de um festival nacional e trabalhámos lado a lado com casas portuguesas de porcelana e de iluminação. Se tem uma divisão, um projeto ou uma ideia, escreva-nos.'],
+                        ['q' => 'Trabalham com designers e arquitetos?', 'a' => 'Frequentemente. Fornecemos amostras, apoio técnico e desenvolvimento por medida para projetos de design. Se está a trabalhar em algo e quer saber se a cortiça tem lugar nele, pergunte-nos.'],
+                        ['q' => 'Quanto tempo demora uma peça?', 'a' => 'As peças disponíveis são enviadas em poucos dias. O trabalho por encomenda depende do que solicitar, normalmente algumas semanas. A cortiça tem o seu próprio ritmo, e preferimos ser honestos a ser rápidos.'],
+                        ['q' => 'Posso ver a peça antes de ser enviada?', 'a' => 'Sim, e encorajamos isso. Como não existem duas peças iguais, enviamos fotografias da peça real antes do envio, para que saiba exatamente qual o veio, quais as marcas, qual é a sua.'],
+                        ['q' => 'Posso visitar o atelier?', 'a' => 'Recebemos visitas com marcação prévia na Rua das Ruivas 108, Esmoriz. Escreva-nos primeiro para que a Isabel possa estar presente: a conversa é muito diferente quando pode segurar a cortiça nas mãos.'],
+                    ],
+                ],
+                [
+                    'title' => 'Envios',
+                    'items' => [
+                        ['q' => 'Fazem envios para todo o mundo?', 'a' => 'Sim. Enviamos de Esmoriz, Portugal, para clientes em todo o mundo, pela DHL. Cada peça é embalada à mão para a viagem, pelas mesmas mãos que a criaram.'],
+                        ['q' => 'Quanto custam os portes de envio?', 'a' => 'Os portes dependem do país de destino e das peças que escolher. Confirmamos consigo o custo exato antes do pagamento, juntamente com o prazo de entrega previsto para o seu país.', 'link' => ['label' => 'Envios e Devoluções']],
+                        ['q' => 'O que acontece se a peça chegar danificada?', 'a' => 'Informe-nos imediatamente e resolveremos. A cortiça é muito mais resistente do que as pessoas pensam, mas o transporte é o transporte, e a nossa responsabilidade não termina quando a peça sai do atelier.'],
+                        ['q' => 'Posso devolver uma peça?', 'a' => 'Sim, no prazo de 14 dias após a receção. As condições completas estão na nossa página de Envios e Devoluções.', 'link' => ['label' => 'Envios e Devoluções']],
+                    ],
+                ],
+            ],
+            'contact' => [
+                'title' => ['Ainda tem alguma *pergunta?*'],
+                'text' => 'Escreva-nos e o atelier responderá pessoalmente, normalmente no prazo de um dia útil.',
+                'cta' => ['label' => 'Contacte-nos'],
+            ],
+        ],
+
+        'legal' => [
+            'shipping-and-returns' => [
+                'title' => 'Envios e Devoluções',
+                'seo' => ['title' => 'Envios e Devoluções | Sildel', 'description' => 'Como a Sildel faz envios para todo o mundo e como funcionam as trocas, devoluções e reembolsos.'],
+            ],
+            'terms-and-conditions' => [
+                'title' => 'Termos e Condições',
+                'seo' => ['title' => 'Termos e Condições | Sildel', 'description' => 'Condições gerais de venda da SILDEL - Arte e Conceito no Mobiliário, Lda.'],
+            ],
+            'privacy-policy' => [
+                'title' => 'Política de Privacidade',
+                'seo' => ['title' => 'Política de Privacidade | Sildel', 'description' => 'Como a Sildel recolhe, utiliza e protege os seus dados pessoais, e a nossa política de cookies.'],
+            ],
+            'kicker' => 'Apoio ao Cliente',
+            'updated' => 'Dúvidas sobre esta página? Escreva para :email.',
+        ],
+
+        'not_found' => [
+            'seo' => ['title' => 'Página não encontrada | Sildel', 'description' => 'Não foi possível encontrar esta página.'],
+            'kicker' => 'Erro 404',
+            'title' => ['Esta página voltou', 'para a *floresta*'],
+            'text' => 'A página que procura não existe ou mudou de endereço. Os nossos tesouros continuam aqui.',
+            'cta' => ['label' => 'Explorar os Tesouros'],
+            'home' => 'Voltar ao início',
+        ],
+
+        'shared' => [
+            'treasures_cta' => [
+                'kicker' => 'Tesouros',
+                'title' => ['Não vendemos produtos.', 'Criamos *tesouros.*'],
+                'cta' => ['label' => 'Ver todos os Tesouros'],
+            ],
         ],
     ],
 ];

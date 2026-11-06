@@ -20,7 +20,8 @@ class ShareSiteSettings
     public function handle(Request $request, Closure $next): Response
     {
         // Pages carry the locale in the URL; forms post it as a hidden field.
-        $locale = $request->route('locale') ?? $request->input('locale');
+        // Unknown URLs (the 404 fallback route) take the locale from the first path segment.
+        $locale = $request->route('locale') ?? $request->input('locale') ?? $request->segment(1);
 
         if (! is_string($locale) || ! in_array($locale, $this->content->locales(), true)) {
             $locale = $this->content->defaultLocale();

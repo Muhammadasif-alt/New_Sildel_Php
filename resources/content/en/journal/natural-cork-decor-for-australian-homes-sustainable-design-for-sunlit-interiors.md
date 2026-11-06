@@ -28,7 +28,7 @@ Genuine cork is light, durable and naturally resistant to moisture and wear. To 
 
 ## Bringing handcrafted cork art from Portugal to Australia
 
-Every Sildel treasure is handcrafted in our atelier in Esmoriz, Portugal, and shipped worldwide. Because each piece is unique, we sell through a personal enquiry rather than an anonymous checkout. We confirm the piece, send photographs of the actual item before dispatch, and prepare a delivery quote to your address in Australia, with careful protective packing for the long journey.
+Every Sildel treasure is handcrafted in our atelier in Esmoriz, Portugal, and shipped worldwide. Because each piece is unique, we sell through a personal enquiry rather than an anonymous checkout. We confirm the piece, send photographs of the actual item before dispatch, and arrange delivery to your address in Australia, with careful protective packing for the long journey.
 
 Interior designers and architects working on residential or hospitality projects in Australia can also commission bespoke pieces. Find out more on our [You Think Cork](/you-think-cork) page.
 
@@ -38,7 +38,7 @@ Interior designers and architects working on residential or hospitality projects
 Yes. Cork is resilient, light and pleasant to the touch, and it ages gracefully with everyday life.
 
 **Do you ship to Australia?**
-Yes. Sildel pieces are shipped worldwide from Portugal. [Contact the atelier](/contact) for a quote to your city.
+Yes. Sildel pieces are shipped worldwide from Portugal by DHL. Postage depends on the destination, and we confirm it with you before you pay. [Contact the atelier](/contact) to arrange delivery to your city.
 
 **What makes Portuguese cork different?**
 Portugal has the world's largest cork forests and the deepest expertise in harvesting and working the material. Read more on our [Authentic Cork](/authentic-cork) page.

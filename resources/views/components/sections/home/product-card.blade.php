@@ -4,20 +4,21 @@
     drawn under the name and the arrow circle filling gold.
     Reusable on any page listing products (grid or slider).
 
-    product: App\Data\Product
-    index:   position in the list (0-based), shown as a Roman numeral
+    product: App\Data\Product (pieces without a black studio photo show their white card)
+    index:   position in the list (0-based, kept for callers; no longer displayed)
 --}}
 @props(['product', 'index' => 0])
 
 @php
     /** @var \App\Data\Product $product */
+    // Badge as on sildel.pt: the piece's own tag, otherwise "Unique & Exclusive" for one-of-a-kind pieces.
+    $badge = $product->tag ?? ($product->exclusive ? $site->ui('unique') : null);
 @endphp
 
 <a href="{{ $product->url }}" {{ $attributes->class('product-card group block') }}>
     <div class="product-card-media relative aspect-[4/5] overflow-hidden bg-velvet">
-        <x-common.roman-numeral :value="$index + 1" class="absolute top-5 left-6 z-[2] hidden text-[0.95rem] sm:block" aria-hidden="true" />
-        @if ($product->tag)
-            <span @class(['product-tag', 'product-tag-sage' => $product->tagTone === 'sage'])>{{ $product->tag }}</span>
+        @if ($badge)
+            <span @class(['product-tag', 'product-tag-sage' => $product->tag && $product->tagTone === 'sage'])>{{ $badge }}</span>
         @endif
         <x-common.cork-image
             :src="$product->galleryImage()"
@@ -33,6 +34,10 @@
         <div class="min-w-0">
             <h3 class="text-[clamp(1.35rem,2.1vw,2rem)] leading-tight transition-colors duration-500 group-hover:text-gold">{{ $product->name }}</h3>
             <p class="caps mt-2 text-mute-light">{{ $product->subtitle }}</p>
+            @if ($badge)
+                {{-- Phones: the badge moves under the name so it never covers the piece. --}}
+                <p class="product-tag-inline">{{ $badge }}</p>
+            @endif
         </div>
         <span class="product-arrow" aria-hidden="true">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 12h14M13 6l6 6-6 6" /></svg>

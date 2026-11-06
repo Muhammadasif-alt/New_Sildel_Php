@@ -1,23 +1,21 @@
 /* Header, MobileMenu (sheet), Footer */
 @layer components {
     /* ---------- Header ---------- */
-    /* Frosted dark bar: melts into the hero at the top, floats over everything once the page scrolls. */
+    /* White bar with the official logo in black, as on the client's site (client choice). */
     .site-header {
         position: fixed;
         inset: 0 0 auto;
         z-index: 100;
         padding: 22px 0;
-        background: var(--color-glass);
-        border-bottom: 1px solid var(--color-line-faint);
-        color: var(--color-bone);
-        backdrop-filter: blur(18px) saturate(140%);
-        transition: padding 0.6s, border-color 0.6s, box-shadow 0.6s;
+        background: var(--color-snow);
+        border-bottom: 1px solid var(--color-linen);
+        color: var(--color-ink);
+        transition: padding 0.6s, box-shadow 0.6s;
     }
 
     .site-header.is-solid {
         padding: 14px 0;
-        border-bottom-color: var(--color-line);
-        box-shadow: 0 24px 60px -36px rgb(0 0 0 / 0.9);
+        box-shadow: 0 18px 40px -28px var(--color-shadow);
     }
 
     /* Logo shrinks with the header once it turns solid. */
@@ -46,16 +44,14 @@
         font-weight: 500;
         letter-spacing: 0.3em;
         text-transform: uppercase;
-        color: var(--color-parchment);
-        opacity: 0.82;
-        transition: color 0.4s, opacity 0.4s;
+        color: var(--color-ink);
+        transition: color 0.4s;
     }
 
     .nav-link:hover,
     .nav-link:focus-visible,
     .nav-link[aria-current] {
-        color: var(--color-gold);
-        opacity: 1;
+        color: var(--color-bronze-ink);
     }
 
     .nav-link::after {
@@ -79,16 +75,16 @@
     .lang {
         font-size: 0.66rem;
         letter-spacing: 0.24em;
-        color: var(--lang-color, var(--color-mute-light));
+        color: var(--lang-color, var(--color-ink-soft));
     }
 
     .lang [aria-current] {
-        color: var(--lang-active, var(--color-gold));
-        font-weight: 500;
+        color: var(--lang-active, var(--color-bronze-ink));
+        font-weight: 600;
     }
 
     .lang a:hover {
-        color: var(--lang-hover, var(--color-bone));
+        color: var(--lang-hover, var(--color-ink));
     }
 
     /* Inside the dark mobile sheet */
@@ -106,7 +102,7 @@
         background: none;
         border: 0;
         cursor: pointer;
-        color: var(--color-bone);
+        color: var(--color-ink);
     }
 
     .burger span {
@@ -220,15 +216,27 @@
     }
 
     .giant-wordmark {
-        margin-bottom: -0.12em;
+        margin: 0 auto;
+        padding: clamp(12px, 2vw, 28px) 16px clamp(22px, 3vw, 40px);
         font-family: var(--font-display);
-        font-size: clamp(5rem, 23vw, 22rem);
-        line-height: 0.8;
+        font-size: clamp(4.2rem, 20vw, 19rem);
+        line-height: 1;
         letter-spacing: 0.06em;
         text-align: center;
-        color: transparent;
-        -webkit-text-stroke: 1px var(--color-line);
+        color: color-mix(in srgb, var(--color-gold) 55%, transparent);
         user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.12em;
+    }
+
+    /* The lynx face before the word, in the same muted gold as the letters. */
+    .giant-wordmark-lynx {
+        flex: none;
+        width: 0.72em;
+        height: 0.72em;
+        color: color-mix(in srgb, var(--color-gold) 55%, transparent);
     }
 
     @media (prefers-reduced-motion: reduce) {

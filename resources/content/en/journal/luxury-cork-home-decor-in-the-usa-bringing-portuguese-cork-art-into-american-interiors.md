@@ -27,7 +27,7 @@ Every Sildel treasure is sold through a personal enquiry rather than an anonymou
 
 1. Confirm the exact piece, size and finish you have in mind.
 2. Send detailed photographs of the actual piece before dispatch, because no two are identical.
-3. Prepare a delivery quote to your address in the United States, with careful protective packing.
+3. Arrange delivery to your address in the United States by DHL, with careful protective packing. Postage depends on the destination, and we confirm it with you before you pay.
 
 To begin, browse the [Sildel Treasures](/treasures) and [contact the atelier](/contact) with the piece you love. We reply personally, normally within one working day.
 

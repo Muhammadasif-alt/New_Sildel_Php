@@ -72,7 +72,7 @@
             <x-ui.button variant="ghost" :href="$content['cta']['url']">{{ $content['cta']['label'] }}</x-ui.button>
         </x-common.section-container>
     @else
-        <x-common.section-container as="ul" class="product-grid" role="list">
+        <x-common.section-container as="ul" class="product-grid product-grid-home" role="list">
             @foreach ($products as $product)
                 <x-common.reveal as="li" :delay="($loop->index % 3) * 0.12" class="product-grid-item">
                     <x-sections.home.product-card :product="$product" :index="$loop->index" />
