@@ -21,7 +21,7 @@
 
     <div class="treasure-info flex items-start justify-between gap-4 pt-5">
         <div class="min-w-0">
-            <p class="caps text-bronze-ink">{{ $product->categoryLabel }}</p>
+            <p class="caps text-bronze-ink">{{ $product->kind() }}</p>
             <h3 class="mt-2 text-[clamp(1.45rem,2vw,1.85rem)] leading-tight text-ink">{{ $product->name }}</h3>
             <p class="mt-1 text-[0.88rem] text-ink-soft">{{ $product->subtitle }}</p>
         </div>

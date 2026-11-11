@@ -654,6 +654,14 @@
         }
     }
 
+    /* The plain "what is this?" sentence under the product name. */
+    .product-fact {
+        max-width: 46ch;
+        font-size: 1.12rem;
+        line-height: 1.6;
+        color: var(--color-ink);
+    }
+
     .product-badge {
         display: inline-flex;
         align-items: center;

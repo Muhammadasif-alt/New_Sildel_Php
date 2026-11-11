@@ -70,6 +70,7 @@ class ConfigContentRepository implements ContentRepository
             fn (string $slug) => $this->product($slug, $locale),
             $home['featured'],
         )));
+        $home['categories'] = $this->categories($locale);
         $home['journal']['articles'] = array_slice($this->articles($locale), 0, 3);
         $home['stats'] = array_map(Stat::fromArray(...), $home['stats']);
         $home['ritual']['steps'] = array_map(RitualStep::fromArray(...), $home['ritual']['steps']);
@@ -91,8 +92,9 @@ class ConfigContentRepository implements ContentRepository
         $categories = $this->categories($locale);
         $care = $this->translated(config('treasures.care'), config("treasures.translations.$locale.care", []));
         $copy = config("treasures.translations.$locale.products", []);
+        $types = config("treasures.types.$locale") ?? config('treasures.types.'.$this->defaultLocale(), []);
 
-        return $this->products[$locale] = array_map(function (array $item) use ($locale, $categories, $care, $copy) {
+        return $this->products[$locale] = array_map(function (array $item) use ($locale, $categories, $types, $care, $copy) {
             $item = [...$item, ...($copy[$item['slug']] ?? [])];
             $folder = 'images/sildel/treasures/'.$item['slug'];
             $dark = 'images/sildel/products/'.$item['slug'].'.webp';
@@ -101,6 +103,7 @@ class ConfigContentRepository implements ContentRepository
                 ...$item,
                 'url' => LocalizedUrl::route('treasures.show', ['slug' => $item['slug']], $locale),
                 'category_label' => $categories[$item['category']] ?? '',
+                'type_label' => $types[$item['type'] ?? ''] ?? '',
                 'image' => $folder.'/card.webp',
                 // Black studio card (images/sildel/products/{slug}.webp) whenever one exists; otherwise the white card.
                 'dark_image' => PublicImage::exists($dark) ? $dark : null,

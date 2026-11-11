@@ -11,10 +11,10 @@
         '@context' => 'https://schema.org',
         '@type' => 'Product',
         'name' => $product->name,
-        'description' => implode(' ', $product->description),
+        'description' => trim(($product->summary ?? '').' '.implode(' ', $product->description)),
         'image' => array_map(fn ($photo) => asset($photo['src']), $product->gallery),
         'material' => $product->subtitle,
-        'category' => $product->categoryLabel,
+        'category' => $product->kind(),
         'brand' => ['@type' => 'Brand', 'name' => $site->name],
         'url' => $product->url,
     ];
@@ -22,7 +22,7 @@
 
 <x-layouts.site
     :title="$product->name.' | '.$treasures['hero']['kicker'].' | '.$site->name"
-    :description="\Illuminate\Support\Str::limit($product->description[0] ?? $product->subtitle, 155)"
+    :description="\Illuminate\Support\Str::limit($product->summary ?? $product->description[0] ?? $product->subtitle, 155)"
     :image="$product->image ? asset($product->image) : null"
     :preloader="false"
 >
@@ -42,8 +42,12 @@
                 <x-sections.treasures.gallery :product="$product" :labels="$labels" />
 
                 <div class="product-summary">
-                    <x-common.kicker tone="bronze">{{ $product->categoryLabel }}</x-common.kicker>
+                    <x-common.kicker tone="bronze">{{ $product->kind() }}</x-common.kicker>
                     <h1 id="page-title" class="mt-5 text-[clamp(2.8rem,5vw,4.6rem)] leading-none">{{ $product->name }}</h1>
+                    @if ($product->summary)
+                        {{-- The plain answer to "what is this?", before the story. --}}
+                        <p class="product-fact mt-6">{{ $product->summary }}</p>
+                    @endif
                     <p class="caps mt-5 text-ink-soft">{{ $product->subtitle }}</p>
 
                     @if ($product->exclusive || $product->tag)
@@ -69,7 +73,8 @@
                         @endforeach
                     </div>
 
-                    <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+                    <p class="caps mt-10 text-bronze-ink">{{ $labels['on_request'] }}</p>
+                    <div class="mt-5 flex flex-wrap items-center gap-x-8 gap-y-5">
                         <x-ui.button variant="ink" :href="$enquiry" arrow>{{ $labels['enquire'] }}</x-ui.button>
                         <a href="{{ $site->contact->phoneHref }}" class="caps text-ink-soft transition-colors hover:text-bronze-ink">{{ $site->contact->phone }}</a>
                     </div>

@@ -15,6 +15,8 @@
 |
 | Keys
 |   category   key of 'categories'
+|   type       key of 'types': what the piece is ("Table lamp"), shown on every card and above the name
+|   summary    one plain sentence: what it is, its size and how it is used (no poetry; that is 'description')
 |   material   "Authentic cork and ..." (shown under the name and in the specifications)
 |   exclusive  true shows the "Unique & Exclusive" mark (one-of-a-kind pieces)
 |   origin     true adds the note on how the cork's air bubble shapes the piece
@@ -39,6 +41,41 @@ return [
             'furniture' => 'Mobiliário',
             'mirrors' => 'Espelhos',
             'accents' => 'Jarras e Velas',
+        ],
+    ],
+
+    // What a piece is, in plain words. Shown on every card so a first-time visitor can tell
+    // a lamp from a sculpture without opening the page.
+    'types' => [
+        'en' => [
+            'table_lamp' => 'Table lamp',
+            'pendant' => 'Pendant light',
+            'hanging_light' => 'Hanging light',
+            'coffee_table' => 'Coffee table',
+            'side_table' => 'Side table',
+            'low_table' => 'Low table',
+            'table' => 'Table',
+            'mirror' => 'Decorative mirror',
+            'sculpture' => 'Sculpture',
+            'centrepiece' => 'Centrepiece',
+            'bowl' => 'Decorative bowl',
+            'vase' => 'Flower vase',
+            'candle_holder' => 'Candle holder',
+        ],
+        'pt' => [
+            'table_lamp' => 'Candeeiro de mesa',
+            'pendant' => 'Candeeiro suspenso',
+            'hanging_light' => 'Luminária suspensa',
+            'coffee_table' => 'Mesa de centro',
+            'side_table' => 'Mesa de apoio',
+            'low_table' => 'Mesa baixa',
+            'table' => 'Mesa',
+            'mirror' => 'Espelho decorativo',
+            'sculpture' => 'Escultura',
+            'centrepiece' => 'Centro de mesa',
+            'bowl' => 'Taça decorativa',
+            'vase' => 'Jarra para flores',
+            'candle_holder' => 'Suporte para velas',
         ],
     ],
 
@@ -103,6 +140,8 @@ return [
             'slug' => 'abyss',
             'name' => 'Abyss',
             'category' => 'sculptures',
+            'type' => 'sculpture',
+            'summary' => 'A sculpture in natural cork bark resting on a round Carrara marble base, 61 cm long. One of a kind.',
             'material' => 'Authentic cork and Carrara marble',
             'exclusive' => true,
             'origin' => true,
@@ -121,6 +160,8 @@ return [
             'slug' => 'alexis',
             'name' => 'Alexis',
             'category' => 'furniture',
+            'type' => 'coffee_table',
+            'summary' => 'A coffee table with a glass top on two cork legs, 123 cm wide. A raised cork stand holds hot or cold dishes.',
             'material' => 'Authentic cork and glass',
             'featured' => true,
             'description' => [
@@ -136,6 +177,8 @@ return [
             'slug' => 'granada',
             'name' => 'Granada',
             'category' => 'furniture',
+            'type' => 'table',
+            'summary' => 'A large table for dining or working, 185 x 100 cm, with a cork mosaic top on solid wood legs.',
             'material' => 'Authentic cork and solid wood',
             'description' => [
                 'In this cork table, nature merges with everyday life, turning every meeting, work or meal into an expression of bohemian art.',
@@ -151,6 +194,8 @@ return [
             'slug' => 'hot-spring',
             'name' => 'Hot Spring',
             'category' => 'lighting',
+            'type' => 'table_lamp',
+            'summary' => 'A table lamp, 54 cm tall: a cork shade on a slim metal stem with a solid cork base.',
             'tag' => 'Different formats',
             'material' => 'Authentic cork and metal',
             'featured' => true,
@@ -169,6 +214,8 @@ return [
             'slug' => 'bond',
             'name' => 'Bond',
             'category' => 'furniture',
+            'type' => 'low_table',
+            'summary' => 'A low table in two separate tiers of cork on steel rods, 40 cm high. The two parts can be arranged in different ways.',
             'material' => 'Authentic cork and steel',
             'description' => [
                 'Bond displays singularity in its geometric form. This piece is divided into two independent parts with distinct thicknesses, giving it remarkable versatility.',
@@ -183,6 +230,8 @@ return [
             'slug' => 'fireflies',
             'name' => 'Fireflies',
             'category' => 'lighting',
+            'type' => 'hanging_light',
+            'summary' => 'A one-metre hanging light: a strand of small cork sheets that lets light through like fireflies.',
             'material' => 'Authentic cork with a stainless steel holder',
             'description' => [
                 'A beam of light, weaving dreams and shadows, breathing life into forgotten corners with an aura of mystery.',
@@ -199,6 +248,8 @@ return [
             'slug' => 'eclipse-silver',
             'name' => 'Eclipse Silver',
             'category' => 'lighting',
+            'type' => 'table_lamp',
+            'summary' => 'A small table lamp, 22 cm long, made of two cork pieces. Turn the upper part to spread or focus the light. White metal finish.',
             'family' => 'eclipse',
             'material' => 'Authentic cork and white metal',
             'description' => [
@@ -215,6 +266,8 @@ return [
             'slug' => 'eclipse-copper',
             'name' => 'Eclipse Copper',
             'category' => 'lighting',
+            'type' => 'table_lamp',
+            'summary' => 'A small table lamp, 22 cm long, made of two cork pieces. Turn the upper part to spread or focus the light. Copper-toned finish.',
             'family' => 'eclipse',
             'material' => 'Authentic cork and copper-toned metal',
             'description' => [
@@ -231,6 +284,8 @@ return [
             'slug' => 'island',
             'name' => 'Island',
             'category' => 'sculptures',
+            'type' => 'centrepiece',
+            'summary' => 'A long cork centrepiece, 84 cm, on a white marble block. Its hollows hold fruit or small objects. One of a kind.',
             'material' => 'Authentic cork and white marble',
             'exclusive' => true,
             'origin' => true,
@@ -247,6 +302,8 @@ return [
             'slug' => 'gibraltar',
             'name' => 'Gibraltar',
             'category' => 'furniture',
+            'type' => 'coffee_table',
+            'summary' => 'A coffee table with a glass top on cork legs, 92 cm wide. A raised cork stand holds hot or cold dishes.',
             'material' => 'Authentic cork and glass',
             'description' => [
                 'Gibraltar is the result of the fusion between cork and glass, a piece that combines sophistication and practicality.',
@@ -261,6 +318,8 @@ return [
             'slug' => 'shell',
             'name' => 'Shell',
             'category' => 'sculptures',
+            'type' => 'bowl',
+            'summary' => 'A large decorative bowl in cork on white marble, 68 cm across. Use it as a fruit bowl or a centrepiece. One of a kind.',
             'material' => 'Authentic cork and white marble',
             'exclusive' => true,
             'origin' => true,
@@ -279,6 +338,8 @@ return [
             'slug' => 'crescent',
             'name' => 'Crescent',
             'category' => 'lighting',
+            'type' => 'pendant',
+            'summary' => 'A pendant light made of dozens of cork arches hanging around the bulb. It can be shaped horizontal, vertical or oval. Four sizes.',
             'tag' => 'Different sizes',
             'material' => 'Authentic cork',
             'featured' => true,
@@ -298,6 +359,8 @@ return [
             'slug' => 'side-by-side',
             'name' => 'Side by Side',
             'category' => 'mirrors',
+            'type' => 'mirror',
+            'summary' => 'A decorative mirror in two separate parts, a mirror panel and a perforated cork panel, 122 cm wide. Arrange them in different ways.',
             'material' => 'Authentic cork and mirror',
             'description' => [
                 'Reflecting handcraft and ancestry, glass meets authentic cork, creating endless combinations.',
@@ -313,6 +376,8 @@ return [
             'slug' => 'shale-coast',
             'name' => 'Shale Coast',
             'category' => 'lighting',
+            'type' => 'table_lamp',
+            'summary' => 'A table lamp built from thick layers of cork, 31 cm long. Stand it upright or lay it flat for a different light.',
             'family' => 'shale',
             'tag' => 'New',
             'tag_tone' => 'sage',
@@ -331,6 +396,8 @@ return [
             'slug' => 'carre-dor',
             'name' => "Carré d'Or",
             'category' => 'mirrors',
+            'type' => 'mirror',
+            'summary' => 'A double-sided table mirror held in a cork block. The mirror stands upright or on its side. Gold Edition.',
             'tag' => 'Gold Edition',
             'material' => 'Authentic cork and double-sided mirror',
             'featured' => true,
@@ -348,6 +415,8 @@ return [
             'slug' => 'belize',
             'name' => 'Belize',
             'category' => 'sculptures',
+            'type' => 'centrepiece',
+            'summary' => 'A cork centrepiece bowl on white marble, 74 cm wide, for fruit or treasured objects. One of a kind.',
             'material' => 'Authentic cork and white marble',
             'exclusive' => true,
             'origin' => true,
@@ -364,6 +433,8 @@ return [
             'slug' => 'equilibrium',
             'name' => 'Equilibrium',
             'category' => 'sculptures',
+            'type' => 'sculpture',
+            'summary' => 'A sculpture in curved cork bark studded with golden stainless steel spheres. It can rest in several positions. One of a kind.',
             'material' => 'Authentic cork and golden stainless steel spheres',
             'exclusive' => true,
             'origin' => true,
@@ -381,6 +452,8 @@ return [
             'slug' => 'shale',
             'name' => 'Shale',
             'category' => 'lighting',
+            'type' => 'table_lamp',
+            'summary' => 'A table lamp of thin pressed cork layers, 28 cm tall. Upright or lying down, it gives direct or indirect light. One of a kind.',
             'family' => 'shale',
             'exclusive' => true,
             'material' => 'Authentic cork',
@@ -398,6 +471,8 @@ return [
             'slug' => 'leaf-golden',
             'name' => 'Leaf Golden',
             'category' => 'lighting',
+            'type' => 'table_lamp',
+            'summary' => 'A table lamp, 42 cm tall: golden cork leaves rising from a white marble cube. Gold Edition.',
             'family' => 'leaf',
             'tag' => 'Gold Edition',
             'material' => 'Authentic cork and white marble',
@@ -415,6 +490,8 @@ return [
             'slug' => 'leaf-brown',
             'name' => 'Leaf Brown',
             'category' => 'lighting',
+            'type' => 'table_lamp',
+            'summary' => 'A table lamp, 42 cm tall: natural brown cork leaves rising from a white marble cube.',
             'family' => 'leaf',
             'material' => 'Authentic cork and white marble',
             'description' => [
@@ -430,6 +507,8 @@ return [
             'slug' => 'halley',
             'name' => 'Halley',
             'category' => 'mirrors',
+            'type' => 'mirror',
+            'summary' => 'A round table mirror set in a cork frame with a long cork "tail". Two separate parts that can be arranged in different ways.',
             'material' => 'Authentic cork and mirror',
             'featured' => true,
             'description' => [
@@ -446,6 +525,8 @@ return [
             'slug' => 'oscar',
             'name' => 'Óscar',
             'category' => 'sculptures',
+            'type' => 'sculpture',
+            'summary' => 'A sculpture in cork on white marble, 47 cm tall, made as a tribute to the cork oak. One of a kind.',
             'exclusive' => true,
             'material' => 'Authentic cork and white marble',
             'lead' => 'A tribute to the cork oak',
@@ -462,6 +543,8 @@ return [
             'slug' => 'marlin',
             'name' => 'Marlin',
             'category' => 'sculptures',
+            'type' => 'sculpture',
+            'summary' => 'A sculpture: a curved cork form on a round white marble base, holding a white marble sphere. 77 cm wide. One of a kind.',
             'material' => 'Authentic cork and white marble',
             'exclusive' => true,
             'origin' => true,
@@ -478,6 +561,8 @@ return [
             'slug' => 'olympia',
             'name' => 'Olympia',
             'category' => 'furniture',
+            'type' => 'side_table',
+            'summary' => 'A tall side table, 94 cm high, with two cork surfaces on a slim steel frame. For beside a bed or a sofa.',
             'material' => 'Authentic cork and steel',
             'description' => [
                 'A functional work of art. Meet Olympia, a symbol of refinement and a testament to nature in its noblest form.',
@@ -493,6 +578,8 @@ return [
             'slug' => 'horizon',
             'name' => 'Horizon',
             'category' => 'sculptures',
+            'type' => 'sculpture',
+            'summary' => 'A sculpture: a long hollowed cork form, 78 cm, balanced on a white marble cube that can be placed in several ways. One of a kind.',
             'material' => 'Authentic cork and white marble',
             'exclusive' => true,
             'description' => [
@@ -509,6 +596,8 @@ return [
             'slug' => 'shale-belly-red',
             'name' => 'Shale Belly Red',
             'category' => 'lighting',
+            'type' => 'table_lamp',
+            'summary' => 'A table lamp of thin layered cork strips, 28 cm tall, with a red lamp holder and cord. Use it upright or lying down.',
             'family' => 'shale',
             'material' => 'Authentic cork',
             'description' => [
@@ -525,6 +614,8 @@ return [
             'slug' => 'shale-belly-silver',
             'name' => 'Shale Belly Silver',
             'category' => 'lighting',
+            'type' => 'table_lamp',
+            'summary' => 'A table lamp of thin layered cork strips, 28 cm tall, with a silver lamp holder. Use it upright or lying down.',
             'family' => 'shale',
             'material' => 'Authentic cork',
             'description' => [
@@ -541,6 +632,8 @@ return [
             'slug' => 'pearl',
             'name' => 'Pearl',
             'category' => 'sculptures',
+            'type' => 'sculpture',
+            'summary' => 'A sculpture: a tall cork form with a round opening on an oval white marble base, holding a marble sphere. 65 cm wide. One of a kind.',
             'material' => 'Authentic cork and white marble',
             'exclusive' => true,
             'origin' => true,
@@ -557,6 +650,8 @@ return [
             'slug' => 'vitaqua',
             'name' => 'Vitaqua',
             'category' => 'accents',
+            'type' => 'vase',
+            'summary' => 'A flower vase, 90 cm long: a row of glass tubes set in a strip of cork bark, one stem in each.',
             'family' => 'stopper',
             'material' => 'Authentic cork and glass',
             'lead' => 'A tribute to the cork stopper',
@@ -573,6 +668,8 @@ return [
             'slug' => 'bonfire',
             'name' => 'Bonfire',
             'category' => 'accents',
+            'type' => 'candle_holder',
+            'summary' => 'A candle holder, 45 cm across: glass cups for candles on a base of joined cork pieces.',
             'material' => 'Authentic cork and glass',
             'description' => [
                 'A fusion of cork pieces coming together to create a unique and organic base, supporting glass vessels that house candles, evoking the warm essence of a glowing bonfire.',
@@ -587,6 +684,8 @@ return [
             'slug' => 'vitavele',
             'name' => 'Vitavele',
             'category' => 'accents',
+            'type' => 'candle_holder',
+            'summary' => 'A candle holder, 90 cm long: a row of glass cups for candles set in a strip of cork bark.',
             'family' => 'stopper',
             'material' => 'Authentic cork and glass',
             'lead' => 'A tribute to the cork stopper',
@@ -666,6 +765,7 @@ return [
             'products' => [
 
                 'abyss' => [
+                    'summary' => 'Escultura em casca de cortiça natural assente numa base redonda de mármore de Carrara, com 61 cm de comprimento. Peça única.',
                     'material' => 'Cortiça autêntica e mármore de Carrara',
                     'description' => [
                         'A atração do Abyss transcende a mera arte, sendo um testemunho da dança ancestral entre a engenhosidade humana e o mundo natural.',
@@ -676,6 +776,7 @@ return [
                 ],
 
                 'alexis' => [
+                    'summary' => 'Mesa de centro com tampo de vidro sobre dois pés de cortiça, com 123 cm de largura. Uma base de cortiça elevada recebe pratos quentes ou frios.',
                     'material' => 'Cortiça autêntica e vidro',
                     'description' => [
                         'Alexis é uma joia do que acontece quando a cortiça e o vidro se fundem, incorporando uma técnica ancestral de amarração de palha de cortiça, visível através do vidro. Isso confere à peça um toque de intemporalidade.',
@@ -685,6 +786,7 @@ return [
                 ],
 
                 'granada' => [
+                    'summary' => 'Mesa grande para refeições ou trabalho, 185 x 100 cm, com tampo em mosaico de cortiça e pés de madeira maciça.',
                     'material' => 'Cortiça autêntica e madeira maciça',
                     'description' => [
                         'Nesta mesa de cortiça, a natureza funde-se com o quotidiano, transformando cada encontro, trabalho ou refeição numa expressão de arte boémia.',
@@ -695,6 +797,7 @@ return [
                 ],
 
                 'hot-spring' => [
+                    'summary' => 'Candeeiro de mesa com 54 cm de altura: abajur de cortiça sobre uma haste metálica fina e base de cortiça maciça.',
                     'tag' => 'Diferentes formatos',
                     'material' => 'Cortiça autêntica e metal',
                     'description' => [
@@ -707,6 +810,7 @@ return [
                 ],
 
                 'bond' => [
+                    'summary' => 'Mesa baixa em dois níveis de cortiça sobre varões de aço, com 40 cm de altura. As duas partes podem ser dispostas de várias formas.',
                     'material' => 'Cortiça autêntica e aço',
                     'description' => [
                         'Bond exibe singularidade na sua forma geométrica. Esta peça é dividida em duas partes independentes com espessuras distintas, conferindo-lhe uma notável versatilidade.',
@@ -716,6 +820,7 @@ return [
                 ],
 
                 'fireflies' => [
+                    'summary' => 'Luminária suspensa com um metro: um fio de pequenas folhas de cortiça que deixa passar a luz como pirilampos.',
                     'material' => 'Cortiça autêntica com suporte em inox',
                     'description' => [
                         'Um feixe de luz, tecendo sonhos e sombras, dando vida a cantos esquecidos com uma aura de mistério.',
@@ -727,6 +832,7 @@ return [
                 ],
 
                 'eclipse-silver' => [
+                    'summary' => 'Pequeno candeeiro de mesa com 22 cm, feito de duas peças de cortiça. Rode a parte superior para dispersar ou focar a luz. Acabamento em metal branco.',
                     'material' => 'Cortiça autêntica e metal branco',
                     'description' => [
                         'Eclipse transcende os limites ordinários de um simples candeeiro, emergindo como uma verdadeira obra-prima de refinamento. Fabricado com duas peças de cortiça autêntica, supera a sua função utilitária, ascendendo ao reino da sofisticação.',
@@ -737,6 +843,7 @@ return [
                 ],
 
                 'eclipse-copper' => [
+                    'summary' => 'Pequeno candeeiro de mesa com 22 cm, feito de duas peças de cortiça. Rode a parte superior para dispersar ou focar a luz. Acabamento em tom de cobre.',
                     'material' => 'Cortiça autêntica e metal acobreado',
                     'description' => [
                         'Eclipse transcende os limites ordinários de um simples candeeiro, emergindo como uma verdadeira obra-prima de refinamento. Fabricado com duas peças de cortiça autêntica, supera a sua função utilitária, ascendendo ao reino da sofisticação.',
@@ -747,6 +854,7 @@ return [
                 ],
 
                 'island' => [
+                    'summary' => 'Centro de mesa comprido em cortiça, com 84 cm, sobre um bloco de mármore branco. As suas concavidades recebem fruta ou pequenos objetos. Peça única.',
                     'material' => 'Cortiça autêntica e mármore branco',
                     'description' => [
                         'Um testemunho da beleza do equilíbrio. Um pequeno prisma de mármore branco ancora uma estrutura fluida de cortiça autêntica, cuja forma alongada é adornada com uma miríade de curvas e ondulações.',
@@ -756,6 +864,7 @@ return [
                 ],
 
                 'gibraltar' => [
+                    'summary' => 'Mesa de centro com tampo de vidro sobre pés de cortiça, com 92 cm de largura. Uma base de cortiça elevada recebe pratos quentes ou frios.',
                     'material' => 'Cortiça autêntica e vidro',
                     'description' => [
                         'Gibraltar é o resultado da fusão entre cortiça e vidro, uma peça que combina sofisticação e praticidade.',
@@ -765,6 +874,7 @@ return [
                 ],
 
                 'shell' => [
+                    'summary' => 'Taça decorativa grande em cortiça sobre mármore branco, com 68 cm de diâmetro. Serve de fruteira ou centro de mesa. Peça única.',
                     'material' => 'Cortiça autêntica e mármore branco',
                     'description' => [
                         'Uma dança entre a natureza e a arte. A forma côncava da cortiça autêntica encontra a pureza do mármore branco num bailado de formas e texturas.',
@@ -775,6 +885,7 @@ return [
                 ],
 
                 'crescent' => [
+                    'summary' => 'Candeeiro suspenso feito de dezenas de arcos de cortiça em torno da lâmpada. Pode assumir forma horizontal, vertical ou oval. Quatro tamanhos.',
                     'tag' => 'Diferentes tamanhos',
                     'material' => 'Cortiça autêntica',
                     'description' => [
@@ -788,6 +899,7 @@ return [
                 ],
 
                 'side-by-side' => [
+                    'summary' => 'Espelho decorativo em duas partes independentes, um painel de espelho e um painel de cortiça perfurada, com 122 cm de largura. Disponha-as de várias formas.',
                     'material' => 'Cortiça autêntica e espelho',
                     'description' => [
                         'Refletindo a arte manual e a ancestralidade, o vidro encontra a cortiça autêntica, criando combinações infinitas.',
@@ -798,6 +910,7 @@ return [
                 ],
 
                 'shale-coast' => [
+                    'summary' => 'Candeeiro de mesa construído com camadas espessas de cortiça, com 31 cm. Use-o na vertical ou deitado para obter uma luz diferente.',
                     'tag' => 'Novo',
                     'material' => 'Cortiça autêntica',
                     'description' => [
@@ -808,6 +921,7 @@ return [
                 ],
 
                 'carre-dor' => [
+                    'summary' => 'Espelho de mesa de dupla face encaixado num bloco de cortiça. O espelho fica na vertical ou na horizontal. Gold Edition.',
                     'tag' => 'Edição Dourada',
                     'material' => 'Cortiça autêntica e espelho duplo',
                     'description' => [
@@ -819,6 +933,7 @@ return [
                 ],
 
                 'belize' => [
+                    'summary' => 'Centro de mesa em forma de taça, em cortiça sobre mármore branco, com 74 cm de largura, para fruta ou objetos especiais. Peça única.',
                     'material' => 'Cortiça autêntica e mármore branco',
                     'description' => [
                         'Belize é uma ode à grandeza natural, onde cada linha e curva convida à contemplação. Uma peça que transcende a função, tornando-se um monumento de expressão artística, moldado pela natureza e pela imaginação.',
@@ -828,6 +943,7 @@ return [
                 ],
 
                 'equilibrium' => [
+                    'summary' => 'Escultura em casca de cortiça curva cravejada de esferas de aço inoxidável dourado. Pode ser pousada em várias posições. Peça única.',
                     'material' => 'Cortiça autêntica e esferas douradas em inox',
                     'description' => [
                         'Os detalhes dourados conferem a esta peça uma elegância verdadeiramente excecional e proporcionam equilíbrio para posicioná-la de diversas maneiras.',
@@ -838,6 +954,7 @@ return [
                 ],
 
                 'shale' => [
+                    'summary' => 'Candeeiro de mesa em finas camadas de cortiça prensada, com 28 cm de altura. Na vertical ou deitado, dá luz direta ou indireta. Peça única.',
                     'material' => 'Cortiça autêntica',
                     'description' => [
                         'Cada camada desta peça revela a história da beleza serena da natureza, com um brilho quente e acolhedor.',
@@ -848,6 +965,7 @@ return [
                 ],
 
                 'leaf-golden' => [
+                    'summary' => 'Candeeiro de mesa com 42 cm de altura: folhas de cortiça douradas que se erguem de um cubo de mármore branco. Gold Edition.',
                     'tag' => 'Edição Dourada',
                     'material' => 'Cortiça autêntica e mármore branco',
                     'description' => [
@@ -858,6 +976,7 @@ return [
                 ],
 
                 'leaf-brown' => [
+                    'summary' => 'Candeeiro de mesa com 42 cm de altura: folhas de cortiça castanha natural que se erguem de um cubo de mármore branco.',
                     'material' => 'Cortiça autêntica e mármore branco',
                     'description' => [
                         'Com uma base cúbica de mármore que simboliza estabilidade e elegância, o Leaf eleva-se com tiras de cortiça que caem livremente do topo, evocando a leveza e o movimento das folhas ao vento.',
@@ -867,6 +986,7 @@ return [
                 ],
 
                 'halley' => [
+                    'summary' => 'Espelho de mesa redondo encaixado numa moldura de cortiça com uma longa "cauda" de cortiça. Duas partes independentes que se dispõem de várias formas.',
                     'material' => 'Cortiça autêntica e espelho',
                     'description' => [
                         'A perfeita harmonia entre vidro e cortiça: Halley é uma expressão artística, com a natureza e a elegância combinadas.',
@@ -877,6 +997,7 @@ return [
                 ],
 
                 'oscar' => [
+                    'summary' => 'Escultura em cortiça sobre mármore branco, com 47 cm de altura, criada como homenagem ao sobreiro. Peça única.',
                     'material' => 'Cortiça autêntica e mármore branco',
                     'lead' => 'Uma homenagem ao sobreiro',
                     'description' => [
@@ -887,6 +1008,7 @@ return [
                 ],
 
                 'marlin' => [
+                    'summary' => 'Escultura: uma forma curva de cortiça sobre base redonda de mármore branco, que guarda uma esfera de mármore branco. 77 cm de largura. Peça única.',
                     'material' => 'Cortiça autêntica e mármore branco',
                     'description' => [
                         'Uma base redonda de mármore branco sustenta uma estrutura côncava assimétrica de cortiça autêntica, que nas suas amplas curvas envolve uma esfera impecável de mármore branco.',
@@ -896,6 +1018,7 @@ return [
                 ],
 
                 'olympia' => [
+                    'summary' => 'Mesa de apoio alta, com 94 cm, com duas superfícies de cortiça numa estrutura fina de aço. Para junto da cama ou do sofá.',
                     'material' => 'Cortiça autêntica e aço',
                     'description' => [
                         'Uma obra de arte funcional. Conheça Olympia, um símbolo de refinamento e um testemunho da natureza na sua forma mais nobre.',
@@ -906,6 +1029,7 @@ return [
                 ],
 
                 'horizon' => [
+                    'summary' => 'Escultura: uma forma comprida e côncava de cortiça, com 78 cm, equilibrada num cubo de mármore branco que pode ser colocado de várias formas. Peça única.',
                     'material' => 'Cortiça autêntica e mármore branco',
                     'description' => [
                         'Horizon deve o seu nome à interação poética entre a estabilidade do mármore e a fluidez orgânica da cortiça, simbolizando a linha onde a terra encontra o céu. É uma peça que transcende a funcionalidade, oferecendo um convite à contemplação e à descoberta contínua da beleza.',
@@ -916,6 +1040,7 @@ return [
                 ],
 
                 'shale-belly-red' => [
+                    'summary' => 'Candeeiro de mesa em finas tiras de cortiça sobrepostas, com 28 cm de altura com casquilho e cabo vermelhos. Use-o na vertical ou deitado.',
                     'material' => 'Cortiça autêntica',
                     'description' => [
                         'Uma afirmação de estilo. Conheça o Shale Belly, um mosaico de sombras e luzes proporcionado pelo melhor material da natureza.',
@@ -926,6 +1051,7 @@ return [
                 ],
 
                 'shale-belly-silver' => [
+                    'summary' => 'Candeeiro de mesa em finas tiras de cortiça sobrepostas, com 28 cm de altura com casquilho prateado. Use-o na vertical ou deitado.',
                     'material' => 'Cortiça autêntica',
                     'description' => [
                         'Uma afirmação de estilo. Conheça o Shale Belly, um mosaico de sombras e luzes proporcionado pelo melhor material da natureza.',
@@ -936,6 +1062,7 @@ return [
                 ],
 
                 'pearl' => [
+                    'summary' => 'Escultura: uma forma alta de cortiça com abertura redonda sobre base oval de mármore branco, que guarda uma esfera de mármore. 65 cm de largura. Peça única.',
                     'material' => 'Cortiça autêntica e mármore branco',
                     'description' => [
                         'Uma união requintada de elementos naturais. Uma elegante base oval de mármore branco suporta uma estrutura côncava alta e imponente de cortiça autêntica, distinguida por uma grande abertura redonda. Aninhada dentro desta forma impressionante está uma esfera lisa de mármore branco.',
@@ -945,6 +1072,7 @@ return [
                 ],
 
                 'vitaqua' => [
+                    'summary' => 'Jarra para flores com 90 cm de comprimento: uma fila de tubos de vidro encaixados numa tira de casca de cortiça, um caule em cada.',
                     'material' => 'Cortiça autêntica e vidro',
                     'lead' => 'Uma homenagem à rolha de cortiça',
                     'description' => [
@@ -955,6 +1083,7 @@ return [
                 ],
 
                 'bonfire' => [
+                    'summary' => 'Suporte para velas com 45 cm: copos de vidro para velas sobre uma base de peças de cortiça unidas.',
                     'material' => 'Cortiça autêntica e vidro',
                     'description' => [
                         'Uma fusão de peças de cortiça que se unem para criar uma base única e orgânica, sustentando recipientes de vidro que abrigam velas, evocando a essência acolhedora de uma fogueira iluminada.',
@@ -964,6 +1093,7 @@ return [
                 ],
 
                 'vitavele' => [
+                    'summary' => 'Suporte para velas com 90 cm de comprimento: uma fila de copos de vidro para velas encaixados numa tira de casca de cortiça.',
                     'material' => 'Cortiça autêntica e vidro',
                     'lead' => 'Uma homenagem à rolha de cortiça',
                     'description' => [

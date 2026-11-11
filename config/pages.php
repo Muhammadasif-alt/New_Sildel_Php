@@ -224,7 +224,7 @@ return [
             'hero' => [
                 'kicker' => 'Treasures',
                 'title' => ['We do not sell products.', 'We create *treasures.*'],
-                'intro' => 'Cork carries the fissures, grain and scars of the tree it came from, so no two pieces can ever be identical.',
+                'intro' => 'Lamps, tables, mirrors, sculptures, vases and candle holders, each made by hand in Portugal from genuine cork. No two pieces are identical.',
             ],
             'filter_label' => 'Filter by category',
             'all' => 'All pieces',
@@ -240,6 +240,7 @@ return [
         'product' => [
             'exclusive' => 'Unique and Exclusive',
             'enquire' => 'Enquire about this piece',
+            'on_request' => 'Sold by personal enquiry · Price on request',
             'enquiry_subject' => 'Enquiry: :name',
             'one_of_a_kind' => 'No two pieces are alike. Before dispatch we send you photographs of the actual piece, so you know exactly which grain and which markings are yours.',
             'shipping' => 'Handcrafted in Esmoriz, Portugal. Delivered worldwide by DHL; postage depends on the destination.',
@@ -634,7 +635,7 @@ return [
             'hero' => [
                 'kicker' => 'Tesouros',
                 'title' => ['Não vendemos produtos.', 'Criamos *tesouros.*'],
-                'intro' => 'A cortiça guarda as fissuras, o veio e as cicatrizes da árvore de onde veio, por isso não existem duas peças iguais.',
+                'intro' => 'Candeeiros, mesas, espelhos, esculturas, jarras e suportes para velas, feitos à mão em Portugal em cortiça autêntica. Não existem duas peças iguais.',
             ],
             'filter_label' => 'Filtrar por categoria',
             'all' => 'Todas as peças',
@@ -650,6 +651,7 @@ return [
         'product' => [
             'exclusive' => 'Único & Exclusivo',
             'enquire' => 'Pedir informações sobre esta peça',
+            'on_request' => 'Venda por contacto pessoal · Preço sob consulta',
             'enquiry_subject' => 'Pedido de informação: :name',
             'one_of_a_kind' => 'Não existem duas peças iguais. Antes do envio, enviamos-lhe fotografias da peça real, para que saiba exatamente qual o veio e quais as marcas que são suas.',
             'shipping' => 'Feito à mão em Esmoriz, Portugal. Enviado para todo o mundo pela DHL; os portes dependem do destino.',

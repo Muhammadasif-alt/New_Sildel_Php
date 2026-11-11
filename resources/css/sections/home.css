@@ -395,6 +395,51 @@
         transform: translateX(4px);
     }
 
+    /* What the piece is ("Table lamp"), above its name on every card. */
+    .product-kind {
+        font-size: 0.68rem;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+    }
+
+    /* Plain statement under the collection heading, with links to each category. */
+    .collection-intro {
+        max-width: 60ch;
+        margin-top: 28px;
+        font-size: 1.05rem;
+        line-height: 1.75;
+        color: var(--color-bone);
+    }
+
+    .collection-types {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 26px;
+    }
+
+    .collection-type {
+        padding: 10px 18px;
+        border: 1px solid var(--color-line-strong);
+        border-radius: 999px;
+        font-size: 0.66rem;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--color-bone);
+        transition: background-color 0.4s var(--ease-soft), border-color 0.4s var(--ease-soft), color 0.4s var(--ease-soft);
+    }
+
+    .collection-type:hover,
+    .collection-type:focus-visible {
+        background: var(--color-gold);
+        border-color: var(--color-gold);
+        color: var(--color-onyx);
+    }
+
     /* Outlined hairline chip rather than a solid block. */
     .product-tag {
         position: absolute;

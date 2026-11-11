@@ -210,6 +210,9 @@ return [
                 'collection' => [
                     'kicker' => 'The Collection',
                     'title' => ['Fine Arts,', '*curated treasures*'],
+                    // Plain statement of what Sildel makes, with links to each category.
+                    'intro' => 'Sildel is an atelier in Esmoriz, Portugal. We make lamps, tables, mirrors and sculptural pieces by hand from genuine cork. Every piece is one of a kind and sold by personal enquiry.',
+                    'browse' => 'Browse by type',
                     // White swoosh under the heading, as on the live site (optional).
                     'divider' => 'images/sildel/brand/fine-arts-line.webp',
                     'cta' => ['label' => 'View All Treasures', 'url' => 'route:treasures.index'],
@@ -432,6 +435,8 @@ return [
                 'collection' => [
                     'kicker' => 'A Coleção',
                     'title' => ['Fine Arts,', '*tesouros escolhidos*'],
+                    'intro' => 'A Sildel é um atelier em Esmoriz, Portugal. Fazemos à mão candeeiros, mesas, espelhos e peças escultóricas em cortiça autêntica. Cada peça é única e vendida por contacto pessoal.',
+                    'browse' => 'Ver por tipo',
                     'cta' => ['label' => 'Ver Todos os Tesouros', 'url' => 'route:treasures.index'],
                 ],
 

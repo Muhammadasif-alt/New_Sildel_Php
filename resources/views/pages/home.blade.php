@@ -3,7 +3,7 @@
     <x-sections.home.hero :content="$hero" />
     <x-common.marquee :items="$marquee" />
     <x-sections.home.statement :content="$statement" />
-    <x-sections.home.collection :content="$collection" :products="$products" :ui="$site->ui" />
+    <x-sections.home.collection :content="$collection" :products="$products" :categories="$categories" :ui="$site->ui" />
     <x-sections.home.manifesto :content="$manifesto" />
     <x-sections.home.numbers :content="$numbers" :stats="$stats" />
     <x-sections.home.film :content="$film" />

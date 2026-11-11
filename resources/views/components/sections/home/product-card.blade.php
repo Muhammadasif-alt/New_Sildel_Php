@@ -32,7 +32,9 @@
 
     <div class="product-card-info mt-6 flex items-center justify-between gap-4 pt-5">
         <div class="min-w-0">
-            <h3 class="text-[clamp(1.35rem,2.1vw,2rem)] leading-tight transition-colors duration-500 group-hover:text-gold">{{ $product->name }}</h3>
+            {{-- What the piece is, before its name: "Table lamp", "Coffee table"... --}}
+            <p class="product-kind">{{ $product->kind() }}</p>
+            <h3 class="mt-2 text-[clamp(1.35rem,2.1vw,2rem)] leading-tight transition-colors duration-500 group-hover:text-gold">{{ $product->name }}</h3>
             <p class="caps mt-2 text-mute-light">{{ $product->subtitle }}</p>
             @if ($badge)
                 {{-- Phones: the badge moves under the name so it never covers the piece. --}}

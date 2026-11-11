@@ -36,6 +36,8 @@ final readonly class Product
         public array $care = [],
         public array $gallery = [],
         public ?string $darkImage = null,
+        public string $typeLabel = '',
+        public ?string $summary = null,
     ) {}
 
     /** @param array<string, mixed> $data */
@@ -63,7 +65,15 @@ final readonly class Product
             care: $data['care'] ?? [],
             gallery: $data['gallery'] ?? [],
             darkImage: $data['dark_image'] ?? null,
+            typeLabel: $data['type_label'] ?? '',
+            summary: $data['summary'] ?? null,
         );
+    }
+
+    /** What the piece is ("Table lamp"); its category when no type is set. */
+    public function kind(): string
+    {
+        return $this->typeLabel !== '' ? $this->typeLabel : $this->categoryLabel;
     }
 
     /** The photo for the velvet-black home collection, falling back to the white card. */

@@ -57,6 +57,40 @@ class HomePageTest extends TestCase
             ->assertSee('<loc>'.url('/pt').'</loc>', false);
     }
 
+    public function test_every_piece_says_what_it_is_in_both_languages(): void
+    {
+        foreach (config('treasures.products') as $product) {
+            $slug = $product['slug'];
+
+            $this->assertArrayHasKey($product['type'] ?? '', config('treasures.types.en'), "$slug has no known type");
+            $this->assertArrayHasKey($product['type'], config('treasures.types.pt'), "$slug type has no Portuguese label");
+            $this->assertNotEmpty($product['summary'] ?? '', "$slug has no summary");
+            $this->assertNotEmpty(config("treasures.translations.pt.products.$slug.summary"), "$slug has no Portuguese summary");
+        }
+    }
+
+    public function test_cards_and_product_page_show_the_type_of_piece(): void
+    {
+        $this->get('/')
+            ->assertSee('Table lamp')
+            ->assertSee('Coffee table')
+            ->assertSee('We make lamps, tables, mirrors and sculptural pieces by hand from genuine cork.')
+            ->assertSee('category=lighting', false);
+
+        $this->get('/treasures')->assertOk()->assertSee('Pendant light')->assertSee('Candle holder');
+
+        $this->get('/treasures/hot-spring')
+            ->assertOk()
+            ->assertSee('Table lamp')
+            ->assertSee('A table lamp, 54 cm tall')
+            ->assertSee('Price on request');
+
+        $this->get('/pt/treasures/hot-spring')
+            ->assertOk()
+            ->assertSee('Candeeiro de mesa')
+            ->assertSee('Preço sob consulta');
+    }
+
     public function test_robots_txt_is_served(): void
     {
         $this->get('/robots.txt')->assertOk()->assertSee('User-agent: *');

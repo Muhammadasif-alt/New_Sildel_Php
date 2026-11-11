@@ -4,12 +4,14 @@
     layout: grid (default, 3 per row / 2 on mobile, last row centred, every piece visible)
             slider (horizontal drag/arrow/keyboard carousel, resources/js/modules/slider.js)
 
-    content keys: kicker, title (lines), cta{label,url}
+    content keys: kicker, title (lines), intro, browse, cta{label,url}
     products: list<App\Data\Product>
+    categories: key => label, linked to the filtered catalogue under the intro
 --}}
 @props([
     'content',
     'products' => [],
+    'categories' => [],
     'ui' => [],
     'layout' => 'grid',
     'id' => 'collection',
@@ -32,6 +34,17 @@
                 <x-common.reveal :delay="0.3" :y="0">
                     <img src="{{ asset($content['divider']) }}" alt="" width="1024" height="16" class="mt-7 h-auto w-[min(440px,72vw)]" loading="lazy" decoding="async">
                 </x-common.reveal>
+            @endif
+            @if (! empty($content['intro']))
+                {{-- In plain words: what Sildel makes and how it is sold. --}}
+                <p class="collection-intro">{{ $content['intro'] }}</p>
+            @endif
+            @if ($categories)
+                <nav class="collection-types" aria-label="{{ $content['browse'] ?? '' }}">
+                    @foreach ($categories as $key => $label)
+                        <a href="{{ $site->route('treasures.index') }}?category={{ $key }}" class="collection-type">{{ $label }}</a>
+                    @endforeach
+                </nav>
             @endif
         </div>
 
