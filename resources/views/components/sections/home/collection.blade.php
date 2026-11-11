@@ -4,14 +4,14 @@
     layout: grid (default, 3 per row / 2 on mobile, last row centred, every piece visible)
             slider (horizontal drag/arrow/keyboard carousel, resources/js/modules/slider.js)
 
-    content keys: kicker, title (lines), intro, browse, cta{label,url}
+    content keys: kicker, title (lines), intro, cta{label,url}
     products: list<App\Data\Product>
-    categories: key => label, linked to the filtered catalogue under the intro
+    rooms: large in-room photographs shown before the grid (sections/home/rooms)
 --}}
 @props([
     'content',
     'products' => [],
-    'categories' => [],
+    'rooms' => [],
     'ui' => [],
     'layout' => 'grid',
     'id' => 'collection',
@@ -39,13 +39,6 @@
                 {{-- In plain words: what Sildel makes and how it is sold. --}}
                 <p class="collection-intro">{{ $content['intro'] }}</p>
             @endif
-            @if ($categories)
-                <nav class="collection-types" aria-label="{{ $content['browse'] ?? '' }}">
-                    @foreach ($categories as $key => $label)
-                        <a href="{{ $site->route('treasures.index') }}?category={{ $key }}" class="collection-type">{{ $label }}</a>
-                    @endforeach
-                </nav>
-            @endif
         </div>
 
         @if ($slider)
@@ -64,6 +57,12 @@
             </x-common.reveal>
         @endif
     </x-common.section-container>
+
+    @if (! empty($rooms['items']))
+        <x-common.section-container class="mb-[clamp(56px,7vw,100px)]">
+            <x-sections.home.rooms :content="$rooms" />
+        </x-common.section-container>
+    @endif
 
     @if ($slider)
         {{-- Focusable so arrow keys scroll it; each card is also a tabbable link. --}}

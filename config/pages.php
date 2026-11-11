@@ -159,10 +159,11 @@ return [
                     '"You Think Cork" is not just about partnering with us. It is about building a network of forward-thinking companies dedicated to pushing the boundaries of what is possible with authentic cork.',
                     'We believe in the power of collaboration to drive innovation and create extraordinary pieces. Our dedication to authentic cork has shown us the limitless potential of this sustainable material, and we want to take our passion a step further: we invite you to join us in exploring new horizons.',
                 ],
-                'images' => [
-                    ['src' => 'images/sildel/pages/material-bank-event.webp', 'alt' => 'Sildel cork samples presented at a Material Bank event'],
-                    ['src' => 'images/sildel/pages/cork-samples.webp', 'alt' => 'Authentic cork samples in natural and dark tones'],
-                ],
+                'kicker' => 'Member of Material Bank',
+                'image' => 'images/sildel/pages/cork-samples-stack.webp',
+                'image_alt' => 'Three Sildel cork sample tiles, one in dark natural bark and two in pale cork',
+                'caption' => 'Sildel cork samples: natural bark and pale cork',
+                'points' => ['Brands and manufacturers', 'Designers and architects', 'Resellers'],
             ],
             'services' => [
                 'kicker' => 'Let\'s innovate together',
@@ -173,32 +174,77 @@ return [
                     ['title' => 'Customised projects', 'text' => 'Bring your unique ideas to life with tailored cork solutions designed to meet your specific needs.'],
                 ],
             ],
-            'collaborations' => [
-                'kicker' => 'Collaborations',
-                'title' => ['Made *together*'],
-                'intro' => 'We have sculpted a national festival\'s trophy and worked alongside Portuguese porcelain and lighting houses. One piece, one project, one idea at a time.',
+            // The Festival Mental trophy: the centrepiece of the page. Photos: scripts/images.manifest.json ("pages/ytc/...").
+            'trophy' => [
+                'kicker' => 'Festival Mental · 2025 and 2026',
+                'title' => ['The trophy is', '*made of cork*'],
+                'paragraphs' => [
+                    'Festival Mental is a Portuguese festival of cinema, arts and information dedicated to mental health. For two years running, the trophy handed to its winners has been sculpted by Sildel in authentic cork.',
+                    'There is no mould and there are no copies. Each trophy is shaped by hand from natural cork bark, so the winner takes home a sculpture that exists only once.',
+                ],
+                'facts' => [
+                    ['value' => '2', 'label' => 'Editions of the festival'],
+                    ['value' => '9th & 10th', 'label' => 'Editions, in 2025 and 2026'],
+                    ['value' => '1 of 1', 'label' => 'Every trophy is unique'],
+                ],
+                'editions' => [
+                    [
+                        'label' => '9th edition · 2025',
+                        'title' => 'Raw bark on polished metal',
+                        'text' => 'The 2025 trophy rises from a polished metal plate engraved with the festival laurel. The cork is left as the tree made it: deep fissures and rough ridges, nothing smoothed away. It was presented in a carrying bag clad in strips of cork.',
+                        'year' => '2025',
+                        'lead' => ['src' => 'images/sildel/pages/ytc/trophy-2025.webp', 'alt' => 'The 2025 Festival Mental trophy, a cork bark sculpture on a metal plate'],
+                        'feature' => ['src' => 'images/sildel/pages/ytc/trophy-2025-together.webp', 'alt' => 'A woman smiling beside the 2025 winner as he holds the cork trophy', 'caption' => 'Celebrating the night the trophy was handed over'],
+                        'photos' => [
+                            ['src' => 'images/sildel/pages/ytc/trophy-2025-plate.webp', 'alt' => 'The engraved metal plate at the foot of the 2025 trophy'],
+                            ['src' => 'images/sildel/pages/ytc/trophy-2025-bag.webp', 'alt' => 'The 2025 trophy beside its cork-clad carrying bag'],
+                            ['src' => 'images/sildel/pages/ytc/trophy-2025-ceremony.webp', 'alt' => 'A woman and the 2025 winner looking closely at the cork trophy'],
+                        ],
+                    ],
+                    [
+                        'label' => '10th edition · 2026',
+                        'title' => 'A sculpture and its case',
+                        'text' => 'For the tenth edition the trophy became a sculpted cork form on a round base, handed over together with a case clad in cork. Two years, two different trophies, the same material throughout.',
+                        'year' => '2026',
+                        'lead' => ['src' => 'images/sildel/pages/ytc/trophy-2026.webp', 'alt' => 'The winner smiling as she holds the 2026 Festival Mental trophy and its cork case'],
+                        'feature' => ['src' => 'images/sildel/pages/ytc/trophy-2026-feature.webp', 'alt' => 'The 2026 winner looking down at the cork trophy in her hands', 'caption' => 'A first look at the trophy'],
+                        'photos' => [
+                            ['src' => 'images/sildel/pages/ytc/trophy-2026-stage.webp', 'alt' => 'The 2026 trophy held beside the Festival Mental banner'],
+                            ['src' => 'images/sildel/pages/ytc/trophy-2026-group.webp', 'alt' => 'The 2026 trophy being presented at the festival'],
+                            ['src' => 'images/sildel/pages/ytc/trophy-2026-pair.webp', 'alt' => 'The 2026 winner holding the trophy and its cork case'],
+                        ],
+                    ],
+                ],
+                'cta' => ['label' => 'Commission a trophy', 'url' => '#atelier'],
+            ],
+            'porcel' => [
+                'kicker' => 'Porcel · Porcelain and cork',
+                'title' => ['Porcelain meets', '*genuine cork*'],
+                'paragraphs' => [
+                    'Genuine cork, born from Portuguese land, grows in silence over decades. It is patient, generous and resilient. Porcelain, precise and luminous, carries the knowledge of the hand that shapes it and the discipline of the fire that transforms it.',
+                    'Together they create balance: nature and technique, warmth and precision. Each piece is conceived and produced in Portugal, the result of the union between Sildel and Porcel.',
+                    'These are not pieces for a season but for a lifetime. To be used, cared for and, one day, passed from hand to hand.',
+                ],
+                'quote' => 'True luxury is beyond what is displayed. It is what endures.',
+                'note' => 'Shown together at the Ambiente fair in Frankfurt.',
+                'photos' => [
+                    ['src' => 'images/sildel/pages/ytc/porcel-vases.webp', 'alt' => 'Two white porcelain vases standing in sculpted cork bases'],
+                    ['src' => 'images/sildel/pages/ytc/porcel-shelves.webp', 'alt' => 'Porcel and Sildel pieces on the lit shelves of the fair stand'],
+                    ['src' => 'images/sildel/pages/partner-porcel.webp', 'alt' => 'The Porcel stand at the Ambiente fair in Frankfurt'],
+                ],
+            ],
+            'corklux' => [
+                'kicker' => 'Lightenjin · Corklux lighting',
+                'title' => ['Light behind', '*genuine cork*'],
+                'paragraphs' => [
+                    'Corklux is a range of backlit lighting in genuine cork, created by Sildel with Lightenjin, a Portuguese lighting manufacturer. The LED light sits behind the cork and washes the wall around it.',
+                    'It is made for offices, meeting rooms, circulation areas and homes, and comes in three cork finishes.',
+                ],
                 'items' => [
-                    [
-                        'name' => 'Porcel',
-                        'label' => 'Porcelain and cork',
-                        'text' => 'Porcelain, precise and luminous, meets genuine cork, patient and resilient. Each piece is conceived and produced in Portugal: not pieces for a season, but for a lifetime.',
-                        'image' => 'images/sildel/pages/partner-porcel.webp',
-                        'image_alt' => 'Porcel and Sildel pieces at the Ambiente fair in Frankfurt',
-                    ],
-                    [
-                        'name' => 'Festival Mental',
-                        'label' => 'The festival trophy',
-                        'text' => 'The trophy of Festival Mental, sculpted in authentic cork by Sildel for its ninth and tenth editions, in 2025 and 2026.',
-                        'image' => 'images/sildel/pages/partner-festival-mental.webp',
-                        'image_alt' => 'The Festival Mental trophy, sculpted in authentic cork',
-                    ],
-                    [
-                        'name' => 'Lightenjin',
-                        'label' => 'Corklux lighting',
-                        'text' => 'Corklux, the backlit genuine cork lighting range created by Sildel and Lightenjin. Tangram, inspired by the Chinese geometric puzzle, combines its elements into unique, dynamic patterns.',
-                        'image' => 'images/sildel/pages/partner-lightenjin.webp',
-                        'image_alt' => 'Corklux Tangram light in authentic cork',
-                    ],
+                    ['name' => 'Corklux I', 'text' => 'Regular flat genuine cork.', 'image' => 'images/sildel/pages/ytc/corklux-1.webp', 'image_alt' => 'Corklux I light in regular flat genuine cork'],
+                    ['name' => 'Corklux II', 'text' => 'Irregular genuine cork.', 'image' => 'images/sildel/pages/ytc/corklux-2.webp', 'image_alt' => 'Corklux II light in irregular genuine cork'],
+                    ['name' => 'Corklux III', 'text' => 'Irregular flat genuine cork.', 'image' => 'images/sildel/pages/ytc/corklux-3.webp', 'image_alt' => 'Corklux III light in irregular flat genuine cork'],
+                    ['name' => 'Tangram', 'text' => 'A modular triangle, 50 x 40 cm, inspired by the Chinese geometric puzzle. Several combine into patterns on the wall.', 'image' => 'images/sildel/pages/partner-lightenjin.webp', 'image_alt' => 'Corklux Tangram, a triangular wall light in genuine cork'],
                 ],
             ],
             'partners' => [
@@ -576,10 +622,10 @@ return [
                     '"You Think Cork" não se trata apenas de colaborar connosco. É sobre construir uma rede de empresas visionárias dedicadas a ultrapassar os limites do que é possível com a cortiça autêntica.',
                     'Acreditamos no poder da colaboração para impulsionar a inovação e criar peças extraordinárias. A nossa dedicação à cortiça autêntica mostrou-nos o potencial ilimitado deste material sustentável, e queremos levar a nossa paixão um passo além: convidamo-lo a juntar-se a nós na exploração de novos horizontes.',
                 ],
-                'images' => [
-                    ['alt' => 'Amostras de cortiça Sildel apresentadas num evento do Material Bank'],
-                    ['alt' => 'Amostras de cortiça autêntica em tons naturais e escuros'],
-                ],
+                'kicker' => 'Membro do Material Bank',
+                'image_alt' => 'Três amostras de cortiça Sildel, uma em casca natural escura e duas em cortiça clara',
+                'caption' => 'Amostras de cortiça Sildel: casca natural e cortiça clara',
+                'points' => ['Marcas e fabricantes', 'Designers e arquitetos', 'Revendedores'],
             ],
             'services' => [
                 'kicker' => 'Inovemos juntos',
@@ -590,26 +636,74 @@ return [
                     ['title' => 'Projetos personalizados', 'text' => 'Dê vida às suas ideias únicas com soluções de cortiça personalizadas, criadas para satisfazer as suas necessidades específicas.'],
                 ],
             ],
-            'collaborations' => [
-                'kicker' => 'Colaborações',
-                'title' => ['Feito em *conjunto*'],
-                'intro' => 'Esculpimos o troféu de um festival nacional e trabalhámos lado a lado com casas portuguesas de porcelana e de iluminação. Uma peça, um projeto, uma ideia de cada vez.',
+            'trophy' => [
+                'kicker' => 'Festival Mental · 2025 e 2026',
+                'title' => ['O troféu é', '*feito de cortiça*'],
+                'paragraphs' => [
+                    'O Festival Mental é um festival português de cinema, artes e informação dedicado à saúde mental. Há dois anos consecutivos, o troféu entregue aos vencedores é esculpido pela Sildel em cortiça autêntica.',
+                    'Não há molde nem cópias. Cada troféu é trabalhado à mão a partir de casca de cortiça natural, por isso quem vence leva para casa uma escultura que existe uma única vez.',
+                ],
+                'facts' => [
+                    ['label' => 'Edições do festival'],
+                    ['value' => '9.ª e 10.ª', 'label' => 'Edições, em 2025 e 2026'],
+                    ['value' => '1 de 1', 'label' => 'Cada troféu é único'],
+                ],
+                'editions' => [
+                    [
+                        'label' => '9.ª edição · 2025',
+                        'title' => 'Casca em bruto sobre metal polido',
+                        'text' => 'O troféu de 2025 ergue-se de uma placa de metal polido gravada com os louros do festival. A cortiça fica tal como a árvore a fez: fissuras profundas e relevos ásperos, sem nada alisado. Foi entregue num saco revestido a tiras de cortiça.',
+                        'lead' => ['alt' => 'O troféu do Festival Mental de 2025, uma escultura em casca de cortiça sobre uma placa de metal'],
+                        'feature' => ['alt' => 'Uma mulher a sorrir ao lado do vencedor de 2025, que segura o troféu de cortiça', 'caption' => 'A celebrar a noite em que o troféu foi entregue'],
+                        'photos' => [
+                            ['alt' => 'A placa de metal gravada na base do troféu de 2025'],
+                            ['alt' => 'O troféu de 2025 ao lado do seu saco revestido a cortiça'],
+                            ['alt' => 'Uma mulher e o vencedor de 2025 a observar de perto o troféu de cortiça'],
+                        ],
+                    ],
+                    [
+                        'label' => '10.ª edição · 2026',
+                        'title' => 'Uma escultura e o seu estojo',
+                        'text' => 'Na décima edição, o troféu passou a ser uma forma esculpida em cortiça sobre uma base redonda, entregue juntamente com um estojo revestido a cortiça. Dois anos, dois troféus diferentes, sempre o mesmo material.',
+                        'lead' => ['alt' => 'A vencedora a sorrir com o troféu do Festival Mental de 2026 e o seu estojo de cortiça'],
+                        'feature' => ['alt' => 'A vencedora de 2026 a olhar para o troféu de cortiça que tem nas mãos', 'caption' => 'O primeiro olhar sobre o troféu'],
+                        'photos' => [
+                            ['alt' => 'O troféu de 2026 junto ao cartaz do Festival Mental'],
+                            ['alt' => 'O troféu de 2026 a ser entregue no festival'],
+                            ['alt' => 'A vencedora de 2026 com o troféu e o seu estojo de cortiça'],
+                        ],
+                    ],
+                ],
+                'cta' => ['label' => 'Encomendar um troféu'],
+            ],
+            'porcel' => [
+                'kicker' => 'Porcel · Porcelana e cortiça',
+                'title' => ['A porcelana encontra', 'a *cortiça genuína*'],
+                'paragraphs' => [
+                    'A cortiça genuína, nascida da terra portuguesa, cresce em silêncio durante décadas. É paciente, generosa e resiliente. A porcelana, precisa e luminosa, carrega em si o saber da mão que a molda e o rigor do fogo que a transforma.',
+                    'Juntas criam equilíbrio: natureza e técnica, calor e precisão. Cada peça é pensada e produzida em Portugal, fruto da união entre a Sildel e a Porcel.',
+                    'Estas não são peças para uma estação. São peças para uma vida. Para serem usadas, cuidadas e, um dia, passadas de mão em mão.',
+                ],
+                'quote' => 'O verdadeiro luxo não é o que se mostra. É o que permanece.',
+                'note' => 'Apresentadas em conjunto na feira Ambiente, em Frankfurt.',
+                'photos' => [
+                    ['alt' => 'Duas jarras de porcelana branca assentes em bases de cortiça esculpida'],
+                    ['alt' => 'Peças Porcel e Sildel nas prateleiras iluminadas do stand da feira'],
+                    ['alt' => 'O stand da Porcel na feira Ambiente, em Frankfurt'],
+                ],
+            ],
+            'corklux' => [
+                'kicker' => 'Lightenjin · Iluminação Corklux',
+                'title' => ['Luz por detrás da', '*cortiça genuína*'],
+                'paragraphs' => [
+                    'Corklux é uma gama de iluminação retroiluminada em cortiça genuína, criada pela Sildel com a Lightenjin, fabricante portuguesa de iluminação. A luz LED fica por detrás da cortiça e banha a parede à sua volta.',
+                    'Foi pensada para escritórios, salas de reunião, zonas de circulação e habitação, e existe em três acabamentos de cortiça.',
+                ],
                 'items' => [
-                    [
-                        'label' => 'Porcelana e cortiça',
-                        'text' => 'A porcelana, precisa e luminosa, encontra a cortiça autêntica, paciente e resiliente. Cada peça é concebida e produzida em Portugal: não são peças para uma estação, mas para uma vida.',
-                        'image_alt' => 'Peças Porcel e Sildel na feira Ambiente, em Frankfurt',
-                    ],
-                    [
-                        'label' => 'O troféu do festival',
-                        'text' => 'O troféu do Festival Mental, esculpido em cortiça autêntica pela Sildel para a nona e a décima edições, em 2025 e 2026.',
-                        'image_alt' => 'O troféu do Festival Mental, esculpido em cortiça autêntica',
-                    ],
-                    [
-                        'label' => 'Iluminação Corklux',
-                        'text' => 'Corklux, a gama de iluminação retroiluminada em cortiça autêntica criada pela Sildel e pela Lightenjin. Tangram, inspirado no quebra-cabeças geométrico chinês, combina os seus elementos em padrões únicos e dinâmicos.',
-                        'image_alt' => 'Candeeiro Corklux Tangram em cortiça autêntica',
-                    ],
+                    ['text' => 'Cortiça genuína plana regular.', 'image_alt' => 'Candeeiro Corklux I em cortiça genuína plana regular'],
+                    ['text' => 'Cortiça genuína irregular.', 'image_alt' => 'Candeeiro Corklux II em cortiça genuína irregular'],
+                    ['text' => 'Cortiça genuína plana irregular.', 'image_alt' => 'Candeeiro Corklux III em cortiça genuína plana irregular'],
+                    ['text' => 'Um triângulo modular, 50 x 40 cm, inspirado no quebra-cabeças geométrico chinês. Vários combinam-se em padrões na parede.', 'image_alt' => 'Corklux Tangram, um aplique triangular em cortiça genuína'],
                 ],
             ],
             'partners' => [

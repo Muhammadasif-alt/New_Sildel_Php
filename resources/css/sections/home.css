@@ -246,7 +246,7 @@
     /* Each piece sits in its own framed panel, so neighbouring cards read as separate. */
     .product-card {
         padding: 0 0 clamp(16px, 1.8vw, 24px);
-        border: 1px solid var(--color-line);
+        border: 1px solid var(--color-line-faint);
         background: rgb(255 255 255 / 0.025);
         transition: border-color 0.7s var(--ease-soft), background-color 0.7s var(--ease-soft);
         user-select: none;
@@ -268,8 +268,25 @@
         -webkit-user-drag: none;
     }
 
+    /* Square stage: wider than tall, with the whole piece always in view (the studio photo
+       sits on the same black, so the bands either side of a tall piece are invisible). */
+    .product-card-media {
+        aspect-ratio: 1 / 1;
+    }
+
+    /* No cork-texture placeholder behind the photo: the bands beside a tall piece stay black. */
+    .product-card .cork {
+        background: var(--color-velvet);
+    }
+
     .product-card .cork-img {
+        object-fit: contain;
         transition: transform 1.6s var(--ease-mask);
+    }
+
+    /* Pieces with only a white studio photo fill the stage instead, so no black bands show. */
+    .product-card .product-card-media-light .cork-img {
+        object-fit: cover;
     }
 
     .product-card:hover .cork-img,
@@ -312,12 +329,12 @@
 
     /* 3 per row (2 on tablets and small screens); an incomplete last row is centred. */
     .product-grid {
-        --grid-gap: clamp(16px, 2.6vw, 40px);
+        --grid-gap: clamp(12px, 1.6vw, 22px);
         --grid-cols: 2;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: clamp(44px, 6vw, 84px) var(--grid-gap);
+        gap: clamp(22px, 3vw, 40px) var(--grid-gap);
     }
 
     /* Cards in a row share one height, so their frames line up. */
@@ -405,7 +422,7 @@
         color: var(--color-gold);
     }
 
-    /* Plain statement under the collection heading, with links to each category. */
+    /* Plain statement under the collection heading. */
     .collection-intro {
         max-width: 60ch;
         margin-top: 28px;
@@ -414,30 +431,111 @@
         color: var(--color-bone);
     }
 
-    .collection-types {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+    /* Rooms: large in-room photographs above the collection grid. Two tall photos side by side,
+       further ones full width. Text sits over a dark fade at the foot of each photo and is
+       deliberately large so it reads at a glance. */
+    .rooms-grid {
+        display: grid;
+        gap: clamp(14px, 1.8vw, 26px);
         margin-top: 26px;
     }
 
-    .collection-type {
-        padding: 10px 18px;
-        border: 1px solid var(--color-line-strong);
-        border-radius: 999px;
-        font-size: 0.66rem;
-        font-weight: 500;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        color: var(--color-bone);
-        transition: background-color 0.4s var(--ease-soft), border-color 0.4s var(--ease-soft), color 0.4s var(--ease-soft);
+    @media (min-width: 48rem) {
+        .rooms-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .rooms-item-wide {
+            grid-column: 1 / -1;
+        }
     }
 
-    .collection-type:hover,
-    .collection-type:focus-visible {
-        background: var(--color-gold);
-        border-color: var(--color-gold);
-        color: var(--color-onyx);
+    .room-card {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        aspect-ratio: 4 / 5;
+        background: var(--color-velvet);
+    }
+
+    .rooms-item-wide .room-card {
+        aspect-ratio: 4 / 5;
+    }
+
+    @media (min-width: 48rem) {
+        .rooms-item-wide .room-card {
+            aspect-ratio: 2 / 1;
+        }
+    }
+
+    .room-media {
+        position: absolute;
+        inset: 0;
+    }
+
+    .room-media .cork-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1.6s var(--ease-soft);
+    }
+
+    .room-card:hover .room-media .cork-img,
+    .room-card:focus-visible .room-media .cork-img {
+        transform: scale(1.04);
+    }
+
+    .room-caption {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: clamp(90px, 12vw, 160px) clamp(20px, 3vw, 44px) clamp(22px, 3vw, 40px);
+        background: linear-gradient(to top, rgb(8 6 5 / 0.92) 0%, rgb(8 6 5 / 0.7) 45%, transparent 100%);
+        color: var(--color-bone);
+    }
+
+    .room-kind {
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+    }
+
+    .room-name {
+        margin-top: 8px;
+        font-family: var(--font-serif);
+        font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+        line-height: 1.05;
+    }
+
+    .room-text {
+        max-width: 38ch;
+        margin-top: 10px;
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .room-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--color-gold);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+    }
+
+    .room-link svg {
+        transition: transform 0.5s var(--ease-soft);
+    }
+
+    .room-card:hover .room-link svg,
+    .room-card:focus-visible .room-link svg {
+        transform: translateX(6px);
     }
 
     /* Outlined hairline chip rather than a solid block. */

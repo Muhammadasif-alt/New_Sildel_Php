@@ -74,8 +74,7 @@ class HomePageTest extends TestCase
         $this->get('/')
             ->assertSee('Table lamp')
             ->assertSee('Coffee table')
-            ->assertSee('We make lamps, tables, mirrors and sculptural pieces by hand from genuine cork.')
-            ->assertSee('category=lighting', false);
+            ->assertSee('We make lamps, tables, mirrors and sculptural pieces by hand from genuine cork.');
 
         $this->get('/treasures')->assertOk()->assertSee('Pendant light')->assertSee('Candle holder');
 

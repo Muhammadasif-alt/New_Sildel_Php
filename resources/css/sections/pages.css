@@ -859,6 +859,307 @@
         color: var(--color-bronze);
     }
 
+    /* ---------- You Think Cork: intro photo ---------- */
+    /* A single cork-sample photo on a warm panel with a caption strip. The studio white melts
+       into the panel (multiply), so only the cork shows. */
+    .sample-stage {
+        position: relative;
+        display: grid;
+        place-items: center;
+        aspect-ratio: 1 / 1;
+        padding: clamp(20px, 4vw, 56px) clamp(20px, 4vw, 56px) clamp(56px, 6vw, 84px);
+        background: var(--color-bone);
+        border: 1px solid var(--color-line-light);
+    }
+
+    .sample-stage img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+    }
+
+    .sample-stage figcaption {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: 14px 20px;
+        border-top: 1px solid var(--color-line-light);
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--color-ink-soft);
+        text-align: center;
+    }
+
+    /* Who the page is for, as a row of quiet tags under the copy. */
+    .sample-points {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 32px;
+    }
+
+    .sample-points li {
+        padding: 9px 16px;
+        border: 1px solid var(--color-line-light);
+        border-radius: 999px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--color-ink-soft);
+    }
+
+    /* ---------- You Think Cork: partner stories ---------- */
+    /* Heading on the left, lede on the right; stacked on phones. */
+    .partner-head {
+        display: grid;
+        gap: 28px;
+        align-items: end;
+        margin-bottom: clamp(48px, 6vw, 80px);
+    }
+
+    @media (min-width: 56.25rem) {
+        .partner-head {
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(40px, 6vw, 96px);
+        }
+    }
+
+    .partner-lede {
+        display: grid;
+        gap: 18px;
+        max-width: 560px;
+        font-size: 1.08rem;
+        line-height: 1.75;
+        color: rgb(237 231 220 / 0.86);
+    }
+
+    /* Three large figures under the trophy intro. */
+    .trophy-facts {
+        display: grid;
+        gap: 28px;
+        padding-block: clamp(32px, 4vw, 52px);
+        border-block: 1px solid var(--color-line);
+        text-align: center;
+    }
+
+    @media (min-width: 37.5rem) {
+        .trophy-facts {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .trophy-fact-value {
+        font-family: var(--font-serif);
+        font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+        line-height: 1.05;
+        color: var(--color-gold);
+    }
+
+    .trophy-fact-label {
+        margin-top: 10px;
+        font-size: 0.74rem;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--color-mute-light);
+    }
+
+    /* One festival edition. A huge year readable from across the room sits beside the story,
+       then a photo mosaic: a tall lead, one wide photo and three small ones. */
+    .edition {
+        margin-top: clamp(72px, 9vw, 140px);
+    }
+
+    .edition-head {
+        display: grid;
+        gap: 18px;
+        align-items: end;
+        margin-bottom: clamp(28px, 4vw, 52px);
+    }
+
+    @media (min-width: 56.25rem) {
+        .edition-head {
+            grid-template-columns: auto 1fr;
+            gap: clamp(32px, 5vw, 80px);
+        }
+
+        .edition-reverse .edition-head {
+            grid-template-columns: 1fr auto;
+        }
+
+        .edition-reverse .edition-year {
+            order: 2;
+        }
+    }
+
+    .edition-year {
+        font-family: var(--font-display);
+        font-size: clamp(5.5rem, 17vw, 15rem);
+        line-height: 0.82;
+        letter-spacing: -0.02em;
+        color: var(--color-gold);
+    }
+
+    .edition-label {
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+    }
+
+    .edition-title {
+        margin-top: 14px;
+        font-size: clamp(2rem, 3.6vw, 3.2rem);
+    }
+
+    .edition-text {
+        max-width: 56ch;
+        margin-top: 18px;
+        font-size: 1.08rem;
+        line-height: 1.75;
+        color: rgb(237 231 220 / 0.86);
+    }
+
+    .edition-mosaic {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(8px, 1.2vw, 16px);
+    }
+
+    .edition-tile {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Phones: lead and wide photo span the full width, the three small ones share a row. */
+    .edition-tile-lead {
+        grid-column: 1 / -1;
+        aspect-ratio: 4 / 5;
+    }
+
+    .edition-tile-wide {
+        grid-column: 1 / -1;
+        aspect-ratio: 3 / 2;
+    }
+
+    @media (min-width: 56.25rem) {
+        .edition-mosaic {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto;
+        }
+
+        .edition-tile {
+            grid-column: span 2;
+            aspect-ratio: auto;
+            min-height: clamp(130px, 13vw, 200px);
+        }
+
+        .edition-tile-lead {
+            grid-column: 1 / span 5;
+            grid-row: 1 / span 2;
+            aspect-ratio: 4 / 5;
+        }
+
+        .edition-tile-wide {
+            grid-column: 6 / -1;
+            grid-row: 1;
+            aspect-ratio: auto;
+        }
+
+        .edition-tile:not(.edition-tile-lead, .edition-tile-wide) {
+            grid-row: 2;
+        }
+
+        .edition-tile:nth-child(3) { grid-column: 6 / span 2; }
+        .edition-tile:nth-child(4) { grid-column: 8 / span 2; }
+        .edition-tile:nth-child(5) { grid-column: 10 / span 3; }
+
+        /* Even editions mirror: lead on the right. */
+        .edition-reverse .edition-tile-lead { grid-column: 8 / -1; }
+        .edition-reverse .edition-tile-wide { grid-column: 1 / span 7; }
+        .edition-reverse .edition-tile:nth-child(3) { grid-column: 1 / span 3; }
+        .edition-reverse .edition-tile:nth-child(4) { grid-column: 4 / span 2; }
+        .edition-reverse .edition-tile:nth-child(5) { grid-column: 6 / span 2; }
+    }
+
+    .edition-tile .cork-img {
+        transition: transform 1.6s var(--ease-soft);
+    }
+
+    .edition-tile:hover .cork-img {
+        transform: scale(1.04);
+    }
+
+    .edition-caption {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: clamp(48px, 6vw, 90px) clamp(16px, 2vw, 28px) clamp(14px, 1.6vw, 22px);
+        background: linear-gradient(to top, rgb(8 6 5 / 0.85), transparent);
+        font-family: var(--font-serif);
+        font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+        font-style: italic;
+        color: var(--color-bone);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .edition-tile .cork-img {
+            transition: none;
+        }
+    }
+
+    /* Porcel: a pull quote and a three-photo mosaic (one wide, two below). */
+    .partner-quote {
+        margin-top: 32px;
+        padding-left: 22px;
+        border-left: 2px solid var(--color-bronze);
+        font-family: var(--font-serif);
+        font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+        font-style: italic;
+        line-height: 1.4;
+        color: var(--color-ink);
+    }
+
+    .porcel-photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(12px, 1.6vw, 20px);
+    }
+
+    .porcel-photo {
+        aspect-ratio: 4 / 5;
+    }
+
+    .porcel-photo-1 {
+        grid-column: 1 / -1;
+        aspect-ratio: 7 / 5;
+    }
+
+    /* Corklux: one tile per model; the studio cut-outs sit whole on black. */
+    .corklux-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(28px, 3vw, 40px) clamp(14px, 2vw, 28px);
+    }
+
+    @media (min-width: 56.25rem) {
+        .corklux-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .corklux-media {
+        background: #000;
+    }
+
+    .corklux-media .cork-img {
+        object-fit: contain;
+    }
+
     .collab-media .cork-img {
         transition: transform 1.4s var(--ease-soft);
     }

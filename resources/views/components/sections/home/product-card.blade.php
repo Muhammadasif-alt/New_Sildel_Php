@@ -16,7 +16,7 @@
 @endphp
 
 <a href="{{ $product->url }}" {{ $attributes->class('product-card group block') }}>
-    <div class="product-card-media relative aspect-[4/5] overflow-hidden bg-velvet">
+    <div @class(['product-card-media relative overflow-hidden bg-velvet', 'product-card-media-light' => ! $product->darkImage])>
         @if ($badge)
             <span @class(['product-tag', 'product-tag-sage' => $product->tag && $product->tagTone === 'sage'])>{{ $badge }}</span>
         @endif

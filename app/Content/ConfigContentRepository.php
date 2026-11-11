@@ -70,7 +70,12 @@ class ConfigContentRepository implements ContentRepository
             fn (string $slug) => $this->product($slug, $locale),
             $home['featured'],
         )));
-        $home['categories'] = $this->categories($locale);
+        // Room photographs: attach the piece each one shows; a photo of an unknown piece is dropped.
+        $home['rooms']['items'] = array_values(array_filter(array_map(
+            fn (string $slug, array $room) => ($product = $this->product($slug, $locale)) ? [...$room, 'product' => $product] : null,
+            array_keys($home['rooms']['items'] ?? []),
+            $home['rooms']['items'] ?? [],
+        )));
         $home['journal']['articles'] = array_slice($this->articles($locale), 0, 3);
         $home['stats'] = array_map(Stat::fromArray(...), $home['stats']);
         $home['ritual']['steps'] = array_map(RitualStep::fromArray(...), $home['ritual']['steps']);

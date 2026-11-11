@@ -1,9 +1,11 @@
 /* Self-hosted Google Fonts (copied to /public/fonts by `npm run fonts`). */
 @font-face { font-family: 'Italiana'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/italiana-latin-400-normal.woff2') format('woff2'); }
-@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/cormorant-garamond-latin-400-normal.woff2') format('woff2'); }
-@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/cormorant-garamond-latin-500-normal.woff2') format('woff2'); }
-@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 500; font-display: swap; src: url('/fonts/cormorant-garamond-latin-500-italic.woff2') format('woff2'); }
-@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/cormorant-garamond-latin-600-normal.woff2') format('woff2'); }
+/* Playfair Display is wider than the Cormorant it replaced; size-adjust keeps every heading size as designed. */
+@font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 400; font-display: swap; size-adjust: 88%; src: url('/fonts/playfair-display-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; size-adjust: 88%; src: url('/fonts/playfair-display-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 500; font-display: swap; size-adjust: 88%; src: url('/fonts/playfair-display-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 500; font-display: swap; size-adjust: 88%; src: url('/fonts/playfair-display-latin-500-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 600; font-display: swap; size-adjust: 88%; src: url('/fonts/playfair-display-latin-600-normal.woff2') format('woff2'); }
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 300; font-display: swap; src: url('/fonts/manrope-latin-300-normal.woff2') format('woff2'); }
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/manrope-latin-400-normal.woff2') format('woff2'); }
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/manrope-latin-500-normal.woff2') format('woff2'); }
@@ -25,20 +27,20 @@
         overflow-x: clip;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        /* Cormorant defaults to old-style figures (911 reads as 9II); use lining figures everywhere. */
+        /* Lining figures everywhere, so a phone number never shows old-style digits. */
         font-variant-numeric: lining-nums;
     }
 
     h1, h2, h3, h4 {
         font-family: var(--font-serif);
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.08;
         letter-spacing: 0;
     }
 
     em {
         font-style: italic;
-        font-weight: 500;
+        font-weight: 400;
         color: var(--color-gold);
     }
 

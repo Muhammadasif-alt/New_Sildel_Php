@@ -210,9 +210,8 @@ return [
                 'collection' => [
                     'kicker' => 'The Collection',
                     'title' => ['Fine Arts,', '*curated treasures*'],
-                    // Plain statement of what Sildel makes, with links to each category.
+                    // Plain statement of what Sildel makes.
                     'intro' => 'Sildel is an atelier in Esmoriz, Portugal. We make lamps, tables, mirrors and sculptural pieces by hand from genuine cork. Every piece is one of a kind and sold by personal enquiry.',
-                    'browse' => 'Browse by type',
                     // White swoosh under the heading, as on the live site (optional).
                     'divider' => 'images/sildel/brand/fine-arts-line.webp',
                     'cta' => ['label' => 'View All Treasures', 'url' => 'route:treasures.index'],
@@ -220,6 +219,31 @@ return [
 
                 // Pieces shown in the home collection, in order (slugs from config/treasures.php).
                 'featured' => ['hot-spring', 'crescent', 'alexis', 'leaf-golden', 'halley', 'carre-dor', 'shell', 'shale-coast', 'abyss'],
+
+                // Large photographs of pieces in a room, shown above the collection grid.
+                // Keyed by product slug; the first two stand side by side, the third runs full width.
+                // Photos: scripts/images.manifest.json ("rooms/...").
+                'rooms' => [
+                    'kicker' => 'In the room',
+                    'view' => 'View this piece',
+                    'items' => [
+                        'crescent' => [
+                            'image' => 'images/sildel/rooms/crescent.webp',
+                            'alt' => 'The Crescent pendant light hanging above a grand staircase',
+                            'caption' => 'Hanging above a grand staircase',
+                        ],
+                        'gibraltar' => [
+                            'image' => 'images/sildel/rooms/gibraltar.webp',
+                            'alt' => 'The Gibraltar coffee table in a marble rotunda, with the Equilibrium sculpture on top',
+                            'caption' => 'In a marble hall, with the Equilibrium sculpture',
+                        ],
+                        'fireflies' => [
+                            'image' => 'images/sildel/rooms/fireflies.webp',
+                            'alt' => 'The Fireflies light glowing on a dark wall',
+                            'caption' => 'Lit at night, the light escapes between the cork sheets',
+                        ],
+                    ],
+                ],
 
                 'manifesto' => [
                     'kicker' => 'Our Manifesto',
@@ -436,8 +460,26 @@ return [
                     'kicker' => 'A Coleção',
                     'title' => ['Fine Arts,', '*tesouros escolhidos*'],
                     'intro' => 'A Sildel é um atelier em Esmoriz, Portugal. Fazemos à mão candeeiros, mesas, espelhos e peças escultóricas em cortiça autêntica. Cada peça é única e vendida por contacto pessoal.',
-                    'browse' => 'Ver por tipo',
                     'cta' => ['label' => 'Ver Todos os Tesouros', 'url' => 'route:treasures.index'],
+                ],
+
+                'rooms' => [
+                    'kicker' => 'No espaço',
+                    'view' => 'Ver esta peça',
+                    'items' => [
+                        'crescent' => [
+                            'alt' => 'O candeeiro suspenso Crescent sobre uma escadaria nobre',
+                            'caption' => 'Suspenso sobre uma escadaria nobre',
+                        ],
+                        'gibraltar' => [
+                            'alt' => 'A mesa de centro Gibraltar num átrio de mármore, com a escultura Equilibrium por cima',
+                            'caption' => 'Num átrio de mármore, com a escultura Equilibrium',
+                        ],
+                        'fireflies' => [
+                            'alt' => 'A luminária Fireflies acesa numa parede escura',
+                            'caption' => 'Acesa à noite, a luz escapa entre as folhas de cortiça',
+                        ],
+                    ],
                 ],
 
                 'manifesto' => [

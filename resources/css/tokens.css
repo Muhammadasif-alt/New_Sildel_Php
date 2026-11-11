@@ -65,7 +65,7 @@
 
     /* Typography */
     --font-display: 'Italiana', serif;                                  /* wordmark, large numbers */
-    --font-serif: 'Cormorant Garamond', 'Garamond', Georgia, serif;     /* headings */
+    --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;  /* headings */
     --font-sans: 'Manrope', 'Helvetica Neue', Arial, sans-serif;        /* body, UI */
 
     --text-h2: clamp(2.5rem, 5.2vw, 4.8rem);
