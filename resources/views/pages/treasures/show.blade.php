@@ -135,7 +135,7 @@
     </section>
 
     @if ($related)
-        <section class="bg-paper py-[clamp(90px,11vw,150px)] text-ink" aria-labelledby="related-title">
+        <section class="bg-bone py-[clamp(90px,11vw,150px)] text-ink" aria-labelledby="related-title">
             <x-common.section-container>
                 <div class="mb-[clamp(40px,5vw,64px)] flex flex-wrap items-end justify-between gap-6">
                     <h2 id="related-title" class="text-h2">{{ $labels['related'] }}</h2>

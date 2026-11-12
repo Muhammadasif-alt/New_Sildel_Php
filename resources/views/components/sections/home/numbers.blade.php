@@ -8,7 +8,7 @@
 --}}
 @props(['content', 'stats' => []])
 
-<section class="bg-paper py-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="numbers-title">
+<section class="bg-snow py-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="numbers-title">
     <x-common.section-container>
         <div class="mx-auto mb-[clamp(56px,7vw,90px)] max-w-[760px] text-center">
             <x-common.kicker tone="bronze" lines="both" align="center">{{ $content['kicker'] }}</x-common.kicker>

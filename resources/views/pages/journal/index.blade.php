@@ -27,7 +27,7 @@
         :breadcrumbs="[[$page['hero']['kicker'], url()->current()]]"
     />
 
-    <section class="bg-snow py-[clamp(70px,9vw,130px)] text-ink">
+    <section class="bg-bone py-[clamp(70px,9vw,130px)] text-ink">
         @if ($rest)
             <x-common.section-container as="ul" class="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3" role="list">
                 @foreach ($rest as $article)

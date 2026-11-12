@@ -11,12 +11,20 @@
     'image' => null,
     'preloader' => true,
     'canonical' => null,
+    'type' => 'website',
+    'published' => null,
+    'section' => null,
+    'imageWidth' => null,
+    'imageHeight' => null,
 ])
 
 @php
     $title ??= $site->seo['title'];
     $description ??= $site->seo['description'];
-    $image ??= $site->ogImage;
+    if ($image === null) {
+        // The default share image is 1200 x 630.
+        [$image, $imageWidth, $imageHeight] = [$site->ogImage, 1200, 630];
+    }
     $canonical ??= $site->alternateUrls[$site->locale] ?? url()->current();
     $current = $site->locales[$site->locale];
 @endphp
@@ -56,14 +64,23 @@
     @endforeach
     <link rel="alternate" hreflang="x-default" href="{{ $site->alternateUrls[$site->defaultLocale] }}">
 
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="{{ $type }}">
+    @if ($published)
+        <meta property="article:published_time" content="{{ $published }}">
+    @endif
+    @if ($section)
+        <meta property="article:section" content="{{ $section }}">
+    @endif
     <meta property="og:site_name" content="{{ $site->name }}">
     <meta property="og:title" content="{{ $title }}">
     <meta property="og:description" content="{{ $description }}">
     <meta property="og:url" content="{{ $canonical }}">
     <meta property="og:image" content="{{ $image }}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    @if ($imageWidth && $imageHeight)
+        <meta property="og:image:width" content="{{ $imageWidth }}">
+        <meta property="og:image:height" content="{{ $imageHeight }}">
+    @endif
+    <meta property="og:image:alt" content="{{ $title }}">
     <meta property="og:locale" content="{{ $current['og'] }}">
     @foreach ($site->locales as $code => $locale)
         @if ($code !== $site->locale)

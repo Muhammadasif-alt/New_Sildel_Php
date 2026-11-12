@@ -1,23 +1,55 @@
-{{-- Journal article: header with meta and cover, the Markdown body, then three more articles. --}}
+{{-- Journal article: header with meta and cover, the Markdown body, questions and answers, then three more articles. --}}
 @php
     /** @var \App\Data\Article $article */
+    $root = rtrim(route('home'), '/').'/';
+    [$coverWidth, $coverHeight] = $article->image ? (\App\Support\PublicImage::size($article->image) ?? [null, null]) : [null, null];
     $schema = [
         '@context' => 'https://schema.org',
-        '@type' => 'BlogPosting',
-        'headline' => $article->title,
-        'description' => $article->excerpt,
-        'datePublished' => $article->date->toDateString(),
-        'image' => $article->image ? asset($article->image) : null,
-        'url' => $article->url,
-        'author' => ['@type' => 'Organization', 'name' => $site->name],
-        'publisher' => ['@type' => 'Organization', 'name' => $site->name, 'logo' => ['@type' => 'ImageObject', 'url' => asset('icon-192.png')]],
+        '@graph' => array_values(array_filter([
+            array_filter([
+                '@type' => 'BlogPosting',
+                '@id' => $article->url.'#article',
+                'mainEntityOfPage' => $article->url,
+                'url' => $article->url,
+                'headline' => $article->title,
+                'description' => $article->excerpt,
+                'inLanguage' => $site->locales[$site->locale]['hreflang'],
+                'datePublished' => $article->date->toDateString(),
+                'dateModified' => $article->date->toDateString(),
+                'articleSection' => $article->topic,
+                'keywords' => $article->keywords ? implode(', ', $article->keywords) : null,
+                'wordCount' => str_word_count(strip_tags((string) $article->body)),
+                'image' => $article->image ? array_filter([
+                    '@type' => 'ImageObject',
+                    'url' => asset($article->image),
+                    'width' => $coverWidth,
+                    'height' => $coverHeight,
+                    'caption' => $article->imageAlt,
+                ]) : null,
+                'author' => ['@id' => $root.'#organization'],
+                'publisher' => ['@id' => $root.'#organization'],
+            ]),
+            $article->faq ? [
+                '@type' => 'FAQPage',
+                'mainEntity' => array_map(fn (array $item) => [
+                    '@type' => 'Question',
+                    'name' => $item['q'],
+                    'acceptedAnswer' => ['@type' => 'Answer', 'text' => $item['a']],
+                ], $article->faq),
+            ] : null,
+        ])),
     ];
 @endphp
 
 <x-layouts.site
-    :title="$article->title.' | '.$site->name"
+    :title="($article->seoTitle ?? $article->title).' | '.$site->name"
     :description="$article->excerpt"
     :image="$article->image ? asset($article->image) : null"
+    :image-width="$coverWidth"
+    :image-height="$coverHeight"
+    type="article"
+    :published="$article->date->toDateString()"
+    :section="$article->topic"
     :preloader="false"
 >
     @push('structured-data')
@@ -49,6 +81,20 @@
         <x-common.section-container class="max-w-[760px] py-[clamp(60px,8vw,110px)]">
             <x-common.prose :html="$article->body" />
 
+            @if ($article->faq)
+                {{-- Plain questions and answers: easy to scan, and what search engines and AI assistants quote. --}}
+                <section class="mt-16" aria-labelledby="faq-title">
+                    <h2 id="faq-title" class="text-[clamp(1.8rem,3vw,2.4rem)] leading-tight">{{ $page['faq'] }}</h2>
+                    <x-common.accordion class="mt-8">
+                        @foreach ($article->faq as $item)
+                            <x-common.accordion-item :question="$item['q']" :open="$loop->first">
+                                <p class="text-[1.06rem] leading-relaxed text-ink-soft">{{ $item['a'] }}</p>
+                            </x-common.accordion-item>
+                        @endforeach
+                    </x-common.accordion>
+                </section>
+            @endif
+
             <div class="mt-16 flex flex-wrap items-center justify-between gap-6 border-t border-line-light pt-10">
                 <x-ui.text-link :href="$site->route('journal.index')" class="text-ink">{{ $page['back'] }}</x-ui.text-link>
                 <x-ui.button variant="outline" :href="$site->route('treasures.index')" arrow>{{ $site->ui('explore_treasures') }}</x-ui.button>
@@ -57,7 +103,7 @@
     </article>
 
     @if ($more)
-        <section class="bg-snow py-[clamp(90px,11vw,150px)] text-ink" aria-labelledby="more-title">
+        <section class="bg-bone py-[clamp(90px,11vw,150px)] text-ink" aria-labelledby="more-title">
             <x-common.section-container>
                 <h2 id="more-title" class="mb-[clamp(40px,5vw,64px)] text-h2">{{ $page['more'] }}</h2>
                 <ul class="grid gap-x-8 gap-y-16 md:grid-cols-3" role="list">

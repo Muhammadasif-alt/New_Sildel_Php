@@ -90,6 +90,46 @@ class HomePageTest extends TestCase
             ->assertSee('Preço sob consulta');
     }
 
+    public function test_article_pages_carry_article_seo_and_questions(): void
+    {
+        $this->get('/journal/cork-candle-holders-for-home-and-church')
+            ->assertOk()
+            ->assertSee('<meta property="og:type" content="article">', false)
+            ->assertSee('<meta property="article:published_time" content="2026-11-12">', false)
+            ->assertSee('<meta property="og:image:width" content="1600">', false)
+            ->assertSee('"@type":"BlogPosting"', false)
+            ->assertSee('"@type":"BreadcrumbList"', false)
+            ->assertSee('"@type":"FAQPage"', false)
+            ->assertSee('Questions and answers')
+            ->assertSee('Is a cork candle holder safe to use?')
+            ->assertSee('href="/treasures/vitavele"', false);
+
+        $this->get('/pt/journal/cork-candle-holders-for-home-and-church')
+            ->assertOk()
+            ->assertSee('Perguntas e respostas')
+            ->assertSee('href="/pt/treasures/vitavele"', false);
+
+        // Pages that are not articles stay "website".
+        $this->get('/')->assertSee('<meta property="og:type" content="website">', false);
+    }
+
+    public function test_every_article_has_its_body_in_both_languages(): void
+    {
+        foreach (config('journal.articles') as $article) {
+            foreach (['en', 'pt'] as $locale) {
+                $this->assertFileExists(resource_path("content/$locale/journal/{$article['slug']}.md"));
+            }
+            $this->assertFileExists(public_path($article['image']));
+        }
+    }
+
+    public function test_sitemap_dates_each_article(): void
+    {
+        $this->get('/sitemap.xml')
+            ->assertSee('<loc>'.url('/journal/cork-candle-holders-for-home-and-church').'</loc>', false)
+            ->assertSee('<lastmod>2026-11-12</lastmod>', false);
+    }
+
     public function test_robots_txt_is_served(): void
     {
         $this->get('/robots.txt')->assertOk()->assertSee('User-agent: *');

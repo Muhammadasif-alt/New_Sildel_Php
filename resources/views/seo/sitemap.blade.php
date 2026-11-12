@@ -4,7 +4,7 @@
 @foreach ($entry['urls'] as $locale => $url)
     <url>
         <loc>{{ $url }}</loc>
-        <lastmod>{{ $lastModified->toDateString() }}</lastmod>
+        <lastmod>{{ $entry['lastmod'] ?? $lastModified->toDateString() }}</lastmod>
         <priority>{{ $locale === $defaultLocale ? $entry['priority'] : number_format(max(0.1, (float) $entry['priority'] - 0.2), 1) }}</priority>
 @foreach ($entry['urls'] as $altLocale => $altUrl)
         <xhtml:link rel="alternate" hreflang="{{ $locales[$altLocale]['hreflang'] }}" href="{{ $altUrl }}" />

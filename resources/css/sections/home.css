@@ -715,6 +715,8 @@
         overflow: hidden;
         border-radius: 4px;
         background: var(--color-parchment);
+        /* Lifts covers shot on white off the beige section. */
+        box-shadow: 0 22px 44px -30px var(--color-shadow);
     }
 
     .journal-media .cork-img {

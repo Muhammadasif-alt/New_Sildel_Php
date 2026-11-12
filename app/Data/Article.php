@@ -16,9 +16,18 @@ final readonly class Article
         public string $url,
         public string $slug = '',
         public ?string $body = null,
+        public array $faq = [],
+        public array $keywords = [],
+        public ?string $seoTitle = null,
     ) {}
 
-    /** @param array{title: string, excerpt: string, topic: string, date: string, image?: ?string, image_alt?: string, url: string, slug?: string, body?: ?string} $data */
+    /**
+     * faq:      list of ['q' => question, 'a' => answer], shown under the article and as FAQPage data
+     * keywords: search phrases the article targets (BlogPosting keywords)
+     * seo_title: shorter text for the browser/search title when the headline is long (about 55 characters)
+     *
+     * @param array{title: string, excerpt: string, topic: string, date: string, image?: ?string, image_alt?: string, url: string, slug?: string, body?: ?string, faq?: list<array{q: string, a: string}>, keywords?: list<string>} $data
+     */
     public static function fromArray(array $data): self
     {
         return new self(
@@ -31,6 +40,9 @@ final readonly class Article
             url: $data['url'],
             slug: $data['slug'] ?? '',
             body: $data['body'] ?? null,
+            faq: $data['faq'] ?? [],
+            keywords: $data['keywords'] ?? [],
+            seoTitle: $data['seo_title'] ?? null,
         );
     }
 

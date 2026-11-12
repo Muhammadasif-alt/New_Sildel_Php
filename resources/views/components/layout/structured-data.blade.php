@@ -4,7 +4,7 @@
 @props(['site'])
 
 @php
-    $root = rtrim($site->alternateUrls[$site->defaultLocale], '/').'/';
+    $root = rtrim(route('home'), '/').'/';
     $contact = $site->contact;
 
     $graph = [

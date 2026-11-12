@@ -58,7 +58,7 @@
         </x-common.section-container>
     </section>
 
-    <x-sections.shared.split :content="$page['craft']" tone="paper" reverse ratio="aspect-square" id="craft" />
+    <x-sections.shared.split :content="$page['craft']" tone="snow" reverse ratio="aspect-square" id="craft" />
 
     <x-sections.shared.cta-band tone="velvet" :content="$shared['treasures_cta']" />
 </x-layouts.site>

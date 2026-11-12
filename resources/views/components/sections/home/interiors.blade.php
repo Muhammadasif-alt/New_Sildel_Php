@@ -7,7 +7,7 @@
 --}}
 @props(['content'])
 
-<section class="bg-paper py-[clamp(110px,13vw,190px)] text-ink" aria-labelledby="interiors-title">
+<section class="bg-snow py-[clamp(110px,13vw,190px)] text-ink" aria-labelledby="interiors-title">
     <x-common.section-container class="grid items-center gap-[clamp(40px,7vw,110px)] md:grid-cols-[1.1fr_1fr]">
         <x-common.reveal class="relative mr-3 mb-10 md:mr-10 md:mb-[60px]">
             <div class="relative aspect-[4/5] overflow-hidden">
@@ -19,7 +19,7 @@
                 :src="$content['detail_image']"
                 :alt="$content['detail_image_alt']"
                 variant="dark"
-                class="absolute -right-3 -bottom-10 aspect-square w-[46%] border-[10px] border-paper md:-right-10 md:-bottom-[60px]"
+                class="absolute -right-3 -bottom-10 aspect-square w-[46%] border-[10px] border-snow md:-right-10 md:-bottom-[60px]"
                 sizes="(min-width: 900px) 24vw, 46vw"
             />
         </x-common.reveal>

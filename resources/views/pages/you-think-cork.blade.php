@@ -13,7 +13,7 @@
     </x-common.page-hero>
 
     {{-- A network of forward-thinking companies --}}
-    <section class="bg-snow py-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="network-title">
+    <section class="bg-bone py-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="network-title">
         <x-common.section-container class="grid items-center gap-[clamp(44px,7vw,110px)] md:grid-cols-[1fr_1.1fr]">
             {{-- One photo on a warm stage: the studio white melts into the panel (multiply), so only the cork shows. --}}
             <x-common.reveal as="figure" class="sample-stage">

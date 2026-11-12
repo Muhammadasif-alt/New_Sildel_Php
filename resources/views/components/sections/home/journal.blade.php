@@ -6,7 +6,7 @@
 --}}
 @props(['content', 'articles' => [], 'ui' => []])
 
-<section class="bg-paper py-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="journal-title">
+<section class="bg-bone py-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="journal-title">
     <x-common.section-container class="mb-[clamp(44px,5vw,70px)] flex flex-wrap items-end justify-between gap-8">
         <div class="max-w-[680px]">
             <x-common.kicker tone="bronze">{{ $content['kicker'] }}</x-common.kicker>

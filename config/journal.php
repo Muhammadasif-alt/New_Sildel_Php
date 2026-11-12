@@ -16,6 +16,58 @@ return [
 
     'articles' => [
         [
+            'slug' => 'cork-candle-holders-for-home-and-church',
+            'title' => 'Cork Candle Holders for Home and Church: The Gentle Glow of Tradition',
+            'seo_title' => 'Cork Candle Holders for Home and Church',
+            'excerpt' => 'Handmade cork candle holders for the family table, a home altar or a church: why genuine cork suits candlelight, and how to use it safely.',
+            'topic' => 'Candlelight',
+            'date' => '2026-11-12',
+            'image' => 'images/sildel/journal/cork-candle-holders.webp',
+            'image_alt' => 'Vitavele cork candle holder with a row of ivory taper candles',
+            'keywords' => ['cork candle holder', 'candle holder for church', 'home altar candle holder', 'Advent candle holder', 'handmade candle holder from Portugal'],
+            'faq' => [
+                ['q' => 'Is a cork candle holder safe to use?', 'a' => 'Yes, when it is used as intended. The candles stand in glass cups, never directly on the cork. Never leave a lit candle unattended, and put it out before it burns down close to the glass.'],
+                ['q' => 'Are the candles included?', 'a' => 'No, so you can choose your own colour and length. Ivory or natural beeswax taper candles look especially good in cork.'],
+                ['q' => 'Can you make a candle holder for a church or chapel?', 'a' => 'Yes. Bespoke pieces for parishes, chapels and religious communities are made to order. Write to us with the space, the measurements and the occasion.'],
+                ['q' => 'How do I clean a cork candle holder?', 'a' => 'Use a dry, soft cloth and avoid water and chemical products. Let any drops of wax cool, then lift them off gently.'],
+                ['q' => 'Do you deliver outside Portugal?', 'a' => 'Yes, worldwide by DHL. Postage depends on the destination, and we send you photographs of your actual piece before dispatch.'],
+            ],
+        ],
+        [
+            'slug' => 'timeless-decor-for-classic-homes-cork-antiques-and-heirlooms',
+            'title' => 'Timeless Decor for Classic Homes: Cork, Antiques and Heirlooms',
+            'seo_title' => 'Timeless Decor for Classic Homes: Cork and Antiques',
+            'excerpt' => 'For people who love old things: how handmade Portuguese cork sits beside antiques, dark wood and family heirlooms, and how to care for it for years.',
+            'topic' => 'Classic Interiors',
+            'date' => '2026-11-11',
+            'image' => 'images/sildel/journal/classic-homes-cork.webp',
+            'image_alt' => 'Óscar cork sculpture on a white marble base',
+            'keywords' => ['timeless home decor', 'decor for classic homes', 'decorating with antiques', 'heirloom quality decor', 'natural cork decor'],
+            'faq' => [
+                ['q' => 'Does cork go with antique furniture?', 'a' => 'Yes. Its warm browns sit naturally beside dark wood, marble, brass and gilded frames, and it adds a softer texture to a classic room.'],
+                ['q' => 'Will a cork piece last?', 'a' => 'Yes. Cork is light, resistant to dust and ages gracefully, and our pieces are made by hand to be kept for many years and passed down.'],
+                ['q' => 'How do I look after cork?', 'a' => 'Dust it with a dry, soft cloth, absorb any spill at once with a dry cloth and avoid chemical cleaning products.'],
+                ['q' => 'Can I see the actual piece before it is sent?', 'a' => 'Yes. Every piece is unique, so we send you photographs of the actual piece before it leaves our atelier in Esmoriz.'],
+            ],
+        ],
+        [
+            'slug' => 'meaningful-gifts-for-lifes-milestones-handcrafted-cork-from-portugal',
+            'title' => 'Meaningful Gifts for Life\'s Milestones: Handcrafted Cork From Portugal',
+            'seo_title' => 'Meaningful Gifts for Life\'s Milestones',
+            'excerpt' => 'Gift ideas for anniversaries, retirements, weddings and christenings: handmade pieces in genuine Portuguese cork that are used every day and kept for years.',
+            'topic' => 'Gifts',
+            'date' => '2026-11-10',
+            'image' => 'images/sildel/journal/meaningful-gifts.webp',
+            'image_alt' => 'Bonfire cork candle holder with three taper candles',
+            'keywords' => ['meaningful anniversary gift', 'retirement gift ideas', 'christening gift', 'handcrafted gifts from Portugal', 'cork gifts'],
+            'faq' => [
+                ['q' => 'How do I know the price of a piece?', 'a' => 'Our pieces are sold by personal enquiry. Write to us about the piece you like and we reply personally with the price and the delivery time.'],
+                ['q' => 'Can the gift be delivered to someone else?', 'a' => 'Yes. Tell us the delivery address and the date of the occasion when you write, and we will confirm the timing before you order.'],
+                ['q' => 'Can you make a personalised gift?', 'a' => 'Yes. We make bespoke pieces for special occasions, for a family, a company or a parish. Tell us who the gift is for and what the occasion is.'],
+                ['q' => 'How long does delivery take?', 'a' => 'It depends on the piece and the destination. If the date matters, write to us early and we will confirm the timing before you order.'],
+            ],
+        ],
+        [
             'slug' => 'portuguese-cork-art-why-portugal-leads-the-world-in-genuine-cork-design',
             'title' => 'Portuguese Cork Art: Why Portugal Leads the World in Genuine Cork Design',
             'excerpt' => 'Around half of the world’s cork grows in Portugal. Discover what makes Portuguese cork the finest, how to recognise genuine cork, and where to find handcrafted cork art.',
@@ -113,6 +165,49 @@ return [
     */
     'translations' => [
         'pt' => [
+            'cork-candle-holders-for-home-and-church' => [
+                'title' => 'Castiçais de Cortiça para a Casa e a Igreja: A Luz Serena da Tradição',
+                'seo_title' => 'Castiçais de Cortiça para a Casa e a Igreja',
+                'excerpt' => 'Castiçais de cortiça feitos à mão para a mesa de família, um oratório ou uma igreja: porque combina a cortiça com a luz das velas e como usá-la em segurança.',
+                'topic' => 'Luz das Velas',
+                'image_alt' => 'Castiçal de cortiça Vitavele com uma fila de velas cor de marfim',
+                'keywords' => ['castiçal de cortiça', 'castiçal para igreja', 'castiçal para oratório', 'velas do Advento', 'castiçal feito à mão em Portugal'],
+                'faq' => [
+                    ['q' => 'Um castiçal de cortiça é seguro?', 'a' => 'Sim, quando usado como previsto. As velas ficam em copos de vidro, nunca diretamente sobre a cortiça. Nunca deixe uma vela acesa sem vigilância e apague-a antes de arder até perto do vidro.'],
+                    ['q' => 'As velas estão incluídas?', 'a' => 'Não, para que possa escolher a cor e o tamanho. Velas de cera natural ou cor de marfim ficam especialmente bem na cortiça.'],
+                    ['q' => 'Podem fazer um castiçal para uma igreja ou capela?', 'a' => 'Sim. Peças por encomenda para paróquias, capelas e comunidades religiosas são feitas à medida. Escreva-nos com o espaço, as medidas e a ocasião.'],
+                    ['q' => 'Como se limpa um castiçal de cortiça?', 'a' => 'Use um pano seco e macio e evite água e produtos químicos. Deixe arrefecer os pingos de cera e retire-os com cuidado.'],
+                    ['q' => 'Enviam para fora de Portugal?', 'a' => 'Sim, para todo o mundo pela DHL. Os portes dependem do destino e, antes do envio, mandamos-lhe fotografias da peça real.'],
+                ],
+            ],
+            'timeless-decor-for-classic-homes-cork-antiques-and-heirlooms' => [
+                'title' => 'Decoração Intemporal para Casas Clássicas: Cortiça, Antiguidades e Peças de Família',
+                'seo_title' => 'Decoração Intemporal para Casas Clássicas',
+                'excerpt' => 'Para quem gosta de coisas antigas: como a cortiça portuguesa feita à mão convive com antiguidades, madeira escura e peças de família, e como cuidar dela.',
+                'topic' => 'Interiores Clássicos',
+                'image_alt' => 'Escultura de cortiça Óscar sobre uma base de mármore branco',
+                'keywords' => ['decoração intemporal', 'decoração para casas clássicas', 'decorar com antiguidades', 'peças para passar de geração em geração', 'decoração em cortiça natural'],
+                'faq' => [
+                    ['q' => 'A cortiça combina com móveis antigos?', 'a' => 'Sim. Os seus castanhos quentes ficam naturalmente bem ao lado de madeira escura, mármore, latão e molduras douradas, e dão uma textura mais suave a uma divisão clássica.'],
+                    ['q' => 'Uma peça de cortiça dura?', 'a' => 'Sim. A cortiça é leve, resistente ao pó e envelhece com elegância, e as nossas peças são feitas à mão para durar muitos anos e passar de geração em geração.'],
+                    ['q' => 'Como cuido da cortiça?', 'a' => 'Limpe o pó com um pano seco e macio, absorva de imediato qualquer líquido entornado com um pano seco e evite produtos de limpeza químicos.'],
+                    ['q' => 'Posso ver a peça real antes do envio?', 'a' => 'Sim. Cada peça é única, por isso enviamos-lhe fotografias da peça real antes de sair do nosso atelier em Esmoriz.'],
+                ],
+            ],
+            'meaningful-gifts-for-lifes-milestones-handcrafted-cork-from-portugal' => [
+                'title' => 'Ofertas com Significado para os Grandes Momentos: Cortiça Feita à Mão em Portugal',
+                'seo_title' => 'Ofertas com Significado para os Grandes Momentos',
+                'excerpt' => 'Ideias de ofertas para bodas, reformas, casamentos e batizados: peças em cortiça portuguesa genuína, feitas à mão, para usar e guardar durante anos.',
+                'topic' => 'Ofertas',
+                'image_alt' => 'Castiçal de cortiça Bonfire com três velas',
+                'keywords' => ['oferta de bodas', 'ideias de oferta para reforma', 'oferta de batizado', 'ofertas feitas à mão em Portugal', 'ofertas em cortiça'],
+                'faq' => [
+                    ['q' => 'Como sei o preço de uma peça?', 'a' => 'As nossas peças são vendidas por contacto pessoal. Escreva-nos sobre a peça de que gosta e respondemos pessoalmente com o preço e o prazo de entrega.'],
+                    ['q' => 'A oferta pode ser entregue a outra pessoa?', 'a' => 'Sim. Indique-nos a morada de entrega e a data da ocasião quando nos escrever, e confirmamos o prazo antes da encomenda.'],
+                    ['q' => 'Podem fazer uma oferta personalizada?', 'a' => 'Sim. Fazemos peças por encomenda para ocasiões especiais, para uma família, uma empresa ou uma paróquia. Diga-nos a quem se destina a oferta e qual é a ocasião.'],
+                    ['q' => 'Quanto tempo demora a entrega?', 'a' => 'Depende da peça e do destino. Se a data é importante, escreva-nos com antecedência e confirmamos o prazo antes da encomenda.'],
+                ],
+            ],
             'portuguese-cork-art-why-portugal-leads-the-world-in-genuine-cork-design' => [
                 'title' => 'Arte em Cortiça Portuguesa: Porque Lidera Portugal o Design em Cortiça Genuína',
                 'excerpt' => 'Cerca de metade da cortiça do mundo nasce em Portugal. Descubra o que torna a cortiça portuguesa a melhor, como reconhecer a cortiça genuína e onde encontrar arte em cortiça feita à mão.',

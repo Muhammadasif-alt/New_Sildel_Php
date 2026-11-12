@@ -34,14 +34,14 @@ class SeoController extends Controller
         $locales = $content->locales();
         $entries = [];
 
-        $add = function (string $name, array $parameters, string $priority) use (&$entries, $locales) {
+        $add = function (string $name, array $parameters, string $priority, ?string $lastmod = null) use (&$entries, $locales) {
             $urls = [];
             foreach ($locales as $locale) {
                 $urls[$locale] = $name === 'home'
                     ? ($locale === $locales[0] ? route('home') : route('home.localized', ['locale' => $locale]))
                     : LocalizedUrl::route($name, $parameters, $locale);
             }
-            $entries[] = ['urls' => $urls, 'priority' => $priority];
+            $entries[] = ['urls' => $urls, 'priority' => $priority, 'lastmod' => $lastmod];
         };
 
         foreach (self::PAGES as $name => $priority) {
@@ -53,7 +53,7 @@ class SeoController extends Controller
         }
 
         foreach ($content->articles($default) as $article) {
-            $add('journal.show', ['slug' => $article->slug], '0.6');
+            $add('journal.show', ['slug' => $article->slug], '0.6', $article->date->toDateString());
         }
 
         return response()

@@ -39,7 +39,7 @@
     --color-sage-line: rgb(244 238 228 / 0.18);
 
     /* Light cards */
-    --color-paper: #faf7f2;                        /* card surface on bone */
+    --color-paper: #ffffff;                        /* white: sections are white, beige (bone) or black */
     --color-linen: #e8e0d3;                        /* card border on bone */
     --color-shadow: rgb(42 34 27 / 0.35);
 

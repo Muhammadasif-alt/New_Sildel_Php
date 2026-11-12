@@ -253,7 +253,7 @@
 
     /* ---------- Long-form text (articles, legal) ---------- */
     .prose {
-        font-size: 1.04rem;
+        font-size: 1.125rem;
         line-height: 1.85;
         color: var(--color-ink-soft);
     }
@@ -868,7 +868,7 @@
         place-items: center;
         aspect-ratio: 1 / 1;
         padding: clamp(20px, 4vw, 56px) clamp(20px, 4vw, 56px) clamp(56px, 6vw, 84px);
-        background: var(--color-bone);
+        background: var(--color-snow);
         border: 1px solid var(--color-line-light);
     }
 
