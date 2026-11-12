@@ -223,20 +223,53 @@
         line-height: 1;
         letter-spacing: 0.06em;
         text-align: center;
-        color: color-mix(in srgb, var(--color-gold) 55%, transparent);
+        color: var(--color-gold);
         user-select: none;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.12em;
+        /* A soft warm glow so the gold lifts off the black. */
+        filter: drop-shadow(0 0 28px rgb(201 180 140 / 0.16));
     }
 
-    /* The lynx face before the word, in the same muted gold as the letters. */
+    /* Lynx and letters share one metallic gold: champagne at the top, bronze at the foot, with a
+       slow band of light passing across every few seconds. */
+    .giant-wordmark > span:not(.giant-wordmark-lynx),
+    .giant-wordmark-lynx {
+        background:
+            linear-gradient(105deg, transparent 42%, rgb(255 246 224 / 0.6) 50%, transparent 58%) 160% 0 / 250% 100% no-repeat,
+            linear-gradient(180deg, #efe3c8 0%, var(--color-gold) 42%, #a8875a 78%, var(--color-bronze) 100%);
+        animation: wordmark-sheen 9s var(--ease-soft) infinite;
+    }
+
+    .giant-wordmark > span:not(.giant-wordmark-lynx) {
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
     .giant-wordmark-lynx {
         flex: none;
         width: 0.72em;
         height: 0.72em;
-        color: color-mix(in srgb, var(--color-gold) 55%, transparent);
+    }
+
+    @keyframes wordmark-sheen {
+        0%,
+        55% {
+            background-position: 160% 0, 0 0;
+        }
+        100% {
+            background-position: -60% 0, 0 0;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .giant-wordmark > span:not(.giant-wordmark-lynx),
+        .giant-wordmark-lynx {
+            animation: none;
+        }
     }
 
     @media (prefers-reduced-motion: reduce) {
