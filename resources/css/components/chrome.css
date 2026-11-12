@@ -97,7 +97,10 @@
     }
 
     /* ---------- Custom cursor (only when enabled by JS on fine pointers) ---------- */
+    /* A bronze dot on the pointer; a bronze ring that follows behind, wrapped in a gold
+       dashed ring that turns slowly. Brand colours read on both the dark and light sections. */
     .cursor,
+    .cursor-ring,
     .cursor-label {
         position: fixed;
         top: 0;
@@ -108,26 +111,80 @@
     }
 
     .has-cursor .cursor,
+    .has-cursor .cursor-ring,
     .has-cursor .cursor-label {
         display: block;
     }
 
-    .cursor {
-        z-index: 9999;
-        width: 8px;
-        height: 8px;
-        margin: -4px 0 0 -4px;
-        border-radius: 50%;
-        background: var(--color-gold);
-        mix-blend-mode: difference;
-        transition: width 0.4s var(--ease-soft), height 0.4s var(--ease-soft), margin 0.4s var(--ease-soft), background-color 0.4s;
+    .cursor-away .cursor,
+    .cursor-away .cursor-ring {
+        opacity: 0;
     }
 
-    .cursor.is-big {
+    .cursor {
+        z-index: 10001;
+        width: 7px;
+        height: 7px;
+        margin: -3.5px 0 0 -3.5px;
+        border-radius: 50%;
+        background: var(--color-bronze);
+        box-shadow: 0 0 0 1.5px rgb(255 255 255 / 0.55);
+        transition: opacity 0.3s;
+    }
+
+    .cursor.is-hidden {
+        opacity: 0;
+    }
+
+    .cursor-ring {
+        z-index: 9999;
+        width: 30px;
+        height: 30px;
+        margin: -15px 0 0 -15px;
+        border: 1.5px solid var(--color-bronze);
+        border-radius: 50%;
+        transition: width 0.45s var(--ease-soft), height 0.45s var(--ease-soft), margin 0.45s var(--ease-soft),
+            background-color 0.45s var(--ease-soft), border-color 0.45s var(--ease-soft), opacity 0.3s;
+    }
+
+    .cursor-ring-dash {
+        position: absolute;
+        inset: -8px;
+        border: 1.5px dashed var(--color-gold);
+        border-radius: 50%;
+        animation: cursor-spin 7s linear infinite;
+        transition: inset 0.45s var(--ease-soft);
+    }
+
+    /* Over links and buttons: the ring opens up and the dashes turn faster. */
+    .cursor-ring.is-hover {
+        width: 46px;
+        height: 46px;
+        margin: -23px 0 0 -23px;
+        background: rgb(201 180 140 / 0.14);
+    }
+
+    .cursor-ring.is-hover .cursor-ring-dash {
+        animation-duration: 3s;
+    }
+
+    /* Over a labelled element: a filled circle carrying the label. */
+    .cursor-ring.is-big {
         width: 86px;
         height: 86px;
         margin: -43px 0 0 -43px;
         background: var(--color-bone);
+        border-color: var(--color-bone);
+    }
+
+    .cursor-ring.is-big .cursor-ring-dash {
+        inset: -10px;
+    }
+
+    @keyframes cursor-spin {
+        to {
+            transform: rotate(360deg);
+        }
     }
 
     .cursor-label {
