@@ -1,5 +1,5 @@
 {{--
-    layout/language-switch: "EN / PT", each with a small flag (public/images/sildel/flags/{code}.svg).
+    layout/language-switch: "EN  PT", each with a small flag (public/images/sildel/flags/{code}.svg).
     The current locale is highlighted; others link to their URL.
 --}}
 @props(['site'])
@@ -15,8 +15,5 @@
                 <img class="lang-flag" src="{{ asset('images/sildel/flags/'.$code.'.svg') }}" alt="" width="21" height="14">{{ $locale['label'] }}
             </a>
         @endif
-        @unless ($loop->last)
-            <span aria-hidden="true">/</span>
-        @endunless
     @endforeach
 </div>

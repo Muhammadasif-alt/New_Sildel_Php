@@ -75,7 +75,6 @@
     .lang {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
         font-size: 0.66rem;
         letter-spacing: 0.24em;
         color: var(--lang-color, var(--color-ink-soft));
@@ -90,6 +89,10 @@
         display: inline-flex;
         align-items: center;
         gap: 7px;
+    }
+
+    .lang-item + .lang-item {
+        margin-left: 18px;
     }
 
     /* Small rectangular flag; muted until its language is current or hovered. */
