@@ -14,7 +14,7 @@
         :breadcrumbs="[[$legal['title'], url()->current()]]"
     />
 
-    <section class="bg-paper pb-[clamp(100px,12vw,160px)] text-ink">
+    <section class="bg-paper pb-[clamp(68px,8vw,108px)] text-ink">
         <x-common.section-container class="grid gap-[clamp(40px,6vw,96px)] border-t border-line-light pt-[clamp(48px,6vw,80px)] md:grid-cols-[240px_1fr]">
             <nav class="legal-nav" aria-label="{{ $labels['kicker'] }}">
                 <ul role="list">

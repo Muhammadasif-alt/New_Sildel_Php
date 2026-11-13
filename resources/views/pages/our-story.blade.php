@@ -14,7 +14,7 @@
     <x-sections.shared.split :content="[...$page['intro'], 'image' => 'images/sildel/pages/our-story-intro.webp', 'image_alt' => $page['intro']['image_alt'] ?? 'White porcelain vase on a sculpted cork base, a Sildel and Porcel piece']" id="story" />
 
     {{-- The lynx: the animal itself, cut out on velvet with a warm glow, beside the text --}}
-    <section class="relative overflow-hidden bg-velvet py-[clamp(110px,13vw,190px)] text-bone" aria-labelledby="lynx-title">
+    <section class="relative overflow-hidden bg-velvet py-[clamp(72px,8.5vw,120px)] text-bone" aria-labelledby="lynx-title">
         <x-common.section-container class="grid items-center gap-[clamp(48px,8vw,120px)] md:grid-cols-[0.9fr_1.1fr]">
             <x-common.reveal class="lynx-portrait" :y="0">
                 <img src="{{ asset($page['lynx']['image']) }}" alt="{{ $page['lynx']['image_alt'] }}" width="896" height="1300" loading="lazy" decoding="async">
@@ -34,7 +34,7 @@
     <x-sections.home.film :content="$page['film']" />
 
     {{-- The founder's dream --}}
-    <section class="bg-bone py-[clamp(110px,13vw,190px)] text-ink" aria-labelledby="founder-title">
+    <section class="bg-bone py-[clamp(72px,8.5vw,120px)] text-ink" aria-labelledby="founder-title">
         <x-common.section-container class="grid items-center gap-[clamp(48px,7vw,110px)] md:grid-cols-[0.8fr_1.2fr]">
             <x-common.reveal class="founder-portrait">
                 <x-common.cork-image :src="$page['founder']['image']" :alt="$page['founder']['image_alt']" variant="dark" class="aspect-square w-full" sizes="(min-width: 900px) 36vw, 80vw" />

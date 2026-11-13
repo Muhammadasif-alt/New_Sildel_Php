@@ -30,7 +30,7 @@
         <script type="application/ld+json">{!! json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}</script>
     @endpush
 
-    <section class="product-page bg-snow pt-[calc(var(--header-h)+clamp(28px,4vw,48px))] pb-[clamp(90px,11vw,150px)] text-ink" aria-labelledby="page-title">
+    <section class="product-page bg-snow pt-[calc(var(--header-h)+clamp(28px,4vw,48px))] pb-[clamp(64px,7.5vw,100px)] text-ink" aria-labelledby="page-title">
         <x-common.section-container>
             <x-common.breadcrumbs :items="[
                 [$treasures['hero']['kicker'], $site->route('treasures.index')],
@@ -75,7 +75,7 @@
 
                     <p class="caps mt-10 text-bronze-ink">{{ $labels['on_request'] }}</p>
                     <div class="mt-5 flex flex-wrap items-center gap-x-8 gap-y-5">
-                        <x-ui.button variant="ink" :href="$enquiry" arrow>{{ $labels['enquire'] }}</x-ui.button>
+                        <x-ui.button variant="olive" :href="$enquiry" arrow>{{ $labels['enquire'] }}</x-ui.button>
                         <a href="{{ $site->contact->phoneHref }}" class="caps text-ink-soft transition-colors hover:text-bronze-ink">{{ $site->contact->phone }}</a>
                     </div>
 
@@ -135,7 +135,7 @@
     </section>
 
     @if ($related)
-        <section class="bg-bone py-[clamp(90px,11vw,150px)] text-ink" aria-labelledby="related-title">
+        <section class="bg-bone py-[clamp(64px,7.5vw,100px)] text-ink" aria-labelledby="related-title">
             <x-common.section-container>
                 <div class="mb-[clamp(40px,5vw,64px)] flex flex-wrap items-end justify-between gap-6">
                     <h2 id="related-title" class="text-h2">{{ $labels['related'] }}</h2>

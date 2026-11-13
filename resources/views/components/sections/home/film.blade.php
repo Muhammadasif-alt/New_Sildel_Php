@@ -5,7 +5,7 @@
 --}}
 @props(['content'])
 
-<section class="bg-onyx py-[clamp(100px,12vw,170px)]" aria-labelledby="film-title">
+<section class="bg-onyx py-[clamp(68px,8vw,112px)]" aria-labelledby="film-title">
     <x-common.section-container>
         <div class="mx-auto mb-[clamp(48px,6vw,80px)] max-w-[820px] text-center">
             <x-common.kicker lines="both" align="center">{{ $content['kicker'] }}</x-common.kicker>

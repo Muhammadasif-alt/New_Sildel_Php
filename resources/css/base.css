@@ -45,8 +45,8 @@
     }
 
     ::selection {
-        background: var(--color-gold);
-        color: var(--color-onyx);
+        background: var(--color-olive);
+        color: var(--color-bone);
     }
 
     :focus-visible {

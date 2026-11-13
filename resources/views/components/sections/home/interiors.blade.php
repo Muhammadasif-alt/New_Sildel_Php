@@ -7,7 +7,7 @@
 --}}
 @props(['content'])
 
-<section class="bg-snow py-[clamp(110px,13vw,190px)] text-ink" aria-labelledby="interiors-title">
+<section class="bg-snow py-[clamp(72px,8.5vw,120px)] text-ink" aria-labelledby="interiors-title">
     <x-common.section-container class="grid items-center gap-[clamp(40px,7vw,110px)] md:grid-cols-[1.1fr_1fr]">
         <x-common.reveal class="relative mr-3 mb-10 md:mr-10 md:mb-[60px]">
             <div class="relative aspect-[4/5] overflow-hidden">
@@ -32,13 +32,13 @@
             <ul class="mt-[30px] mb-11 grid gap-4" role="list">
                 @foreach ($content['features'] as $feature)
                     <x-common.reveal as="li" :delay="0.1 + $loop->index * 0.08" :y="16" class="flex items-center gap-4 text-[0.95rem]">
-                        <span class="size-2 flex-none rotate-45 border border-sage" aria-hidden="true"></span>
+                        <span class="size-2 flex-none rotate-45 border border-olive" aria-hidden="true"></span>
                         {{ $feature }}
                     </x-common.reveal>
                 @endforeach
             </ul>
 
-            <x-ui.button variant="ink" :href="$content['cta']['url']" arrow>{{ $content['cta']['label'] }}</x-ui.button>
+            <x-ui.button variant="olive" :href="$content['cta']['url']" arrow>{{ $content['cta']['label'] }}</x-ui.button>
         </div>
     </x-common.section-container>
 </section>

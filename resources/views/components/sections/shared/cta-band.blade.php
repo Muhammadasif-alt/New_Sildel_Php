@@ -12,7 +12,7 @@
 @endphp
 
 <section {{ $attributes->class([
-    'cta-band relative overflow-hidden py-[clamp(100px,12vw,170px)] text-center',
+    'cta-band relative overflow-hidden py-[clamp(68px,8vw,112px)] text-center',
     'bg-paper text-ink' => $light,
     'bg-onyx text-bone' => $tone === 'dark',
     'bg-velvet text-bone' => $tone === 'velvet',

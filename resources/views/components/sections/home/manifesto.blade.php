@@ -7,7 +7,7 @@
 --}}
 @props(['content'])
 
-<section class="relative overflow-hidden bg-bone py-[clamp(110px,13vw,190px)] text-ink" aria-labelledby="manifesto-title">
+<section class="relative overflow-hidden bg-bone py-[clamp(72px,8.5vw,120px)] text-ink" aria-labelledby="manifesto-title">
     <x-common.section-container class="grid items-center gap-[clamp(50px,8vw,130px)] md:grid-cols-[5fr_6fr]">
         <x-common.reveal class="relative mb-[50px] md:mb-0">
             <x-common.cork-image
@@ -20,7 +20,7 @@
                 :src="$content['detail_image']"
                 :alt="$content['detail_image_alt']"
                 variant="dark"
-                class="absolute -bottom-[40px] -left-[12px] aspect-square w-[46%] border-[10px] border-bone md:-bottom-[60px] md:-left-[40px]"
+                class="absolute -bottom-[40px] -left-[12px] aspect-square w-[46%] border-[10px] border-bone md:-bottom-[60px] md:-left-4 xl:-left-10"
                 sizes="(min-width: 900px) 21vw, 52vw"
             />
             @if (! empty($content['watermark']))
@@ -43,7 +43,7 @@
             @endforeach
 
             <div class="mt-10">
-                <x-ui.button variant="ink" :href="$content['cta']['url']">{{ $content['cta']['label'] }}</x-ui.button>
+                <x-ui.button variant="olive" :href="$content['cta']['url']">{{ $content['cta']['label'] }}</x-ui.button>
             </div>
         </div>
     </x-common.section-container>

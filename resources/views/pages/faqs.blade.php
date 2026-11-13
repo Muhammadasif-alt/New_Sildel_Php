@@ -19,7 +19,7 @@
         :breadcrumbs="[[$page['hero']['kicker'], url()->current()]]"
     />
 
-    <div class="bg-paper pb-[clamp(100px,12vw,160px)] text-ink">
+    <div class="bg-paper pb-[clamp(68px,8vw,108px)] text-ink">
         @foreach ($page['groups'] as $group)
             <x-common.section-container
                 as="section"
@@ -27,7 +27,7 @@
                 aria-labelledby="faq-group-{{ $loop->index }}"
             >
                 <div>
-                    <span class="font-display text-[2.6rem] leading-none text-bronze" aria-hidden="true">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                    <span class="font-display text-[2.6rem] leading-none text-olive" aria-hidden="true">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
                     <h2 id="faq-group-{{ $loop->index }}" class="mt-4 text-[clamp(2rem,3.4vw,3rem)]">{{ $group['title'] }}</h2>
                 </div>
                 <x-common.accordion :items="$group['items']" :open="$loop->first ? 0 : null" />

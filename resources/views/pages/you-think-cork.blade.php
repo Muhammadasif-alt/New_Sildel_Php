@@ -9,11 +9,11 @@
         image-ratio="aspect-square"
         :breadcrumbs="[[$page['hero']['kicker'], url()->current()]]"
     >
-        <x-ui.button variant="ink" href="#atelier" arrow>{{ $page['form']['kicker'] }}</x-ui.button>
+        <x-ui.button variant="olive" href="#atelier" arrow>{{ $page['form']['kicker'] }}</x-ui.button>
     </x-common.page-hero>
 
     {{-- A network of forward-thinking companies --}}
-    <section class="bg-bone py-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="network-title">
+    <section class="bg-bone py-[clamp(68px,8vw,112px)] text-ink" aria-labelledby="network-title">
         <x-common.section-container class="grid items-center gap-[clamp(44px,7vw,110px)] md:grid-cols-[1fr_1.1fr]">
             {{-- One photo on a warm stage: the studio white melts into the panel (multiply), so only the cork shows. --}}
             <x-common.reveal as="figure" class="sample-stage">
@@ -38,7 +38,7 @@
     </section>
 
     {{-- The Festival Mental trophy: the centrepiece. Intro and facts, then one block per edition. --}}
-    <section class="bg-onyx py-[clamp(100px,12vw,170px)] text-bone" id="trophy" aria-labelledby="trophy-title">
+    <section class="bg-onyx py-[clamp(68px,8vw,112px)] text-bone" id="trophy" aria-labelledby="trophy-title">
         <x-common.section-container>
             <div class="partner-head">
                 <div>
@@ -98,7 +98,7 @@
     </section>
 
     {{-- Porcel: porcelain and cork, in the partners' own words, beside photos from the fair. --}}
-    <section class="bg-paper py-[clamp(100px,12vw,170px)] text-ink" id="porcel" aria-labelledby="porcel-title">
+    <section class="bg-paper py-[clamp(68px,8vw,112px)] text-ink" id="porcel" aria-labelledby="porcel-title">
         <x-common.section-container class="grid items-center gap-[clamp(44px,7vw,110px)] md:grid-cols-[1fr_1.1fr]">
             <div class="max-w-[560px]">
                 <x-common.kicker tone="bronze">{{ $page['porcel']['kicker'] }}</x-common.kicker>
@@ -122,7 +122,7 @@
     </section>
 
     {{-- Corklux: the lighting range made with Lightenjin, one tile per model. --}}
-    <section class="bg-velvet py-[clamp(100px,12vw,170px)] text-bone" id="corklux" aria-labelledby="corklux-title">
+    <section class="bg-velvet py-[clamp(68px,8vw,112px)] text-bone" id="corklux" aria-labelledby="corklux-title">
         <x-common.section-container>
             <div class="partner-head">
                 <div>
@@ -150,7 +150,7 @@
     </section>
 
     {{-- What we can build together --}}
-    <section class="bg-bone py-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="services-title">
+    <section class="bg-bone py-[clamp(68px,8vw,112px)] text-ink" aria-labelledby="services-title">
         <x-common.section-container>
             <div class="mx-auto mb-[clamp(52px,6vw,84px)] max-w-[760px] text-center">
                 <x-common.kicker tone="bronze" lines="both" align="center">{{ $page['services']['kicker'] }}</x-common.kicker>

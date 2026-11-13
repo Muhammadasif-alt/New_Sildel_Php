@@ -1,17 +1,22 @@
 {{--
-    layout/language-switch: "EN / PT". The current locale is highlighted; others link to their URL.
+    layout/language-switch: "EN / PT", each with a small flag (public/images/sildel/flags/{code}.svg).
+    The current locale is highlighted; others link to their URL.
 --}}
 @props(['site'])
 
 <div {{ $attributes->class('lang') }} role="group" aria-label="{{ $site->ui('language') }}">
     @foreach ($site->locales as $code => $locale)
         @if ($code === $site->locale)
-            <span aria-current="true">{{ $locale['label'] }}</span>
+            <span class="lang-item" aria-current="true">
+                <img class="lang-flag" src="{{ asset('images/sildel/flags/'.$code.'.svg') }}" alt="" width="21" height="14">{{ $locale['label'] }}
+            </span>
         @else
-            <a href="{{ $site->alternateUrls[$code] }}" hreflang="{{ $locale['hreflang'] }}" lang="{{ $locale['hreflang'] }}">{{ $locale['label'] }}</a>
+            <a class="lang-item" href="{{ $site->alternateUrls[$code] }}" hreflang="{{ $locale['hreflang'] }}" lang="{{ $locale['hreflang'] }}">
+                <img class="lang-flag" src="{{ asset('images/sildel/flags/'.$code.'.svg') }}" alt="" width="21" height="14">{{ $locale['label'] }}
+            </a>
         @endif
         @unless ($loop->last)
-            <span aria-hidden="true">&nbsp;/&nbsp;</span>
+            <span aria-hidden="true">/</span>
         @endunless
     @endforeach
 </div>

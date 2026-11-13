@@ -15,7 +15,7 @@
 @endphp
 
 <section {{ $attributes->class([
-    'py-[clamp(100px,12vw,170px)]',
+    'py-[clamp(68px,8vw,112px)]',
     match ($tone) { 'bone' => 'bg-bone', 'snow' => 'bg-snow', 'onyx' => 'bg-onyx', 'velvet' => 'bg-velvet', default => 'bg-paper' },
     'text-bone' => $dark,
     'text-ink' => ! $dark,

@@ -1,12 +1,12 @@
 {{--
     ui/button
     Renders <a> when href is given, otherwise <button>.
-    variant: gold (default) | ghost (outlined gold) | ink (onyx) | outline (ink pill, light surfaces)
+    variant: gold (default) | ghost (outlined gold) | ink (onyx) | olive (green, light surfaces) | outline (olive border, light surfaces)
     arrow:   adds a drawn arrow after the label
 
     <x-ui.button href="/treasures">Explore Treasures</x-ui.button>
     <x-ui.button variant="ghost" type="submit">Send</x-ui.button>
-    <x-ui.button variant="ink" href="/you-think-cork" arrow>Discover More</x-ui.button>
+    <x-ui.button variant="olive" href="/you-think-cork" arrow>Discover More</x-ui.button>
 --}}
 @props([
     'variant' => 'gold',
@@ -16,7 +16,7 @@
 ])
 
 @php
-    $classes = 'btn btn-'.(in_array($variant, ['gold', 'ghost', 'ink', 'outline'], true) ? $variant : 'gold');
+    $classes = 'btn btn-'.(in_array($variant, ['gold', 'ghost', 'ink', 'olive', 'outline'], true) ? $variant : 'gold');
 @endphp
 
 @if ($href)

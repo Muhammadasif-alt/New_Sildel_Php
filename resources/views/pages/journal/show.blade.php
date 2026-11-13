@@ -103,7 +103,7 @@
     </article>
 
     @if ($more)
-        <section class="bg-bone py-[clamp(90px,11vw,150px)] text-ink" aria-labelledby="more-title">
+        <section class="bg-bone py-[clamp(64px,7.5vw,100px)] text-ink" aria-labelledby="more-title">
             <x-common.section-container>
                 <h2 id="more-title" class="mb-[clamp(40px,5vw,64px)] text-h2">{{ $page['more'] }}</h2>
                 <ul class="grid gap-x-8 gap-y-16 md:grid-cols-3" role="list">

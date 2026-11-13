@@ -22,7 +22,7 @@
 @endphp
 
 <section
-    class="overflow-hidden bg-velvet py-[clamp(90px,11vw,150px)]"
+    class="overflow-hidden bg-velvet py-[clamp(64px,7.5vw,100px)]"
     aria-labelledby="{{ $id }}-title"
     @if ($slider) data-slider @endif
 >

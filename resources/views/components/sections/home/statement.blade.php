@@ -11,7 +11,7 @@
     $words = preg_split('/\s+/', trim($content['text']));
 @endphp
 
-<section class="border-t border-line py-[clamp(120px,16vw,220px)] text-center">
+<section class="border-t border-line py-[clamp(80px,10vw,140px)] text-center">
     <x-common.section-container>
         <x-common.reveal>
             <x-common.kicker lines="both" align="center">{{ $content['kicker'] }}</x-common.kicker>

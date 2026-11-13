@@ -34,6 +34,6 @@
     <x-ui.field name="message" as="textarea" :label="$labels['message']" id-prefix="enquiry-" :value="$old('message')" :error="$bag->first('message')" maxlength="3000" required field-class="md:col-span-2" />
 
     <div class="justify-self-start md:col-span-2">
-        <x-ui.button variant="ink" type="submit" arrow data-sending-label="{{ $labels['sending'] }}">{{ $labels['submit'] }}</x-ui.button>
+        <x-ui.button variant="olive" type="submit" arrow data-sending-label="{{ $labels['sending'] }}">{{ $labels['submit'] }}</x-ui.button>
     </div>
 </form>

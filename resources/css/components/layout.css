@@ -51,7 +51,7 @@
     .nav-link:hover,
     .nav-link:focus-visible,
     .nav-link[aria-current] {
-        color: var(--color-bronze-ink);
+        color: var(--color-olive);
     }
 
     .nav-link::after {
@@ -73,6 +73,9 @@
     }
 
     .lang {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
         font-size: 0.66rem;
         letter-spacing: 0.24em;
         color: var(--lang-color, var(--color-ink-soft));
@@ -81,6 +84,27 @@
     .lang [aria-current] {
         color: var(--lang-active, var(--color-bronze-ink));
         font-weight: 600;
+    }
+
+    .lang-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    /* Small rectangular flag; muted until its language is current or hovered. */
+    .lang-flag {
+        flex: none;
+        width: 21px;
+        height: 14px;
+        border-radius: 2px;
+        opacity: 0.6;
+        transition: opacity 0.4s;
+    }
+
+    .lang [aria-current] .lang-flag,
+    .lang a:hover .lang-flag {
+        opacity: 1;
     }
 
     .lang a:hover {

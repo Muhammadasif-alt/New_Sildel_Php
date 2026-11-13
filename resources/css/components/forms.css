@@ -95,7 +95,7 @@
         --field-text: var(--color-ink);
         --field-line: var(--color-line-light);
         --field-label: var(--color-ink-soft);
-        --field-accent: var(--color-bronze-ink);
+        --field-accent: var(--color-olive);
         position: relative;
         background: var(--color-paper);
         box-shadow: 0 40px 80px -40px var(--color-shadow);

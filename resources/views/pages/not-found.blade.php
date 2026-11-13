@@ -4,7 +4,7 @@
         <meta name="robots" content="noindex">
     @endpush
 
-    <section class="relative flex min-h-[78vh] items-center overflow-hidden bg-velvet py-[clamp(100px,12vw,160px)] text-center text-bone" aria-labelledby="page-title">
+    <section class="relative flex min-h-[78vh] items-center overflow-hidden bg-velvet py-[clamp(68px,8vw,108px)] text-center text-bone" aria-labelledby="page-title">
         <x-common.emblem class="cta-band-emblem text-bone" />
         <x-common.section-container class="relative max-w-[860px]">
             <x-common.kicker lines="both" align="center">{{ $page['kicker'] }}</x-common.kicker>

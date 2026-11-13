@@ -12,7 +12,7 @@
     />
 
     {{-- The material, with three key facts --}}
-    <section class="bg-onyx pb-[clamp(100px,12vw,170px)] text-bone">
+    <section class="bg-onyx pb-[clamp(68px,8vw,112px)] text-bone">
         <x-common.section-container class="grid gap-[clamp(48px,7vw,110px)] border-t border-line pt-[clamp(60px,7vw,100px)] md:grid-cols-[1.1fr_1fr]">
             <div class="grid gap-6 text-[1.05rem] text-mute-light">
                 @foreach ($page['intro']['paragraphs'] as $paragraph)
@@ -31,7 +31,7 @@
     </section>
 
     {{-- The harvest film --}}
-    <section class="bg-velvet py-[clamp(100px,12vw,170px)] text-bone" aria-labelledby="film-title">
+    <section class="bg-velvet py-[clamp(68px,8vw,112px)] text-bone" aria-labelledby="film-title">
         <x-common.section-container>
             <div class="mb-[clamp(44px,5vw,72px)] grid items-end gap-8 md:grid-cols-2">
                 <div>
@@ -52,7 +52,7 @@
     />
 
     {{-- A lung for the planet --}}
-    <section class="climate relative overflow-hidden bg-onyx py-[clamp(110px,13vw,190px)] text-bone" aria-labelledby="climate-title">
+    <section class="climate relative overflow-hidden bg-onyx py-[clamp(72px,8.5vw,120px)] text-bone" aria-labelledby="climate-title">
         <x-common.section-container>
             <div class="mx-auto max-w-[980px] text-center">
                 <x-common.kicker lines="both" align="center">{{ $page['climate']['kicker'] }}</x-common.kicker>

@@ -17,7 +17,7 @@
         :breadcrumbs="[[$page['hero']['kicker'], url()->current()]]"
     />
 
-    <section class="bg-onyx pb-[clamp(100px,12vw,160px)] text-bone" data-flipbook>
+    <section class="bg-onyx pb-[clamp(68px,8vw,108px)] text-bone" data-flipbook>
         <x-common.section-container as="ul" class="press-grid border-t border-line pt-[clamp(56px,7vw,90px)]" role="list">
             @foreach ($page['items'] as $item)
                 @php

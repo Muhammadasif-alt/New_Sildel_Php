@@ -15,7 +15,7 @@
     ];
 @endphp
 
-<section id="{{ $content['id'] }}" class="border-b border-line bg-truffle py-[clamp(110px,12vw,170px)] text-bone" aria-labelledby="{{ $content['id'] }}-title">
+<section id="{{ $content['id'] }}" class="border-b border-line bg-truffle py-[clamp(72px,8vw,112px)] text-bone" aria-labelledby="{{ $content['id'] }}-title">
     <x-common.section-container class="grid items-center gap-[clamp(50px,8vw,120px)] md:grid-cols-[1fr_1.15fr]">
         <div>
             <x-common.kicker>{{ $content['kicker'] }}</x-common.kicker>

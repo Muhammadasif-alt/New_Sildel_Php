@@ -1,6 +1,6 @@
 {{--
     common/kicker: gold uppercase label with hairlines.
-    lines: left (default) | both    align: left (default) | center    tone: gold (default) | bronze (for light surfaces)
+    lines: left (default) | both    align: left (default) | center    tone: gold (default) | bronze (light surfaces; rendered in olive)
 
     <x-common.kicker lines="both" align="center">From Forest to Home</x-common.kicker>
 --}}
@@ -13,7 +13,7 @@
 <span {{ $attributes->class([
     'kicker',
     'justify-center' => $align === 'center',
-])->style(['--kicker-color: var(--color-bronze-ink)' => $tone === 'bronze']) }}>
+])->style(['--kicker-color: var(--color-olive)' => $tone === 'bronze']) }}>
     <i class="kicker-line" aria-hidden="true"></i>
     <span>{{ $slot }}</span>
     @if ($lines === 'both')

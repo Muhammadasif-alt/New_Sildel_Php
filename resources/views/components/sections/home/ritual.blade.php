@@ -5,7 +5,7 @@
 --}}
 @props(['content'])
 
-<section class="bg-bone py-[clamp(110px,13vw,190px)] text-ink" aria-labelledby="ritual-title">
+<section class="bg-bone py-[clamp(72px,8.5vw,120px)] text-ink" aria-labelledby="ritual-title">
     <x-common.section-container>
         <div class="mx-auto mb-[clamp(56px,7vw,90px)] max-w-[760px] text-center">
             <x-common.kicker lines="both" align="center" tone="bronze">{{ $content['kicker'] }}</x-common.kicker>

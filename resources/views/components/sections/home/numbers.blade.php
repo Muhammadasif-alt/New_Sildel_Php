@@ -8,7 +8,7 @@
 --}}
 @props(['content', 'stats' => []])
 
-<section class="bg-snow py-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="numbers-title">
+<section class="bg-snow py-[clamp(68px,8vw,112px)] text-ink" aria-labelledby="numbers-title">
     <x-common.section-container>
         <div class="mx-auto mb-[clamp(56px,7vw,90px)] max-w-[760px] text-center">
             <x-common.kicker tone="bronze" lines="both" align="center">{{ $content['kicker'] }}</x-common.kicker>
@@ -22,7 +22,7 @@
             @foreach ($stats as $stat)
                 <x-common.reveal :delay="$loop->index * 0.1" class="flex flex-col border-t border-line-light pt-8">
                     <dt class="order-2 mt-7 font-serif text-[1.5rem] leading-tight text-ink">{{ $stat->label }}</dt>
-                    <dd class="order-1 font-display text-[clamp(3rem,4.6vw,4.2rem)] leading-none text-bronze">
+                    <dd class="order-1 font-display text-[clamp(3rem,4.6vw,4.2rem)] leading-none text-olive">
                         @if ($stat->isCounter())
                             <x-common.counter :to="$stat->value" :suffix="$stat->suffix" />
                         @else

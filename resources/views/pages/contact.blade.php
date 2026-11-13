@@ -13,7 +13,7 @@
         :breadcrumbs="[[$page['hero']['kicker'], url()->current()]]"
     />
 
-    <section id="atelier" class="bg-paper pb-[clamp(100px,12vw,170px)] text-ink" aria-labelledby="atelier-title">
+    <section id="atelier" class="bg-paper pb-[clamp(68px,8vw,112px)] text-ink" aria-labelledby="atelier-title">
         <x-common.section-container class="grid items-start gap-[clamp(44px,6vw,90px)] border-t border-line-light pt-[clamp(56px,6vw,90px)] lg:grid-cols-[0.85fr_1.15fr]">
             <div>
                 <x-common.kicker tone="bronze">{{ $info['kicker'] }}</x-common.kicker>
@@ -65,7 +65,7 @@
         $mapLang = $site->locale === 'pt' ? '1spt-PT!2spt' : '1sen!2s';
         $mapSrc = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.0616529910826!2d-8.648078200000002!3d40.9582282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24780865e8e801%3A0x5b93fe96f3fe35f7!2sR.%20das%20Ruivas%20108%2C%203885-494%20Esmoriz%2C%20Portugal!5e0!3m2!'.$mapLang.'!4v1793965953603!5m2!'.$mapLang;
     @endphp
-    <section class="contact-map bg-paper pb-[clamp(90px,10vw,140px)]">
+    <section class="contact-map bg-paper pb-[clamp(64px,7vw,96px)]">
         <x-common.section-container>
             <iframe
                 src="{{ $mapSrc }}"
@@ -78,7 +78,7 @@
         </x-common.section-container>
     </section>
 
-    <section class="bg-bone py-[clamp(100px,12vw,160px)] text-ink" aria-labelledby="faq-title">
+    <section class="bg-bone py-[clamp(68px,8vw,108px)] text-ink" aria-labelledby="faq-title">
         <x-common.section-container class="grid gap-[clamp(40px,6vw,96px)] md:grid-cols-[0.8fr_1.2fr]">
             <div>
                 <x-common.kicker tone="bronze">{{ $page['faq']['kicker'] }}</x-common.kicker>

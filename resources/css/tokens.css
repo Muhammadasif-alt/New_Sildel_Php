@@ -34,9 +34,13 @@
     --color-whatsapp-deep: #1ebe5d;
 
     /* Sustainability accent (used sparingly: numbers band) */
-    --color-sage: #4a5643;
+    --color-sage: #4a5535;                         /* same green as olive */
     --color-sage-ink: #dcd5c6;                     /* labels on sage */
     --color-sage-line: rgb(244 238 228 / 0.18);
+
+    /* Olive: the signature green of primary buttons on light surfaces, ticks and small accents */
+    --color-olive: #4a5535;
+    --color-olive-deep: #363f25;
 
     /* Light cards */
     --color-paper: #ffffff;                        /* white: sections are white, beige (bone) or black */

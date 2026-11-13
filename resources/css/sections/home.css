@@ -592,8 +592,8 @@
         top: -30px;
         font-size: 5rem;
         line-height: 1;
-        color: var(--color-bronze);
-        opacity: 0.35;
+        color: var(--color-olive);
+        opacity: 0.4;
     }
 
     /* ---------- Ritual cards ---------- */
@@ -606,7 +606,7 @@
         transition: transform 0.6s var(--ease-soft), box-shadow 0.6s var(--ease-soft);
     }
 
-    /* Gold bar along the base that grows across the card on hover. */
+    /* Olive bar along the base that grows across the card on hover. */
     .ritual-card::after {
         content: '';
         position: absolute;
@@ -614,7 +614,7 @@
         bottom: -1px;
         width: 60px;
         height: 2px;
-        background: var(--color-gold);
+        background: var(--color-olive);
         transition: width 0.6s var(--ease-soft);
     }
 
@@ -647,20 +647,20 @@
         place-items: center;
         width: var(--medallion);
         height: var(--medallion);
-        border: 1px solid var(--color-gold);
+        border: 1px solid var(--color-olive);
         border-radius: 50%;
         background: var(--color-paper);
         font-family: var(--font-serif);
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 1;
-        color: var(--color-bronze-ink);
+        color: var(--color-olive);
         transition: background-color 0.6s var(--ease-soft), color 0.6s var(--ease-soft);
     }
 
     .ritual-card:hover .ritual-numeral {
-        background: var(--color-gold);
-        color: var(--color-onyx);
+        background: var(--color-olive);
+        color: var(--color-bone);
     }
 
     /* Desktop: a fine gold line runs from each medallion across the gap to the next card. */
@@ -737,7 +737,7 @@
         font-weight: 500;
         letter-spacing: 0.22em;
         text-transform: uppercase;
-        color: var(--color-bronze-ink);
+        color: var(--color-olive);
     }
 
     .journal-meta i {
@@ -756,7 +756,7 @@
     }
 
     .journal-card:hover .journal-title {
-        color: var(--color-bronze-ink);
+        color: var(--color-olive);
     }
 
     .journal-excerpt {

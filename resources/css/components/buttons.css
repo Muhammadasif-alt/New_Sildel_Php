@@ -1,4 +1,4 @@
-/* ui/button: uppercase, .34em tracking, sliding fill on hover. Variants: gold (default), ghost, ink, outline. */
+/* ui/button: uppercase, .34em tracking, sliding fill on hover. Variants: gold (default), ghost, ink, olive, outline. */
 @layer components {
     .btn {
         --btn-fill: var(--color-bone);
@@ -63,14 +63,19 @@
         --btn-fill: var(--color-bronze);
     }
 
-    /* Outlined ink pill for light surfaces */
+    /* Olive: the primary call to action on light surfaces (same shape as the hero button) */
+    .btn-olive {
+        background: var(--color-olive);
+        color: var(--color-bone);
+        --btn-fill: var(--color-olive-deep);
+    }
+
+    /* Outlined olive for secondary actions on light surfaces (same shape as the hero button) */
     .btn-outline {
         background: transparent;
-        color: var(--color-ink);
-        border-color: var(--color-ink);
-        border-radius: 999px;
-        padding: 17px 34px;
-        --btn-fill: var(--color-ink);
+        color: var(--color-olive);
+        border-color: var(--color-olive);
+        --btn-fill: var(--color-olive);
     }
 
     .btn-outline:hover,

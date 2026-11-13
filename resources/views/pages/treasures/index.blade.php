@@ -9,7 +9,7 @@
         :breadcrumbs="[[$page['hero']['kicker'], url()->current()]]"
     />
 
-    <section class="treasures-dark bg-onyx pb-[clamp(100px,12vw,160px)] text-bone" data-filter>
+    <section class="treasures-dark bg-onyx pb-[clamp(68px,8vw,108px)] text-bone" data-filter>
         <div class="filter-bar">
             <x-common.section-container class="flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
                 <div class="filter-chips" role="group" aria-label="{{ $page['filter_label'] }}">
