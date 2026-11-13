@@ -16,6 +16,26 @@ return [
 
     'articles' => [
         [
+            'slug' => 'cork-the-complete-guide-from-cork-oak-to-your-home',
+            'title' => 'Cork: The Complete Guide, From the Cork Oak to Your Home',
+            'seo_title' => 'What Is Cork? A Complete Guide to the Material',
+            'excerpt' => 'What cork is, where it grows, how it is harvested by hand, what makes it light, warm and lasting, and how to tell genuine cork from imitations.',
+            'topic' => 'Authentic Cork',
+            'date' => '2026-11-13',
+            'image' => 'images/sildel/journal/cork-complete-guide.webp',
+            'image_alt' => 'Three samples of natural cork, from dark outer bark to pale inner cork',
+            'keywords' => ['what is cork', 'cork oak', 'how is cork harvested', 'properties of cork', 'is cork sustainable', 'natural cork vs agglomerated cork'],
+            'faq' => [
+                ['q' => 'What is cork made from?', 'a' => 'Cork is the outer bark of the cork oak (Quercus suber), a tree that grows around the western Mediterranean. About half of the world\'s cork comes from Portugal.'],
+                ['q' => 'Does harvesting cork kill the tree?', 'a' => 'No. Only the bark is removed, by hand, and the tree grows it back. A cork oak is first harvested at about 25 years old and then at most once every nine years.'],
+                ['q' => 'How long does a cork oak live?', 'a' => 'Around 200 years, so a single tree can be harvested 15 times or more during its life.'],
+                ['q' => 'Is cork waterproof?', 'a' => 'Cork resists water very well, because its cells contain suberin, a natural waxy substance. It should still not be soaked or left standing in water.'],
+                ['q' => 'Is cork a sustainable material?', 'a' => 'Yes. No tree is felled, the bark regrows, and cork is natural and recyclable. The cork forests also store carbon and shelter rare wildlife such as the Iberian lynx.'],
+                ['q' => 'How can I tell genuine cork from an imitation?', 'a' => 'Genuine natural cork never repeats its pattern, is very light and warm to the touch, gives slightly under a fingernail and recovers, and has a faint woody smell.'],
+                ['q' => 'How do I clean cork?', 'a' => 'Dust it with a dry, soft cloth, absorb any spill at once with a dry cloth and avoid chemical cleaning products.'],
+            ],
+        ],
+        [
             'slug' => 'cork-candle-holders-for-home-and-church',
             'title' => 'Cork Candle Holders for Home and Church: The Gentle Glow of Tradition',
             'seo_title' => 'Cork Candle Holders for Home and Church',
@@ -165,6 +185,23 @@ return [
     */
     'translations' => [
         'pt' => [
+            'cork-the-complete-guide-from-cork-oak-to-your-home' => [
+                'title' => 'Cortiça: O Guia Completo, do Sobreiro até à Sua Casa',
+                'seo_title' => 'O que é a Cortiça? Guia Completo do Material',
+                'excerpt' => 'O que é a cortiça, onde nasce, como é extraída à mão, o que a torna leve, quente e duradoura, e como distinguir a cortiça genuína das imitações.',
+                'topic' => 'Cortiça Autêntica',
+                'image_alt' => 'Três amostras de cortiça natural, da casca exterior escura à cortiça interior clara',
+                'keywords' => ['o que é a cortiça', 'sobreiro', 'como se extrai a cortiça', 'propriedades da cortiça', 'a cortiça é sustentável', 'cortiça natural e aglomerado de cortiça'],
+                'faq' => [
+                    ['q' => 'De que é feita a cortiça?', 'a' => 'A cortiça é a casca exterior do sobreiro (Quercus suber), uma árvore que cresce à volta do Mediterrâneo ocidental. Cerca de metade da cortiça do mundo vem de Portugal.'],
+                    ['q' => 'Tirar a cortiça mata a árvore?', 'a' => 'Não. Só se retira a casca, à mão, e a árvore volta a criá-la. O sobreiro é descortiçado pela primeira vez por volta dos 25 anos e depois, no máximo, de nove em nove anos.'],
+                    ['q' => 'Quanto tempo vive um sobreiro?', 'a' => 'Cerca de 200 anos, pelo que uma só árvore pode ser descortiçada 15 vezes ou mais ao longo da vida.'],
+                    ['q' => 'A cortiça é impermeável?', 'a' => 'A cortiça resiste muito bem à água, porque as suas células têm suberina, uma substância cerosa natural. Mesmo assim, não deve ser mergulhada nem deixada dentro de água.'],
+                    ['q' => 'A cortiça é um material sustentável?', 'a' => 'Sim. Nenhuma árvore é abatida, a casca volta a crescer e a cortiça é natural e reciclável. Os montados também retêm carbono e abrigam animais raros como o lince-ibérico.'],
+                    ['q' => 'Como distingo a cortiça genuína de uma imitação?', 'a' => 'A cortiça natural genuína nunca repete o padrão, é muito leve e quente ao toque, cede um pouco à pressão da unha e recupera, e tem um leve cheiro a madeira.'],
+                    ['q' => 'Como se limpa a cortiça?', 'a' => 'Limpe o pó com um pano seco e macio, absorva de imediato qualquer líquido com um pano seco e evite produtos de limpeza químicos.'],
+                ],
+            ],
             'cork-candle-holders-for-home-and-church' => [
                 'title' => 'Castiçais de Cortiça para a Casa e a Igreja: A Luz Serena da Tradição',
                 'seo_title' => 'Castiçais de Cortiça para a Casa e a Igreja',
